@@ -14,27 +14,6 @@ body {
   background-color: #fdcff1;
 }
 
-.princess-section {
-  background-color: #c7fceb;
-  /* background-color: #2b9abf; */
-}
-.princess-section2 {
-  background-color: #aae9d6;
-  /* background-color: #2b9abf; */
-}
-.princess-section3 {
-  background-color: #ffd2a0;
-  /* background-color: #2b9abf; */
-}
-.princess-section4 {
-  background-color: #ffe37f;
-  /* background-color: #2b9abf; */
-}
-.princess-section5 {
-  background-color: #00c89a;
-  /* background-color: #2b9abf; */
-}
-
 @media screen and (min-width: 768px) {
   .navbar {
     padding-left: 10rem;
@@ -88,6 +67,18 @@ body {
   background-size: fill;
   background-repeat: no-repeat;
   background-position: bottom left;
+
+}
+
+.bobally-section {
+  background-color: #83aade;
+  /* background-color: #2b9abf; */
+}
+.princess-section {
+  background-image: url('./images/svg/about-background3.svg');;
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-position: top right;
 
 }
 
