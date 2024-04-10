@@ -56,14 +56,14 @@ body {
 }
 
 .about-section {
-  background-image: url('./images/svg/about-background2.svg');
+  background-image: url('./images/svg/about-background.svg');
   background-size: fill;
   background-repeat: no-repeat;
   background-position: top right;
   
 }
 .contact-section {
-  background-image: url('./images/svg/contact-background3.svg');;
+  background-image: url('./images/svg/contact-background.svg');;
   background-size: fill;
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -75,7 +75,7 @@ body {
   /* background-color: #2b9abf; */
 }
 .princess-section {
-  background-image: url('./images/svg/about-background3.svg');;
+  background-image: url('./images/svg/princess-background.svg');;
   background-size: fill;
   background-repeat: no-repeat;
   background-position: top right;
