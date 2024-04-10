@@ -1,154 +1,201 @@
 body {
-    font-family: 'Linux Libertine', serif;
+  font-family: 'Linux Libertine', serif;
+  width: 100%;
 }
 
 @font-face {
-    font-family: 'Linux Libertine';
-    src: url('fonts/linlibertine_r.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Linux Libertine';
+  src: url('fonts/linlibertine_r.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .hero {
-    background-color: #fdcff1;
+  background-color: #fdcff1;
+}
+
+.princess-section {
+  background-color: #2b9abf;
 }
 
 @media screen and (min-width: 768px) {
-    .navbar {
-        padding-left: 10rem;
-        padding-right: 10rem;
-    }
+  .navbar {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
-    flex-grow: 1;
+  font-size: 1.5rem;
+  flex-grow: 1;
 }
 
 #navbarNavAltMarkup .navbar-nav {
-    /* This will space the nav items evenly */
-    flex-grow: 1;
-    justify-content: space-between;
-    /* font-size: 1.2rem; */
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+  /* This will space the nav items evenly */
+  flex-grow: 1;
+  justify-content: space-between;
+  /* font-size: 1.2rem; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 #navbarNavAltMarkup .navbar-nav :hover {
-    color: #5fdde5;
+  color: #5fdde5;
 }
 
 #navbarNavAltMarkup .navbar-nav .nav-link {
-    padding: 8px;
-    /* Adjust padding for visual comfort of all nav links */
-    margin-right: 15px;
-    /* Space between regular nav links */
+  padding: 8px;
+  /* Adjust padding for visual comfort of all nav links */
+  margin-right: 15px;
+  /* Space between regular nav links */
 }
 
 #navbarNavAltMarkup .navbar-nav:last-child .nav-link {
-    margin-right: 0;
-    /* Remove space between social icons */
+  margin-right: 0;
+  /* Remove space between social icons */
 }
 
 .arial {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-section {
+  background-image: url('./images/svg/about-background2.svg');
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-position: top right;
+  
+}
+.contact-section {
+  background-image: url('./images/svg/contact-background3.svg');;
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+
+}
+
+h2.text-primary {
+  color: #007BFF;
+  /* A nice shade of bootstrap primary blue */
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+  /* Brighter focus shadow */
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  /* Deeper blue for the primary button */
+  border-color: #004085;
+  /* Matching border color */
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  /* Lighter blue on hover */
+  border-color: #0056b3;
+  /* Matching border color for hover */
+}
+
+.content {
+  padding: 7rem 0;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.form-control {
+  border: none;
+  background: #f3f3f3;
+}
+
+.form-control:active,
+.form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #000;
+  background: #f3f3f3;
+}
+
+.col-form-label {
+  color: #000;
+}
+
+/* .btn, */
+.form-control,
+.custom-select {
+  height: 50px;
+}
+
+.custom-select:active,
+.custom-select:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #000;
 }
 
 
-  h2.text-primary {
-    color: #007BFF; /* A nice shade of bootstrap primary blue */
-  }
+.btn:hover {
+  color: #fff;
+}
 
-  .form-control:focus {
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25); /* Brighter focus shadow */
-  }
+.btn:active,
+.btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 
-  .btn-primary {
-    background-color: #0056b3; /* Deeper blue for the primary button */
-    border-color: #004085; /* Matching border color */
-  }
+.box {
+  padding: 40px;
+  background: #fff;
+  -webkit-box-shadow: -30px 30px 0px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: -30px 30px 0px 0 rgba(0, 0, 0, 0.08);
+}
 
-  .btn-primary:hover {
-    background-color: #0069d9; /* Lighter blue on hover */
-    border-color: #0056b3; /* Matching border color for hover */
-  }
+.box h3 {
+  font-size: 14px;
+  margin-bottom: 30px;
+  text-align: center;
+}
 
-  .content {
-    padding: 7rem 0; }
-  
-  .heading {
-    font-size: 2.5rem;
-    font-weight: 900; }
-  
-  .form-control {
-    border: none;
-    background: #f3f3f3; }
-    .form-control:active, .form-control:focus {
-      outline: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      border-color: #000;
-      background: #f3f3f3; }
-  
-  .col-form-label {
-    color: #000; }
-  
-  .btn, .form-control, .custom-select {
-    height: 50px; }
-  
-  .custom-select:active, .custom-select:focus {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-color: #000; }
-  
-  .btn {
-    border: none;
-    border-radius: 4px !important; }
-    .btn.btn-primary {
-      background: #000;
-      color: #fff;
-      padding: 15px 20px; }
-    .btn:hover {
-      color: #fff; }
-    .btn:active, .btn:focus {
-      outline: none;
-      -webkit-box-shadow: none;
-      box-shadow: none; }
-  
-  .box {
-    padding: 40px;
-    background: #fff;
-    -webkit-box-shadow: -30px 30px 0px 0 rgba(0, 0, 0, 0.08);
-    box-shadow: -30px 30px 0px 0 rgba(0, 0, 0, 0.08); }
-    .box h3 {
-      font-size: 14px;
-      margin-bottom: 30px;
-      text-align: center; }
-  
-  label.error {
-    font-size: 12px;
-    color: red; }
-  
-  #message {
-    resize: vertical; }
-  
-  #form-message-warning, #form-message-success {
-    display: none; }
-  
-  #form-message-warning {
-    color: #B90B0B; }
-  
-  #form-message-success {
-    color: #55A44E;
-    font-size: 18px;
-    font-weight: bold; }
-  
-  .submitting {
-    float: left;
-    width: 100%;
-    padding: 10px 0;
-    display: none;
-    font-weight: bold;
-    font-size: 12px;
-    color: #000; }
+label.error {
+  font-size: 12px;
+  color: red;
+}
+
+#message {
+  resize: vertical;
+}
+
+#form-message-warning,
+#form-message-success {
+  display: none;
+}
+
+#form-message-warning {
+  color: #B90B0B;
+}
+
+#form-message-success {
+  color: #55A44E;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.submitting {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000;
+}
+
+

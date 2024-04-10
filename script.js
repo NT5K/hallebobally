@@ -45,3 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var currentYear = new Date().getFullYear(); // Get the current year
+    document.getElementById('current-year').textContent = currentYear; // Set the current year in the footer
+  });
