@@ -14,14 +14,45 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-col {
+        background-color: #f8f9fa; /* Light gray background */
+        border: 1px solid #dee2e6; /* Subtle border */
+        padding: 2rem; /* Spacious padding for better readability */
+        border-radius: 0.5rem; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Soft shadow for depth */
+        max-width: 600px; /* Limiting max width for better text line management */
+        margin: auto; /* Centering the column */
+    }
+
+    .contact-heading {
+        color: #495057; /* Dark gray for contrast */
+        font-size: 1.75rem; /* Larger heading for emphasis */
+    }
+
+    .contact-text {
+        font-size: 1.25rem; /* Larger text for easy reading */
+        line-height: 1.6; /* Improved line spacing */
+        color: #343a40; /* Slightly darker text for better readability */
+    }
+
+    a {
+        color: #007bff; /* Bootstrap primary color for links */
+        text-decoration: none; /* No underline to keep it clean */
+    }
+
+    a:hover {
+        text-decoration: underline; /* Underline on hover for better interaction feedback */
+    }
+</style>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar navbar-expand-lg bg-light navbar-no-decoration">
     <div class="container-fluid">
       <!-- Branding -->
-      <a class="navbar-brand" href="#" style="font-size: 250%;">Halle St. John</a>
+      <a class="navbar-brand" href="index.html" style="font-size: 250%;">Halle St. John</a>
 
       <!-- Toggler for mobile view -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -32,17 +63,17 @@
       <!-- Navbar links -->
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav me-auto">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="index.html">Home</a>
           <a class="nav-link" href="#">About</a>
 
           <!-- Dropdown Menu -->
           <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Services
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Hally Bo Bally</a></li>
+            <ul class="dropdown-menu  " aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="hallebobally.html">Hally Bo Bally</a></li>
               <li><a class="dropdown-item" href="#">Princess Parties</a></li>
               <li><a class="dropdown-item" href="#">Story Time</a></li>
               <li><a class="dropdown-item" href="#">Vocalist</a></li>
@@ -91,7 +122,7 @@
           As a professional vocalist and entertainer in Cleveland, I'm excited to work alongside you as we make your
           special occasion that much more memorable!
         </p>
-        <a href="#" class="text-decoration-none">Read More &raquo;</a>
+        <h5><a href="#" class="">Read More &raquo;</a></h5>
       </div>
       <div class="col-12 col-md-6 text-center px-3 px-md-5 py-5">
         <img src="./images/10.png" alt="About Halle St. John" class="img-fluid w-75 mx-auto rounded">
@@ -103,7 +134,7 @@
   <section class="container-fluid bobally-section g-0 p-md-5">
     <div class="row g-0 p-0 m-0 align-items-center">
       <div class="col-12 col-md-6 text-center order-2 order-md-1 pb-3">
-        <img src="./images/contact_image.png" alt="Princess party in Cleveland" class="img-fluid w-75 mx-auto rounded">
+        <img src="./images/hbb/hbb1.JPG" alt="Princess party in Cleveland" class="img-fluid w-75 mx-auto rounded">
       </div>
       <div class="col-12 col-md-6 text-center text-md-start p-4 order-1 order-md-2">
         <h1 class="display-4 display-md-4">Halle Bo Bally Story Time in Cleveland</h1>
@@ -124,7 +155,7 @@
           Make that event even more magical with a visit from a Princess! With a New York City
           singing background, I will bring each character to life when I tell her story and sing her songs!
         </p>
-        <button class="btn btn-light text-dark m-1 arial">Book a Party</button>
+        <button class="btn btn-outline-dark text-dark m-1 arial">Book a Party</button>
       </div>
       <div class="col-12 col-md-6 text-center px-3 px-md-5 py-5">
         <img src="./images/princess_parties/princess3.png" alt="About Halle St. John"
@@ -136,18 +167,20 @@
   <!-- contact -->
   <section class="container-fluid px-5 py-5 contact-section">
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-12 text-center">
         <h3 class="heading mb-4">Let's talk about everything!</h3>
-        <p class="arial">Don't like forms? Send me an email instead. <a href="mailto:email@email.com">email
-            address</a></p>
-        <p class="arial">Want to talk on the phone? Give me a call at <a href="tel:555-555-5555">555-555-5555</a>
-        </p>
+        <h5 class="arial">
+          Don't like forms? Send me an email instead. <a href="mailto:hallesaintj@gmail.com">hallesaintj@gmail.com</a>
+          </h5>
+        <h5 class="arial">
+          Want to talk on the phone? Give me a call at <a href="tel:216-577-2428">216-577-2428</a>
+        </h5>
       </div>
-      <div class="col-lg-6 mx-auto pb-3">
-        <h3 class="heading mb-4">Contact Me</h3>
+      <div class="col-12 col-lg-4 mx-auto pb-3 p-0">
+        <h3 class="heading mb-4 text-center">Contact Me</h3>
         <form id="myCustomForm" class="needs-validation" novalidate>
           <div class="mb-3">
-            <label for="firstname" class="form-label">First Name</label>
+            <label for="firstname" class="form-label arial">First Name</label>
             <input type="text" class="form-control" id="firstname" name="entry.1854831876" required>
             <div class="invalid-feedback">
               Please enter your first name.
@@ -155,7 +188,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="lastname" class="form-label">Last Name</label>
+            <label for="lastname" class="form-label arial">Last Name</label>
             <input type="text" class="form-control" id="lastname" name="entry.1146938562" required>
             <div class="invalid-feedback">
               Please enter your last name.
@@ -163,7 +196,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label arial">Email</label>
             <input type="email" class="form-control" id="email" name="entry.1184860373" required>
             <div class="invalid-feedback">
               Please enter a valid email address.
@@ -171,14 +204,14 @@
           </div>
 
           <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" name="entry.427335266" rows="8" required></textarea>
+            <label for="message" class="form-label arial">Message</label>
+            <textarea class="form-control" id="message" name="entry.427335266" rows="5" required></textarea>
             <div class="invalid-feedback">
               What would you like to tell me?
             </div>
           </div>
 
-          <button type="submit" class="btn btn-success">Send Message</button>
+          <button type="submit" class="btn btn-success arial">Send Message</button>
           <div id="submitSuccessMessage" class="alert alert-success mt-3 d-none" role="alert">
             Thanks for reaching out! I'll get back to you soon.
           </div>
@@ -187,7 +220,7 @@
     </div>
     <!-- footer -->
     <footer class="text-center py-3">
-      <p>&copy; <span id="current-year"></span> Halle St. John</p>
+      <p class="arial">&copy; <span id="current-year"></span> Halle St. John</p>
       <span>
         <a class="" href="#"><i class="bi bi-twitter"></i></a>
         <a class="" href="#"><i class="bi bi-facebook"></i></a>

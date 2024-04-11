@@ -67,11 +67,12 @@ body {
   background-size: fill;
   background-repeat: no-repeat;
   background-position: bottom left;
+  background-size: 75rem;
 
 }
 
 .bobally-section {
-  background-color: #83aade;
+  background-color: #cbe5fe;
   /* background-color: #2b9abf; */
 }
 .princess-section {
@@ -134,10 +135,10 @@ h2.text-primary {
 }
 
 /* .btn, */
-.form-control,
+/* .form-control,
 .custom-select {
   height: 50px;
-}
+} */
 
 .custom-select:active,
 .custom-select:focus {
@@ -204,6 +205,11 @@ label.error {
   font-weight: bold;
   font-size: 12px;
   color: #000;
+}
+
+/* Custom style to remove text decoration from all links within the navbar */
+.navbar-no-decoration a {
+  text-decoration: none !important; 
 }
 
 
