@@ -14,6 +14,38 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    #dynamicCarousel {
+      max-width: 800px;
+      /* Maximum width of the carousel */
+      max-height: 500px;
+      overflow: hidden;
+      margin: auto;
+      /* Center the carousel horizontally */
+    }
+
+    #dynamicCarousel .carousel-inner {
+      max-height: 500px;
+    }
+
+    #dynamicCarousel .carousel-inner .carousel-item img {
+      max-height: 500px;
+      max-width: 100%;
+      /* Make sure images are not wider than their container */
+      height: auto;
+      /* Maintain aspect ratio */
+      object-fit: contain;
+      /* Ensures the image fits nicely within the dimensions without distorting */
+      margin: auto;
+      /* Center the image within the carousel when width is auto */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(100%);
+      /* Inverts the color to black */
+    }
+  </style>
 </head>
 
 <body>
@@ -42,9 +74,9 @@
               Services
             </a>
             <ul class="dropdown-menu text-decoration-none" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="hallybobally.html">Hally Bo Bally</a></li>
-              <li><a class="dropdown-item" href="#">Princess Parties</a></li>
-              <li><a class="dropdown-item" href="#">Story Time</a></li>
+              <li><a class="dropdown-item" href="hallebobally.html">Hally Bo Bally</a></li>
+              <li><a class="dropdown-item" href="princessparties.html">Princess Parties</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Story Time</a></li> -->
               <li><a class="dropdown-item" href="#">Vocalist</a></li>
               <li><a class="dropdown-item" href="#">Theater</a></li>
             </ul>
@@ -63,64 +95,87 @@
     </div>
   </nav>
 
+  <!-- Header with Logo -->
   <header class="col-12 bg-light p-3 mb-4 border-bottom text-center">
     <img src="./images/hbb/logos/logo-transparent-crop-long.png" alt="Princess Parties Cleveland" class="img-fluid"
       style="max-height: 75px;">
-    <!-- <h1 class="text-center">Halle Bo Bally</h1> -->
   </header>
 
-
-
-  <div class="container">
+  <div class="container my-5">
     <div class="row">
-      <div class="col-md-4 mb-3" style="max-height: 400px;">
-        <!-- <img src="path_to_image.jpg" alt="Performer as Princess" class="img-fluid rounded-circle"> -->
-        <div id="dynamicCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner" id="carouselItems" style="max-height: 400px;">
-            <!-- Carousel items will be inserted here by JavaScript -->
+      <div class="col-12 col-lg-4 col-md-6 mb-3">
+        <div class="card h-100 shadow" style="background-color: #cbe5fe;">
+          <div class="card-body text-center d-flex flex-column justify-content-center">
+            <div class="rounded-circle mx-auto shadow"
+              style="width: 70%; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; background: url('./images/hbb/circle_1.PNG') center/cover; background-blend-mode: darken; background-color: rgba(0, 0, 0, 0.3);">
+              <h1 class="px-3 text-white" style="text-shadow: 2px 2px 3px #000;">WHAT IS HBB?</h1>
+            </div>
+            <p class="card-text mt-3 arial" style="font-size: 1.2rem;">Halle Bo Bally is an interactive experience that
+              includes not only story book reading, but songs and dance too! HBB story telling sparks imagination, while
+              music and movement help to build coordination and confidence. Kids learn best through play, right?!</p>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#dynamicCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#dynamicCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
-      <div class="col-md-8">
-        <h2>What is it?</h2>
-        <p class="arial">Fun and learning through stories, songs and dances
-          Kids learn best through play! Our interactive storytimes, songs and dances provide a magical experience where
-          kids can learn through having fun. </p>
-        <p class="arial">We read stories that spark their imagination, sing songs that help develop
-          language skills and lead dances that build coordination and confidence.
-        </p>
-
-        <h3>My Mission</h3>
-        <p class="arial">Nurturing little minds and hearts
-          Your child's early years are so important for development. At our storytimes and sessions, we nurture little
-          minds and hearts by fostering a love of reading, music and movement. We help build social skills through group
-          interactions and encourage creativity and self-expression through stories and play.
-        </p>
-
-        <h3>Experience</h3>
-        <p class="arial">Bond with your child through shared experiences
-          There's nothing more special than sharing experiences with your little one. Bringing your child to our
-          storytimes and sessions is a great way for you to bond while they learn and play with other kids. You'll
-          make memories together laughing at the stories, singing along to the songs and dancing to the rhythms.
-        </p>
+      <div class="col-12 col-lg-4 col-md-6 mb-3">
+        <div class="card h-100 shadow" style="background-color: #fdcff1;">
+          <div class="card-body text-center d-flex flex-column justify-content-center">
+            <div class="rounded-circle mx-auto shadow"
+              style="width: 70%; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; background: url('./images/hbb/circle_2.JPG') center/cover; background-blend-mode: darken; background-color: rgba(0, 0, 0, 0.3);">
+              <h1 class="px-3 text-white" style="text-shadow: 2px 2px 3px #000;">MISSION</h1>
+            </div>
+            <p class="card-text mt-3 arial" style="font-size: 1.2rem;">Your child's early years are so important for
+              development. At HBB, we nurture little minds and hearts by fostering a love of reading, music and
+              movement. Our goal is to help build social skills through group interactions and to encourage creativity
+              and self-expression through play.</p>
+          </div>
+        </div>
       </div>
-      <h3>Any Occasion</h3>
-      <p class="arial">Discover new books and find storytime favorites
-        Kids love familiarity and repetition! At our story sessions, we read both new books to spark curiosity as well
-        as storytime favorites your little one will want to hear again and again. We curate a selection of the best
-        children's books to help develop your child's literacy skills in a fun and engaging way.
-      </p>
+      <div class="col-12 col-lg-4 col-md-12 mb-3">
+        <div class="card h-100 shadow" style="background-color: #aae9d6;">
+          <div class="card-body text-center d-flex flex-column justify-content-center">
+            <div class="rounded-circle mx-auto shadow"
+              style="width: 70%; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; background: url('./images/hbb/circle_3.JPG') center/cover; background-blend-mode: darken; background-color: rgba(0, 0, 0, 0.3);">
+              <h1 class="px-3 text-white" style="text-shadow: 2px 2px 3px #000;">AN EXPERIENCE FOR <i>YOUR</i> CHILD…AND YOU!
+              </h1>
+            </div>
+            <p class="card-text mt-3 arial" style="font-size: 1.2rem;">There's nothing more special than sharing
+              experiences with your little one. Bringing your child to HBB is a great way for you to bond, while they
+              learn and play with other kids. You'll make memories laughing together at the stories, singing along to
+              the songs, and dancing to the rhythms!</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
+
+  <!-- Carousel Section -->
+  <section>
+    <div class="text-center">
+
+      <h1>Slideshow</h1>
+    </div>
+    <div class="container mb-4">
+      <div class="row">
+        <div class="col-12 col-md-6 mx-auto"> <!-- Centering the carousel on medium and larger screens -->
+          <div id="dynamicCarousel" class="carousel slide" data-bs-ride="carousel"
+            style="max-width: 800px; margin: auto;">
+            <div class="carousel-inner" id="carouselItems">
+              <!-- Carousel items inserted by JavaScript -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#dynamicCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%);"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#dynamicCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(100%);"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- footer -->
   <footer class="text-center py-3">
@@ -142,7 +197,7 @@
       "./images/hbb/hbb1.JPG",
       "./images/hbb/hbb2.jpeg",
       "./images/hbb/hbb3.jpg",
-      "./images/hbb/hbb13.PNG",
+      // "./images/hbb/hbb13.PNG",
       "./images/hbb/hbb20.PNG",
     ];
 
