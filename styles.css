@@ -3,6 +3,25 @@ body {
   width: 100%;
 }
 
+/* Ensure the navbar is always on top */
+.navbar {
+    z-index: 1030; /* Bootstrap's default z-index for navbar is 1030 */
+}
+
+/* Absolute positioning for mobile screens */
+@media (max-width: 991px) { /* Adjust this breakpoint according to your design */
+    .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    body {
+        padding-top: 70px; /* Adjust this value based on the actual height of your navbar */
+    }
+}
+
 @font-face {
   font-family: 'Linux Libertine';
   src: url('fonts/linlibertine_r.ttf') format('truetype');
@@ -212,4 +231,31 @@ label.error {
   text-decoration: none !important; 
 }
 
+@media screen and (max-width: 683px) {
+  #bobally_princess_separator {
+    display: none;
+  }
+  
+}
 
+.custom-shape-divider-top-1713145993 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1713145993 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 25px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1713145993 .shape-fill {
+  fill: #CBE5FE;
+}

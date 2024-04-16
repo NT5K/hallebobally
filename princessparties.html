@@ -21,6 +21,99 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --elsa-custom-color: #82d4ed;
+      --belle-custom-color: #ffe67f;
+      --ariel-custom-color: #a497c4;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #F2059F, #581B59, #1A7352, #D99923, #0D0D0D);
+      min-height: 100vh;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      
+    }
+
+    .black-button .carousel-control-prev-icon,
+    .black-button .carousel-control-next-icon {
+      background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 8 8"><path d="M4.5 0L3 1.5 5.5 4 3 6.5 4.5 8l4-4-4-4z"/></svg>');
+      filter: none;
+      /* Removes any default filter, ensuring the icon is black */
+    }
+
+    .black-button {
+      color: #000;
+      /* Ensures that the controls' textual descriptions are black, if used */
+    }
+
+    .particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    animation: fly 2s ease-out;
+}
+
+@keyframes fly {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+.star-five {
+      background: transparent;
+      margin: 50px 0;
+      position: relative;
+      display: block;
+      color: #ffffff;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid #ffffff;
+      border-left: 100px solid transparent;
+      /* transform: rotate(35deg) scale(0.1) translate(-1450px, -250px); */
+    }
+    .star-five:before {
+      border-bottom: 80px solid #ffffff;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      background-color: transparent;
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -45px;
+      left: -65px;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+    }
+    .star-five:after {
+      background-color: transparent;
+      position: absolute;
+      display: block;
+      color: #ffffff;
+      top: 3px;
+      left: -105px;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid #ffffff;
+      border-left: 100px solid transparent;
+      transform: rotate(-70deg);
+      content: '';
+    }
+  </style>
 
 </head>
 
@@ -72,13 +165,13 @@
   </nav>
 
   <!-- Header with Logo -->
-  <header class="col-12 bg-light p-3 mb-4 border-bottom text-center">
-    <img src="./content/princess_parties/images/logos/logo_1.png" alt="Princess Parties Cleveland" class="img-fluid"
+  <header class="col-12 bg-light p-3  border-bottom text-center">
+    <img src="./content/princess_parties/images/logos/logo_1.png" alt="Princess Parties Cleveland" class="img-fluid "
       style="max-height: 75px;">
   </header>
 
-  <div class="container my-5">
-    <div class="row justify-content-center">
+  <div class="container-fluid">
+    <div class="row justify-content-center py-5">
       <div class="col-12 col-md-8">
         <h3 class="text-center arial">
           Take your children's event to a whole new level with a visit from a Princess! As a professional actress and
@@ -89,54 +182,132 @@
     </div>
 
     <div class="my-5">
-      <h1 class="text-center mb-3">Meet the Princesses</h1>
-      <div class="row g-4">
+      <h1 class="display-2 text-center mb-3">Meet the Princesses</h1>
+      <div class="row g-4 d-none d-md-flex">
+        <!-- Elsa -->
         <div class="col-lg-4 col-12">
-          <div class="card h-100">
+          <div class="card h-100 p-2" style="background-color: var(--elsa-custom-color, #ffffff);">
             <img src="./content/princess_parties/images/princesses/elsa1.png" class="card-img-top" alt="Princess Elsa"
               style="height: 550px; object-fit: cover; object-position: top center;">
             <div class="card-body text-center">
               <img src="./content/princess_parties/images/logos/princess_elsa_scaled.png" style="max-height: 150px;">
+              <p class="card-text mt-3  arial">
+                Let Elsa bring the magic of Arendelle to your event! With her enchanting voice and captivating presence,
+                she will make your child's dreams come true.
+              </p>
             </div>
           </div>
         </div>
+        <!-- Belle -->
         <div class="col-lg-4 col-12">
-          <div class="card h-100">
+          <div class="card h-100 p-2" style="background-color: var(--belle-custom-color, #ffffff);">
             <img src="./content/princess_parties/images/princesses/belle2.png" class="card-img-top" alt="Princess Belle"
-              style="height: 550px; object-fit: cover; object-position: center center;">
+              style="height: 550px; object-fit: cover; object-position: top center;">
             <div class="card-body text-center">
               <img src="./content/princess_parties/images/logos/princess_belle.png" style="max-height: 150px;">
+              <p class="card-text mt-3 arial">
+                Join Belle for a magical party full of fun and adventure. Experience the enchantment of Arendelle and
+                create memories that will last forever.
+              </p>
             </div>
           </div>
         </div>
+
+        <!-- Ariel -->
         <div class="col-lg-4 col-12">
-          <div class="card h-100">
+          <div class="card h-100 p-2 shadow" style="background-color: var(--ariel-custom-color, #ffffff);">
             <img src="./content/princess_parties/images/princesses/ariel1.png" class="card-img-top" alt="Princess Ariel"
               style="height: 550px; object-fit: cover; object-position: top center;">
             <div class="card-body text-center">
-              <img src="./content/princess_parties/images/logos/princess_ariel.jpeg" style="max-height: 150px;">
+              <img src="./content/princess_parties/images/logos/princess_ariel.png" style="max-height: 150px;">
+              <p class="card-text mt-3 arial">
+                Join Ariel for a magical party full of fun and adventure. Experience the enchantment of Arendelle and
+                create memories that will last forever.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- princess carousel for mobile -->
+      <div class="row g-4 d-md-none"> <!-- Only visible on mobile and smaller devices -->
+        <div id="princessCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Elsa Card -->
+            <div class="carousel-item active " data-bs-interval="7000">
+              <div class="card h-100 p-2" style="background-color: var(--elsa-custom-color, #ffffff);">
+                <img src="./content/princess_parties/images/princesses/elsa1.png" class="card-img-top"
+                  alt="Princess Elsa" style="height: 550px; object-fit: cover; object-position: top center;">
+                <div class="card-body text-center">
+                  <img src="./content/princess_parties/images/logos/princess_elsa_scaled.png"
+                    style="max-height: 150px;">
+                  <p class="card-text mt-3 arial">
+                    Let Elsa bring the magic of Arendelle to your event! With her enchanting voice and captivating
+                    presence, she will make your child's dreams come true.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Belle Card -->
+            <div class="carousel-item" data-bs-interval="7000">
+              <div class="card h-100 p-2" style="background-color: var(--belle-custom-color, #ffffff);">
+                <img src="./content/princess_parties/images/princesses/belle2.png" class="card-img-top"
+                  alt="Princess Belle" style="height: 550px; object-fit: cover; object-position: top center;">
+                <div class="card-body text-center">
+                  <img src="./content/princess_parties/images/logos/princess_belle.png" style="max-height: 150px;">
+                  <p class="card-text mt-3 arial">
+                    Join Belle for a magical party full of fun and adventure. Experience the enchantment of Arendelle
+                    and create memories that will last forever.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Ariel Card -->
+            <div class="carousel-item" data-bs-interval="7000">
+              <div class="card h-100 p-2 shadow" style="background-color: var(--ariel-custom-color, #ffffff);">
+                <img src="./content/princess_parties/images/princesses/ariel1.png" class="card-img-top"
+                  alt="Princess Ariel" style="height: 550px; object-fit: cover; object-position: top center;">
+                <div class="card-body text-center">
+                  <img src="./content/princess_parties/images/logos/princess_ariel.png" style="max-height: 150px;">
+                  <p class="card-text mt-3 arial">
+                    Join Ariel for a magical party full of fun and adventure. Experience the enchantment of Arendelle
+                    and create memories that will last forever.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#princessCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#princessCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+
       <div class="text-center my-5">
-        <h2>What Past Clients Say</h2>
+        <h2 class="display-5">What Past Clients Say</h2>
         <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <blockquote class="blockquote">
-                <p class="mb-3">"Halle made my daughter's birthday so memorable! She has a gift of making all the
+                <p class="lead mb-3">"Halle made my daughter's birthday so memorable! She has a gift of making all the
                   children
                   in attendance feel comfortable and special. She runs a party so seamlessly, from story time, to
                   singing,
-                  dancing and playing. I have a feeling we will be calling Halle for many more events in the future!"</p>
+                  dancing and playing. I have a feeling we will be calling Halle for many more events in the future!"
+                </p>
                 <footer class="blockquote-footer">Happy Parent</footer>
               </blockquote>
             </div>
             <div class="carousel-item">
               <blockquote class="blockquote">
-                <p class="mb-3">"Halle is a phenomenal princess. We have hired her for two parties. She came once as Elsa
+                <p class="mb-3">"Halle is a phenomenal princess. We have hired her for two parties. She came once as
+                  Elsa
                   and once as Belle. She was wonderful for both! She sang songs, she did crafts with our kids and the
                   children were blown away when she made her entrance! We are bringing her back again as Arielle, and
                   hoping our kids never figure out she's the same person!"</p>
@@ -158,25 +329,29 @@
       </div>
 
       <div class="my-5">
-        <h2 class="text-center mb-3">Gallery</h2>
+        <h2 class="display-5 text-center mb-3">Gallery</h2>
         <div class="row g-3">
           <div class="col-12 col-md-6 col-lg-3">
-            <img src="./content/princess_parties/images/gallery/princess1.png" class="img-fluid rounded" alt="Event Image 1">
+            <img src="./content/princess_parties/images/gallery/princess1.png" class="img-fluid rounded"
+              alt="Event Image 1">
           </div>
           <div class="col-12 col-md-6 col-lg-3">
-            <img src="./content/princess_parties/images/gallery/princess4.png" class="img-fluid rounded" alt="Event Image 2">
+            <img src="./content/princess_parties/images/gallery/princess4.png" class="img-fluid rounded"
+              alt="Event Image 2">
           </div>
           <div class="col-12 col-md-6 col-lg-3">
-            <img src="./content/princess_parties/images/gallery/princess5.png" class="img-fluid rounded" alt="Event Image 3">
+            <img src="./content/princess_parties/images/gallery/princess5.png" class="img-fluid rounded"
+              alt="Event Image 3">
           </div>
           <div class="col-12 col-md-6 col-lg-3">
-            <img src="./content/princess_parties/images/gallery/princess6.png" class="img-fluid rounded" alt="Event Image 4">
+            <img src="./content/princess_parties/images/gallery/princess6.png" class="img-fluid rounded"
+              alt="Event Image 4">
           </div>
         </div>
       </div>
 
       <div class="text-center my-5">
-        <h2>Videos</h2>
+        <h2 class="display-5 text-center mb-3">Videos</h2>
         <!-- Placeholder for videos, replace src with actual video URLs -->
         <div class="row justify-content-center">
           <div class="col-12 col-md-8">
@@ -212,29 +387,63 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
-    <script>
-      const imagePaths = [
-        "./images/hbb/hbb1.JPG",
-        "./images/hbb/hbb2.jpeg",
-        "./images/hbb/hbb3.jpg",
-        // "./images/hbb/hbb13.PNG",
-        "./images/hbb/hbb20.PNG",
-      ];
+<!-- 
+      <script>
+        document.getElementById('magicContainer').addEventListener('mousemove', function(e) {
+    let particle = document.createElement('div');
+    particle.className = 'particle';
+    document.body.appendChild(particle);
 
-      const carouselItemsContainer = document.getElementById('carouselItems');
+    particle.style.left = `${e.pageX}px`;
+    particle.style.top = `${e.pageY}px`;
 
-      imagePaths.forEach((path, index) => {
-        const div = document.createElement('div');
-        div.className = `carousel-item ${index === 0 ? 'active' : ''}`;
-        const img = document.createElement('img');
-        img.src = path;
-        img.className = 'd-block w-100';
-        img.alt = `Slide ${index + 1}`;
+    setTimeout(function() {
+        particle.remove();
+    }, 2000); // Matches the animation duration
+});
+      </script> -->
 
-        div.appendChild(img);
-        carouselItemsContainer.appendChild(div);
-      });
-    </script>
+      <script>
+        window.addEventListener('mousemove', function (e) {
+          //trail
+          [.7, .9, .8, .5, .25, .6, .4, .3, .2].forEach(function (i) {
+            var j = (1 - i) * 50;
+            var elem = document.createElement('div');
+            var size = Math.ceil(Math.random() * 10 * i) + 'px';
+      
+            //ramdom number between 0 and 1
+            var precision = 50; // 2 decimals
+            var randomnum = Math.floor(Math.random() * (10 * precision - 1 * precision) + 1 * precision) / (1*precision);   
+            var rOpacity = randomnum/10;
+            var rSize = randomnum/120;
+      
+            elem.style.position = 'fixed';
+            elem.classList.add('star-five')
+            elem.style.zIndex = 6;
+            elem.style.transform = `rotate(35deg) scale(${rSize})`
+            //elem.style.transform = `rotate(35deg) scale(${rSize}) translate(-1450px, -250px)`
+            elem.style.top = e.pageY - window.scrollY + Math.round(Math.random() * j - j / 2) - 100 + 'px';
+            elem.style.left = e.pageX + Math.round(Math.random() * j - j / 2) - 100 + 'px';
+            //elem.style.width = size;
+            //console.log(rSize);
+            elem.style.opacity = rOpacity;
+            //elem.style.height = size;
+            // elem.style.background = 'hsla(' +
+            //   Math.round(Math.random() * 160) + ', ' +
+            //   '60%, ' +
+            //   '100%, ' +
+            //   i + ')';
+            //elem.style.borderRadius = size;
+            elem.style.pointerEvents = 'none';
+            document.body.appendChild(elem);
+            window.setTimeout(function () {
+              document.body.removeChild(elem);
+            }, Math.round(Math.random() * i * 1000));
+          });
+          ////
+          
+        }, false);
+      </script>
 </body>
 
 </html>
