@@ -22,56 +22,22 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
   <style>
-    :root {
+    /* :root {
       --elsa-custom-color: #82d4ed;
       --belle-custom-color: #ffe67f;
       --ariel-custom-color: #a497c4;
-    }
+    } */
 
     body {
-      background: linear-gradient(to bottom, #F2059F, #581B59, #1A7352, #D99923, #0D0D0D);
+      /* background: linear-gradient(to bottom, #F2059F, #581B59, #1A7352, #D99923, #0D0D0D); */
+      background-color: #f7e6ee;
       min-height: 100vh;
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      
-    }
-
-    .black-button .carousel-control-prev-icon,
-    .black-button .carousel-control-next-icon {
-      background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 8 8"><path d="M4.5 0L3 1.5 5.5 4 3 6.5 4.5 8l4-4-4-4z"/></svg>');
-      filter: none;
-      /* Removes any default filter, ensuring the icon is black */
-    }
-
-    .black-button {
       color: #000;
-      /* Ensures that the controls' textual descriptions are black, if used */
+      /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+
     }
 
-    .particle {
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 1000;
-    animation: fly 2s ease-out;
-}
-
-@keyframes fly {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(0);
-        opacity: 0;
-    }
-}
-
-
-.star-five {
+    .star-five {
       background: transparent;
       margin: 50px 0;
       position: relative;
@@ -84,6 +50,7 @@
       border-left: 100px solid transparent;
       /* transform: rotate(35deg) scale(0.1) translate(-1450px, -250px); */
     }
+
     .star-five:before {
       border-bottom: 80px solid #ffffff;
       border-left: 30px solid transparent;
@@ -98,6 +65,7 @@
       content: '';
       transform: rotate(-35deg);
     }
+
     .star-five:after {
       background-color: transparent;
       position: absolute;
@@ -288,49 +256,87 @@
         </div>
       </div>
 
-
+      <!-- testimonials -->
       <div class="text-center my-5">
         <h2 class="display-5">What Past Clients Say</h2>
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <blockquote class="blockquote">
-                <p class="lead mb-3">"Halle made my daughter's birthday so memorable! She has a gift of making all the
-                  children
-                  in attendance feel comfortable and special. She runs a party so seamlessly, from story time, to
-                  singing,
-                  dancing and playing. I have a feeling we will be calling Halle for many more events in the future!"
-                </p>
-                <footer class="blockquote-footer">Happy Parent</footer>
-              </blockquote>
-            </div>
-            <div class="carousel-item">
-              <blockquote class="blockquote">
-                <p class="mb-3">"Halle is a phenomenal princess. We have hired her for two parties. She came once as
-                  Elsa
-                  and once as Belle. She was wonderful for both! She sang songs, she did crafts with our kids and the
-                  children were blown away when she made her entrance! We are bringing her back again as Arielle, and
-                  hoping our kids never figure out she's the same person!"</p>
-                <footer class="blockquote-footer">Delighted Mom</footer>
-              </blockquote>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6"> <!-- Adjusted width for better centering -->
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <blockquote class="blockquote">
+                    <p class="lead mb-3">"Halle made my daughter's birthday so memorable! She has a gift of making all
+                      the
+                      children in attendance feel comfortable and special. She runs a party so seamlessly, from story
+                      time, to
+                      singing, dancing and playing. I have a feeling we will be calling Halle for many more events in
+                      the future!"
+                    </p>
+                    <footer class="blockquote-footer">Happy Parent</footer>
+                  </blockquote>
+                </div>
+                <div class="carousel-item">
+                  <blockquote class="blockquote">
+                    <p class="mb-3">"Halle is a phenomenal princess. We have hired her for two parties. She came once as
+                      Elsa and once as Belle. She was wonderful for both! She sang songs, she did crafts with our kids
+                      and the
+                      children were blown away when she made her entrance! We are bringing her back again as Arielle,
+                      and
+                      hoping our kids never figure out she's the same person!"</p>
+                    <footer class="blockquote-footer">Delighted Mom</footer>
+                  </blockquote>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-            data-bs-slide="prev">
+        </div>
+      </div>
+
+
+      <div class="my-5">
+        <h2 class="display-5 text-center mb-3">Gallery</h2>
+        <!-- Carousel for mobile screens -->
+        <div id="galleryCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./content/princess_parties/images/gallery/princess1.png" class="d-block w-100 img-fluid rounded"
+                alt="Event Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="./content/princess_parties/images/gallery/princess4.png" class="d-block w-100 img-fluid rounded"
+                alt="Event Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="./content/princess_parties/images/gallery/princess5.png" class="d-block w-100 img-fluid rounded"
+                alt="Event Image 3">
+            </div>
+            <div class="carousel-item">
+              <img src="./content/princess_parties/images/gallery/princess6.png" class="d-block w-100 img-fluid rounded"
+                alt="Event Image 4">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-            data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
 
-      <div class="my-5">
-        <h2 class="display-5 text-center mb-3">Gallery</h2>
-        <div class="row g-3">
+        <!-- Grid for non-mobile screens -->
+        <div class="row g-3 d-none d-md-flex">
           <div class="col-12 col-md-6 col-lg-3">
             <img src="./content/princess_parties/images/gallery/princess1.png" class="img-fluid rounded"
               alt="Event Image 1">
@@ -349,6 +355,7 @@
           </div>
         </div>
       </div>
+
 
       <div class="text-center my-5">
         <h2 class="display-5 text-center mb-3">Videos</h2>
@@ -387,7 +394,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
-<!-- 
+    <!-- 
       <script>
         document.getElementById('magicContainer').addEventListener('mousemove', function(e) {
     let particle = document.createElement('div');
@@ -403,47 +410,47 @@
 });
       </script> -->
 
-      <script>
-        window.addEventListener('mousemove', function (e) {
-          //trail
-          [.7, .9, .8, .5, .25, .6, .4, .3, .2].forEach(function (i) {
-            var j = (1 - i) * 50;
-            var elem = document.createElement('div');
-            var size = Math.ceil(Math.random() * 10 * i) + 'px';
-      
-            //ramdom number between 0 and 1
-            var precision = 50; // 2 decimals
-            var randomnum = Math.floor(Math.random() * (10 * precision - 1 * precision) + 1 * precision) / (1*precision);   
-            var rOpacity = randomnum/10;
-            var rSize = randomnum/120;
-      
-            elem.style.position = 'fixed';
-            elem.classList.add('star-five')
-            elem.style.zIndex = 6;
-            elem.style.transform = `rotate(35deg) scale(${rSize})`
-            //elem.style.transform = `rotate(35deg) scale(${rSize}) translate(-1450px, -250px)`
-            elem.style.top = e.pageY - window.scrollY + Math.round(Math.random() * j - j / 2) - 100 + 'px';
-            elem.style.left = e.pageX + Math.round(Math.random() * j - j / 2) - 100 + 'px';
-            //elem.style.width = size;
-            //console.log(rSize);
-            elem.style.opacity = rOpacity;
-            //elem.style.height = size;
-            // elem.style.background = 'hsla(' +
-            //   Math.round(Math.random() * 160) + ', ' +
-            //   '60%, ' +
-            //   '100%, ' +
-            //   i + ')';
-            //elem.style.borderRadius = size;
-            elem.style.pointerEvents = 'none';
-            document.body.appendChild(elem);
-            window.setTimeout(function () {
-              document.body.removeChild(elem);
-            }, Math.round(Math.random() * i * 1000));
-          });
-          ////
-          
-        }, false);
-      </script>
+    <script>
+      window.addEventListener('mousemove', function (e) {
+        //trail
+        [.7, .9, .8, .5, .25, .6, .4, .3, .2].forEach(function (i) {
+          var j = (1 - i) * 50;
+          var elem = document.createElement('div');
+          var size = Math.ceil(Math.random() * 10 * i) + 'px';
+
+          //ramdom number between 0 and 1
+          var precision = 50; // 2 decimals
+          var randomnum = Math.floor(Math.random() * (10 * precision - 1 * precision) + 1 * precision) / (1 * precision);
+          var rOpacity = randomnum / 10;
+          var rSize = randomnum / 120;
+
+          elem.style.position = 'fixed';
+          elem.classList.add('star-five')
+          elem.style.zIndex = 6;
+          elem.style.transform = `rotate(35deg) scale(${rSize})`
+          //elem.style.transform = `rotate(35deg) scale(${rSize}) translate(-1450px, -250px)`
+          elem.style.top = e.pageY - window.scrollY + Math.round(Math.random() * j - j / 2) - 100 + 'px';
+          elem.style.left = e.pageX + Math.round(Math.random() * j - j / 2) - 100 + 'px';
+          //elem.style.width = size;
+          //console.log(rSize);
+          elem.style.opacity = rOpacity;
+          //elem.style.height = size;
+          // elem.style.background = 'hsla(' +
+          //   Math.round(Math.random() * 160) + ', ' +
+          //   '60%, ' +
+          //   '100%, ' +
+          //   i + ')';
+          //elem.style.borderRadius = size;
+          elem.style.pointerEvents = 'none';
+          document.body.appendChild(elem);
+          window.setTimeout(function () {
+            document.body.removeChild(elem);
+          }, Math.round(Math.random() * i * 1000));
+        });
+        ////
+
+      }, false);
+    </script>
 </body>
 
 </html>
