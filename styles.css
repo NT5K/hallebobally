@@ -90,7 +90,7 @@ body {
 
 }
 
-.bobally-section {
+.boballe-section {
   background-color: #cbe5fe;
   /* background-color: #2b9abf; */
 }
@@ -232,7 +232,7 @@ label.error {
 }
 
 @media screen and (max-width: 683px) {
-  #bobally_princess_separator {
+  #boballe_princess_separator {
     display: none;
   }
   

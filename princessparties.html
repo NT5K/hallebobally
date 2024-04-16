@@ -15,27 +15,31 @@
   <meta name="description"
     content="Halle St. John offers enchanting princess parties and engaging story time sessions in Cleveland. Discover professional vocalist services for any event.">
   <meta name="keywords"
-    content="princess parties Cleveland, story time Cleveland, vocalist for hire, children's party entertainment, Cleveland events, Cleveland princess parties, Cleveland story time">
+    content="princess parties Cleveland, story time Cleveland, vocalist for hire, children's party entertainment, Cleveland events, Cleveland princess parties, Cleveland story time, Halle Bo Balle, Halle Bo Bally, princess parties near me, story time near me">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* :root {
-      --elsa-custom-color: #82d4ed;
-      --belle-custom-color: #ffe67f;
-      --ariel-custom-color: #a497c4;
-    } */
+    :root {
+      /* --elsa-custom-color: #82d4ed; */
+      /* --belle-custom-color: #ffe67f; */
+      /* --ariel-custom-color: #a497c4; */
+      --princess-gold-color: #ffe888;
+      --princess-pink-color: #f7e6ee;
+    }
 
     body {
       /* background: linear-gradient(to bottom, #F2059F, #581B59, #1A7352, #D99923, #0D0D0D); */
-      background-color: #f7e6ee;
+      background-color: var(--princess-pink-color);
       min-height: 100vh;
       color: #000;
       /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
 
     }
+
+
 
     .star-five {
       background: transparent;
@@ -81,6 +85,19 @@
       transform: rotate(-70deg);
       content: '';
     }
+
+    @font-face {
+      font-family: 'Gioviale';
+      src: url('fonts/HLT_Gioviale.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .gioviale {
+      font-family: 'Gioviale', sans-serif;
+      color: var(--princess-gold-color);
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+    }
   </style>
 
 </head>
@@ -111,7 +128,7 @@
               Services
             </a>
             <ul class="dropdown-menu text-decoration-none" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="hallebobally.html">Hally Bo Bally</a></li>
+              <li><a class="dropdown-item" href="halleboballe.html">Hally Bo Balle</a></li>
               <li><a class="dropdown-item" href="princessparties.html">Princess Parties</a></li>
               <!-- <li><a class="dropdown-item" href="#">Story Time</a></li> -->
               <li><a class="dropdown-item" href="#">Vocalist</a></li>
@@ -134,27 +151,40 @@
 
   <!-- Header with Logo -->
   <header class="col-12 bg-light p-3  border-bottom text-center">
-    <img src="./content/princess_parties/images/logos/logo_1.png" alt="Princess Parties Cleveland" class="img-fluid "
-      style="max-height: 75px;">
+    <!-- <img src="./content/princess_parties/images/logos/logo_1.png" alt="Princess Parties Cleveland" class="img-fluid "
+      style="max-height: 75px;"> -->
+    <h1 class="display-1 gioviale">Princess Parties</h1>
   </header>
 
   <div class="container-fluid">
     <div class="row justify-content-center py-5">
-      <div class="col-12 col-md-8">
-        <h3 class="text-center arial">
-          Take your children's event to a whole new level with a visit from a Princess! As a professional actress and
-          vocalist, I bring the magic to life by truly becoming the character. Completely customizable to your specific
-          needs, I will partner with you to turn your event's vision into a reality!
-        </h3>
+      <div class="col-12 col-md-10">
+        <h1 class="display-2 text-center arial">
+          Take your children's event to a whole new
+          level with a visit from a Princess!
+        </h1>
+      </div>
+      <div class="col-12 col-md-8 mt-0">
+        <h2 class="text-center arial">
+          As a professional actress and vocalist, I bring the magic to life by truly becoming the character.
+        </h2>
+        <h2 class="text-center arial">
+          Completely
+          customizable to your specific needs, I will partner with you to turn your event's vision into a reality!
+        </h2>
+        <!-- button -->
+        <div class="text-center mt-5">
+          <button class="btn btn-light btn-lg text-dark m-1 arial"><strong>Contact Now</strong></button>
+        </div>
       </div>
     </div>
 
     <div class="my-5">
-      <h1 class="display-2 text-center mb-3">Meet the Princesses</h1>
-      <div class="row g-4 d-none d-md-flex">
+      <h1 class="display-2 text-center mb-3 gioviale">Meet the Princesses</h1>
+      <div class="row g-4 px-md-5 d-none d-md-flex">
         <!-- Elsa -->
         <div class="col-lg-4 col-12">
-          <div class="card h-100 p-2 shadow" style="background-color: var(--elsa-custom-color, #ffffff);">
+          <div class="card h-100 shadow" style="background-color: var(--elsa-custom-color, #ffffff);">
             <img src="./content/princess_parties/images/princesses/elsa1.png" class="card-img-top" alt="Princess Elsa"
               style="height: 550px; object-fit: cover; object-position: top center;">
             <div class="card-body text-center">
@@ -168,7 +198,7 @@
         </div>
         <!-- Belle -->
         <div class="col-lg-4 col-12">
-          <div class="card h-100 p-2 shadow" style="background-color: var(--belle-custom-color, #ffffff);">
+          <div class="card h-100 shadow" style="background-color: var(--belle-custom-color, #ffffff);">
             <img src="./content/princess_parties/images/princesses/belle2.png" class="card-img-top" alt="Princess Belle"
               style="height: 550px; object-fit: cover; object-position: top center;">
             <div class="card-body text-center">
@@ -183,7 +213,7 @@
 
         <!-- Ariel -->
         <div class="col-lg-4 col-12">
-          <div class="card h-100 p-2 shadow" style="background-color: var(--ariel-custom-color, #ffffff);">
+          <div class="card h-100 shadow" style="background-color: var(--ariel-custom-color, #ffffff);">
             <img src="./content/princess_parties/images/princesses/ariel1.png" class="card-img-top" alt="Princess Ariel"
               style="height: 550px; object-fit: cover; object-position: top center;">
             <div class="card-body text-center">
@@ -203,7 +233,7 @@
           <div class="carousel-inner">
             <!-- Elsa Card -->
             <div class="carousel-item active " data-bs-interval="7000">
-              <div class="card h-100 p-2 shadow" style="background-color: var(--elsa-custom-color, #ffffff);">
+              <div class="card h-100 shadow" style="background-color: var(--elsa-custom-color, #ffffff);">
                 <img src="./content/princess_parties/images/princesses/elsa1.png" class="card-img-top"
                   alt="Princess Elsa" style="height: 550px; object-fit: cover; object-position: top center;">
                 <div class="card-body text-center">
@@ -218,7 +248,7 @@
             </div>
             <!-- Belle Card -->
             <div class="carousel-item" data-bs-interval="7000">
-              <div class="card h-100 p-2 shadow" style="background-color: var(--belle-custom-color, #ffffff);">
+              <div class="card h-100 shadow" style="background-color: var(--belle-custom-color, #ffffff);">
                 <img src="./content/princess_parties/images/princesses/belle2.png" class="card-img-top"
                   alt="Princess Belle" style="height: 550px; object-fit: cover; object-position: top center;">
                 <div class="card-body text-center">
@@ -232,7 +262,7 @@
             </div>
             <!-- Ariel Card -->
             <div class="carousel-item" data-bs-interval="7000">
-              <div class="card h-100 p-2 shadow" style="background-color: var(--ariel-custom-color, #ffffff);">
+              <div class="card h-100 shadow" style="background-color: var(--ariel-custom-color, #ffffff);">
                 <img src="./content/princess_parties/images/princesses/ariel1.png" class="card-img-top"
                   alt="Princess Ariel" style="height: 550px; object-fit: cover; object-position: top center;">
                 <div class="card-body text-center">
@@ -258,12 +288,12 @@
 
       <!-- testimonials -->
       <div class="text-center my-5">
-        <h2 class="display-5">What Past Clients Say</h2>
+        <h1 class="display-2 gioviale">What Past Clients Say</h1>
         <div class="row justify-content-center">
           <div class="col-12 col-md-8 col-lg-6"> <!-- Adjusted width for better centering -->
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active" data-bs-interval="10000">
                   <blockquote class="blockquote">
                     <p class="lead mb-3">"Halle made my daughter's birthday so memorable! She has a gift of making all
                       the
@@ -275,7 +305,7 @@
                     <footer class="blockquote-footer">Happy Parent</footer>
                   </blockquote>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="10000">
                   <blockquote class="blockquote">
                     <p class="mb-3">"Halle is a phenomenal princess. We have hired her for two parties. She came once as
                       Elsa and once as Belle. She was wonderful for both! She sang songs, she did crafts with our kids
@@ -304,25 +334,25 @@
 
 
       <div class="my-5">
-        <h2 class="display-5 text-center mb-3">Gallery</h2>
+        <h1 class="display-1 text-center mb-3 gioviale">Gallery</h1>
         <!-- Carousel for mobile screens -->
         <div id="galleryCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./content/princess_parties/images/gallery/princess1.png" class="d-block w-100 img-fluid rounded shadow"
-                alt="Event Image 1">
+            <div class="carousel-item active" data-bs-interval="6000">
+              <img src="./content/princess_parties/images/gallery/princess1.png"
+                class="d-block w-100 img-fluid rounded shadow" alt="Event Image 1">
             </div>
-            <div class="carousel-item">
-              <img src="./content/princess_parties/images/gallery/princess4.png" class="d-block w-100 img-fluid rounded shadow"
-                alt="Event Image 2">
+            <div class="carousel-item" data-bs-interval="6000">
+              <img src="./content/princess_parties/images/gallery/princess4.png"
+                class="d-block w-100 img-fluid rounded shadow" alt="Event Image 2">
             </div>
-            <div class="carousel-item">
-              <img src="./content/princess_parties/images/gallery/princess5.png" class="d-block w-100 img-fluid rounded shadow"
-                alt="Event Image 3">
+            <div class="carousel-item" data-bs-interval="6000">
+              <img src="./content/princess_parties/images/gallery/princess5.png"
+                class="d-block w-100 img-fluid rounded shadow" alt="Event Image 3">
             </div>
-            <div class="carousel-item">
-              <img src="./content/princess_parties/images/gallery/princess6.png" class="d-block w-100 img-fluid rounded shadow"
-                alt="Event Image 4">
+            <div class="carousel-item" data-bs-interval="6000">
+              <img src="./content/princess_parties/images/gallery/princess6.png"
+                class="d-block w-100 img-fluid rounded shadow" alt="Event Image 4">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
@@ -358,19 +388,20 @@
 
 
       <div class="text-center my-5">
-        <h2 class="display-5 text-center mb-3">Videos</h2>
+        <h1 class="display-1 text-center mb-3 gioviale">Videos</h1>
         <!-- Placeholder for videos, replace src with actual video URLs -->
         <div class="row justify-content-center">
           <div class="col-12 col-md-8">
-            <video controls class="w-100 shadow">
+            <video controls class="w-100 shadow" style="max-width: 900px;">
               <source src="./content/princess_parties/videos/video_1.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
+
         </div>
-        <div class="row mt-5 justify-content-center">
-          <div class="col-12 col-md-6">
-            <video controls class="w-100 shadow">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-3">
+            <video controls class="w-100 shadow w-md-25">
               <source src="./content/princess_parties/videos/video_2.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
