@@ -26,7 +26,7 @@
       /* --elsa-custom-color: #82d4ed; */
       /* --belle-custom-color: #ffe67f; */
       /* --ariel-custom-color: #a497c4; */
-      --princess-gold-color: #ffe888;
+      --princess-gold-color: #f9df75;
       --princess-pink-color: #f7e6ee;
     }
 
@@ -96,7 +96,15 @@
     .gioviale {
       font-family: 'Gioviale', sans-serif;
       color: var(--princess-gold-color);
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+      text-shadow: 2px 1px 1px black;
+      font-size: 6rem;
+    }
+    @media screen and (max-width: 768px) {
+      .gioviale {
+        font-size: 4rem;
+        padding-top: 5px;
+      }
+      
     }
   </style>
 
@@ -149,36 +157,34 @@
     </div>
   </nav>
 
+
+
   <!-- Header with Logo -->
-  <header class="col-12 bg-light p-3  border-bottom text-center">
-    <!-- <img src="./content/princess_parties/images/logos/logo_1.png" alt="Princess Parties Cleveland" class="img-fluid "
-      style="max-height: 75px;"> -->
+  <header class="col-12 bg-light mb-4 border-bottom text-center">
     <h1 class="display-1 gioviale">Princess Parties</h1>
   </header>
-
-  <div class="container-fluid">
-    <div class="row justify-content-center py-5">
-      <div class="col-12 col-md-10">
-        <h1 class="display-2 text-center arial">
-          Take your children's event to a whole new
-          level with a visit from a Princess!
-        </h1>
-      </div>
-      <div class="col-12 col-md-8 mt-0">
-        <h2 class="text-center arial">
-          As a professional actress and vocalist, I bring the magic to life by truly becoming the character.
-        </h2>
-        <h2 class="text-center arial">
-          Completely
-          customizable to your specific needs, I will partner with you to turn your event's vision into a reality!
-        </h2>
-        <!-- button -->
-        <div class="text-center mt-5">
-          <button class="btn btn-light btn-lg text-dark m-1 arial"><strong>Contact Now</strong></button>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+      <div class="px-4 py-5 my-5 text-center">
+        <!-- <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+        <h1 class="display-5 fw-bold">Take your children's event to a whole new
+          level with a visit from a Princess!</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4 arial">As a professional actress and vocalist, I bring the magic to life by truly becoming the character.</p>
+          <p class="lead mb-4 arial">Completely
+            customizable to your specific needs, I will partner with you to turn your event's vision into a reality!</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  
 
+   
     <div class="my-5">
       <h1 class="display-2 text-center mb-3 gioviale">Meet the Princesses</h1>
       <div class="row g-4 px-md-5 d-none d-md-flex">
