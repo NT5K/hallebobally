@@ -99,11 +99,27 @@
       text-shadow: 2px 1px 1px black;
       font-size: 6rem;
     }
+
     @media screen and (max-width: 768px) {
       .gioviale {
         font-size: 4rem;
       }
-      
+
+    }
+
+    .video-responsive {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 aspect ratio */
+      height: 0;
+    }
+
+    .video-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   </style>
 
@@ -162,77 +178,84 @@
   <header class="col-12 bg-light pt-3 border-bottom text-center">
     <h1 class="display-1 gioviale">Princess Parties</h1>
   </header>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-8">
-      <div class="px-4 py-5 my-5 text-center">
-        <!-- <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
-        <h1 class="display-5 fw-bold">Take your children's event to a whole new
-          level with a visit from a Princess!</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4 arial">As a professional actress and vocalist, I bring the magic to life by truly becoming the character.</p>
-          <p class="lead mb-4 arial">Completely
-            customizable to your specific needs, I will partner with you to turn your event's vision into a reality!</p>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
+
+  <div class="container my-5" style="background-color: white;">
+    <div class="row p-4 pb-0  align-items-center rounded-3 border shadow-lg pb-3">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1">Take your children's event to a whole new level with a visit from a Princess!
+        </h1>
+        <p class="lead arial">As a professional actress and vocalist, I bring the magic to life by truly becoming
+          the character.</p>
+        <p class="arial">Completely customizable to your specific needs, I will partner with you to turn your
+          event's vision into a reality!</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold arial">Contact Me</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4 arial">Meet the princesses!</button>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4  text-center">
+        <img class="rounded-3 img-fluid" src="./content/princess_parties/images/gallery/princess_hero.png" alt="" style="max-height: 500px;">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="my-5">
+    <h1 class="display-2 text-center mb-3 gioviale">Meet the Princesses</h1>
+    <div class="row g-4 px-md-5 d-none d-md-flex">
+      <!-- Elsa -->
+      <div class="col-lg-4 col-12">
+        <div class="card h-100 shadow" style="background-color: var(--elsa-custom-color, #ffffff);">
+          <img src="./content/princess_parties/images/princesses/elsa1.png" class="card-img-top" alt="Princess Elsa"
+            style="height: 550px; object-fit: cover; object-position: top center;">
+          <div class="card-body text-center">
+            <img src="./content/princess_parties/images/logos/princess_elsa_scaled.png" style="max-height: 150px;">
+            <p class="card-text mt-3  arial">
+              Let Elsa bring the magic of Arendelle to your event! With her enchanting voice and captivating presence,
+              she will make your child's dreams come true.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Belle -->
+      <div class="col-lg-4 col-12">
+        <div class="card h-100 shadow" style="background-color: var(--belle-custom-color, #ffffff);">
+          <img src="./content/princess_parties/images/princesses/belle2.png" class="card-img-top" alt="Princess Belle"
+            style="height: 550px; object-fit: cover; object-position: top center;">
+          <div class="card-body text-center">
+            <img src="./content/princess_parties/images/logos/princess_belle.png" style="max-height: 150px;">
+            <p class="card-text mt-3 arial">
+              Join Belle for a magical party full of fun and adventure. Experience the enchantment of Arendelle and
+              create memories that will last forever.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ariel -->
+      <div class="col-lg-4 col-12">
+        <div class="card h-100 shadow" style="background-color: var(--ariel-custom-color, #ffffff);">
+          <img src="./content/princess_parties/images/princesses/ariel1.png" class="card-img-top" alt="Princess Ariel"
+            style="height: 550px; object-fit: cover; object-position: top center;">
+          <div class="card-body text-center">
+            <img src="./content/princess_parties/images/logos/princess_ariel.png" style="max-height: 150px;">
+            <p class="card-text mt-3 arial">
+              Join Ariel for a magical party full of fun and adventure. Experience the enchantment of Arendelle and
+              create memories that will last forever.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  
 
-   
-    <div class="my-5">
-      <h1 class="display-2 text-center mb-3 gioviale">Meet the Princesses</h1>
-      <div class="row g-4 px-md-5 d-none d-md-flex">
-        <!-- Elsa -->
-        <div class="col-lg-4 col-12">
-          <div class="card h-100 shadow" style="background-color: var(--elsa-custom-color, #ffffff);">
-            <img src="./content/princess_parties/images/princesses/elsa1.png" class="card-img-top" alt="Princess Elsa"
-              style="height: 550px; object-fit: cover; object-position: top center;">
-            <div class="card-body text-center">
-              <img src="./content/princess_parties/images/logos/princess_elsa_scaled.png" style="max-height: 150px;">
-              <p class="card-text mt-3  arial">
-                Let Elsa bring the magic of Arendelle to your event! With her enchanting voice and captivating presence,
-                she will make your child's dreams come true.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Belle -->
-        <div class="col-lg-4 col-12">
-          <div class="card h-100 shadow" style="background-color: var(--belle-custom-color, #ffffff);">
-            <img src="./content/princess_parties/images/princesses/belle2.png" class="card-img-top" alt="Princess Belle"
-              style="height: 550px; object-fit: cover; object-position: top center;">
-            <div class="card-body text-center">
-              <img src="./content/princess_parties/images/logos/princess_belle.png" style="max-height: 150px;">
-              <p class="card-text mt-3 arial">
-                Join Belle for a magical party full of fun and adventure. Experience the enchantment of Arendelle and
-                create memories that will last forever.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Ariel -->
-        <div class="col-lg-4 col-12">
-          <div class="card h-100 shadow" style="background-color: var(--ariel-custom-color, #ffffff);">
-            <img src="./content/princess_parties/images/princesses/ariel1.png" class="card-img-top" alt="Princess Ariel"
-              style="height: 550px; object-fit: cover; object-position: top center;">
-            <div class="card-body text-center">
-              <img src="./content/princess_parties/images/logos/princess_ariel.png" style="max-height: 150px;">
-              <p class="card-text mt-3 arial">
-                Join Ariel for a magical party full of fun and adventure. Experience the enchantment of Arendelle and
-                create memories that will last forever.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- princess carousel for mobile -->
+    <!-- princess carousel for mobile -->
+    <div class="container">
       <div class="row g-4 d-md-none"> <!-- Only visible on mobile and smaller devices -->
         <div id="princessCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -290,129 +313,132 @@
           </button>
         </div>
       </div>
-
-      <!-- testimonials -->
-      <div class="text-center my-5">
-        <h1 class="display-2 gioviale">What Past Clients Say</h1>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 col-lg-6"> <!-- Adjusted width for better centering -->
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                  <blockquote class="blockquote">
-                    <p class="lead mb-3">"Halle made my daughter's birthday so memorable! She has a gift of making all
-                      the
-                      children in attendance feel comfortable and special. She runs a party so seamlessly, from story
-                      time, to
-                      singing, dancing and playing. I have a feeling we will be calling Halle for many more events in
-                      the future!"
-                    </p>
-                    <footer class="blockquote-footer">Happy Parent</footer>
-                  </blockquote>
-                </div>
-                <div class="carousel-item" data-bs-interval="10000">
-                  <blockquote class="blockquote">
-                    <p class="mb-3">"Halle is a phenomenal princess. We have hired her for two parties. She came once as
-                      Elsa and once as Belle. She was wonderful for both! She sang songs, she did crafts with our kids
-                      and the
-                      children were blown away when she made her entrance! We are bringing her back again as Arielle,
-                      and
-                      hoping our kids never figure out she's the same person!"</p>
-                    <footer class="blockquote-footer">Delighted Mom</footer>
-                  </blockquote>
-                </div>
+    </div>
+    <!-- testimonials -->
+    <div class="text-center my-5 px-2">
+      <h1 class="display-2 gioviale">What Past Clients Say</h1>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6"> <!-- Adjusted width for better centering -->
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <blockquote class="blockquote">
+                  <p class="lead mb-3">"Halle made my daughter's birthday so memorable! She has a gift of making all
+                    the
+                    children in attendance feel comfortable and special. She runs a party so seamlessly, from story
+                    time, to
+                    singing, dancing and playing. I have a feeling we will be calling Halle for many more events in
+                    the future!"
+                  </p>
+                  <footer class="blockquote-footer">Happy Parent</footer>
+                </blockquote>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+              <div class="carousel-item" data-bs-interval="10000">
+                <blockquote class="blockquote">
+                  <p class="mb-3">"Halle is a phenomenal princess. We have hired her for two parties. She came once as
+                    Elsa and once as Belle. She was wonderful for both! She sang songs, she did crafts with our kids
+                    and the
+                    children were blown away when she made her entrance! We are bringing her back again as Arielle,
+                    and
+                    hoping our kids never figure out she's the same person!"</p>
+                  <footer class="blockquote-footer">Delighted Mom</footer>
+                </blockquote>
+              </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
 
-      <div class="my-5">
-        <h1 class="display-1 text-center mb-3 gioviale">Gallery</h1>
-        <!-- Carousel for mobile screens -->
-        <div id="galleryCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="6000">
-              <img src="./content/princess_parties/images/gallery/princess1.png"
-                class="d-block w-100 img-fluid rounded shadow" alt="Event Image 1">
-            </div>
-            <div class="carousel-item" data-bs-interval="6000">
-              <img src="./content/princess_parties/images/gallery/princess4.png"
-                class="d-block w-100 img-fluid rounded shadow" alt="Event Image 2">
-            </div>
-            <div class="carousel-item" data-bs-interval="6000">
-              <img src="./content/princess_parties/images/gallery/princess5.png"
-                class="d-block w-100 img-fluid rounded shadow" alt="Event Image 3">
-            </div>
-            <div class="carousel-item" data-bs-interval="6000">
-              <img src="./content/princess_parties/images/gallery/princess6.png"
-                class="d-block w-100 img-fluid rounded shadow" alt="Event Image 4">
-            </div>
+    <!-- event gallery -->
+    <div class="my-5 px-2">
+      <h1 class="display-1 text-center mb-3 gioviale">Gallery</h1>
+      <!-- Carousel for mobile screens -->
+      <div id="galleryCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="6000">
+            <img src="./content/princess_parties/images/gallery/princess1.png"
+              class="d-block w-100 img-fluid rounded shadow" alt="Event Image 1">
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+          <div class="carousel-item" data-bs-interval="6000">
+            <img src="./content/princess_parties/images/gallery/princess4.png"
+              class="d-block w-100 img-fluid rounded shadow" alt="Event Image 2">
+          </div>
+          <div class="carousel-item" data-bs-interval="6000">
+            <img src="./content/princess_parties/images/gallery/princess5.png"
+              class="d-block w-100 img-fluid rounded shadow" alt="Event Image 3">
+          </div>
+          <div class="carousel-item" data-bs-interval="6000">
+            <img src="./content/princess_parties/images/gallery/princess6.png"
+              class="d-block w-100 img-fluid rounded shadow" alt="Event Image 4">
+          </div>
         </div>
-
-        <!-- Grid for non-mobile screens -->
-        <section class="px-md-5">
-          <div class="row g-3 d-none d-md-flex">
-            <div class="col-12 col-md-6 col-lg-3">
-              <img src="./content/princess_parties/images/gallery/princess1.png" class="img-fluid rounded shadow"
-                alt="Event Image 1">
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <img src="./content/princess_parties/images/gallery/princess4.png" class="img-fluid rounded shadow"
-                alt="Event Image 2">
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <img src="./content/princess_parties/images/gallery/princess5.png" class="img-fluid rounded shadow"
-                alt="Event Image 3">
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <img src="./content/princess_parties/images/gallery/princess6.png" class="img-fluid rounded shadow"
-                alt="Event Image 4">
-            </div>
-          </div>
-        </section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
 
-
-      <div class="text-center my-5">
-        <h1 class="display-1 text-center mb-3 gioviale">Videos</h1>
-        <!-- Placeholder for videos, replace src with actual video URLs -->
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8">
-            <video controls class="w-100 shadow" style="max-width: 900px;">
-              <source src="./content/princess_parties/videos/video_1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+      <!-- Grid for non-mobile screens -->
+      <section class="px-md-5">
+        <div class="row g-3 d-none d-md-flex">
+          <div class="col-12 col-md-6 col-lg-3">
+            <img src="./content/princess_parties/images/gallery/princess1.png" class="img-fluid rounded shadow"
+              alt="Event Image 1">
           </div>
-
+          <div class="col-12 col-md-6 col-lg-3">
+            <img src="./content/princess_parties/images/gallery/princess4.png" class="img-fluid rounded shadow"
+              alt="Event Image 2">
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img src="./content/princess_parties/images/gallery/princess5.png" class="img-fluid rounded shadow"
+              alt="Event Image 3">
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img src="./content/princess_parties/images/gallery/princess6.png" class="img-fluid rounded shadow"
+              alt="Event Image 4">
+          </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-3">
-            <video controls class="w-100 shadow w-md-25">
-              <source src="./content/princess_parties/videos/video_2.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+      </section>
+    </div>
+
+    <div class="container section-padding">
+
+      <h1 class="display-1 text-center mb-3 gioviale">Videos</h1>
+      <div class="row">
+
+        <div class="col-12 col-lg-6 col-md-6 mb-4">
+          <div class="video-responsive">
+            <iframe src="./content/princess_parties/videos/video_1.mp4" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
           </div>
+          <p class="text-center arial">Watch as Elsa brings the magic of Arendelle to life at a birthday party!</p>
+        </div>
+        <div class="col-12 col-lg-6 col-md-6 mb-4">
+          <div class="video-responsive">
+            <iframe src="./content/princess_parties/videos/video_2.mp4" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p class="text-center arial">Watch as Elsa brings the magic of Arendelle to life at a birthday party!</p>
         </div>
       </div>
     </div>
@@ -449,6 +475,7 @@
       </script> -->
 
     <script>
+      // magic wand script
       window.addEventListener('mousemove', function (e) {
         //trail
         [.7, .9, .8, .5, .25, .6, .4, .3, .2].forEach(function (i) {
