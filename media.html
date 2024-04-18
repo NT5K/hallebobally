@@ -124,19 +124,20 @@
                 title: "Theater",
                 videos: [
                     { name: "“I Put a Spell on You”", id: "./content/media/theater/Hocus_Pocus.mp4", description: "Event contract performing as Winnifred from Hocus Pocus", link1: "#", link2: "#" },
-                    { name: "Jazz Demo", id: "https://www.youtube.com/embed/CM03NQl5jt4", description: "Demo showcasing jazz offering", link1: "#", link2: "#" },
                     { name: "Halle SJ - Big Fish, Sandra", id: "https://www.youtube.com/embed/WBfaJTDtaAk", description: "Halle SJ - Big Fish, Sandra", link1: "#", link2: "#" },
                 ],
                 // extraClasses: "justify-content-center",
-                // colSizes: "col-lg-6 col-md-8"
+                colSizes: "col-lg-6"
             },
             {
                 title: "Voice",
                 videos: [
+                    { name: "Jazz Demo", id: "https://www.youtube.com/embed/CM03NQl5jt4", description: "Demo showcasing jazz offering", link1: "#", link2: "#" },
                     { name: "For Good", id: "./content/media/voice/ForGood.mp4", description: "'For Good' from WickedVocal cover of this famous Broadway tune.", link1: "#", link2: "#" },
                     { name: "Laura Keene", id: "./content/media/voice/Infamous_vocal.mp4", description: "'Laura Keene' from Infamous The MusicalVocal from cast recording of Infamous The Musical, a brand new musical based in Cleveland by composer David Michaels.", link1: "#", link2: "#" },
                     { name: "The Reckoning", id: "./content/media/voice/The Reckoning_vocal.mp4", description: "Vocal demo performed and recorded for musical in development.", link1: "#", link2: "#" }
-                ]
+                ],
+                colSizes: "col-lg-6"
             },
             {
                 title: "Television & Web",
@@ -171,7 +172,8 @@
                                 </div>
                                 <div class="video-responsive">
                                     <iframe src="${video.id}" frameborder="0"
-                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allow=""
+                                        SameSite=None
                                         allowfullscreen></iframe>
                                 </div>
                                 <div class="card-body">
@@ -179,14 +181,14 @@
                                 </div>
                             </div>
                         `;
-                        sectionDiv.children[1].appendChild(colDiv);
-                    });
-                    
-                    container.appendChild(sectionDiv);
+                    sectionDiv.children[1].appendChild(colDiv);
                 });
-            }
-            // <a href="${video.link1}" class="btn btn-primary arial">More Info</a>
-            // <a href="${video.link2}" class="btn btn-secondary arial">Watch More</a>
+
+                container.appendChild(sectionDiv);
+            });
+        }
+        // <a href="${video.link1}" class="btn btn-primary arial">More Info</a>
+        // <a href="${video.link2}" class="btn btn-secondary arial">Watch More</a>
 
         document.addEventListener('DOMContentLoaded', createVideoSections);
     </script>
