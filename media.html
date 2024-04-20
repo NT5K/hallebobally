@@ -80,10 +80,10 @@
                         </a>
                         <ul class="dropdown-menu  " aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="hallebobally.html">Halle Bo Bally</a></li>
-                            <li><a class="dropdown-item" href="./princessparties.html">Princess Parties</a></li>
+                            <li><a class="dropdown-item" href="princessparties.html">Princess Parties</a></li>
                             <!-- <li><a class="dropdown-item" href="#">Story Time</a></li> -->
                             <li><a class="dropdown-item" href="#">Vocalist</a></li>
-                            <li><a class="dropdown-item" href="#">Theater</a></li>
+                            <li><a class="dropdown-item" href="theater.html">Theater</a></li>
                         </ul>
                     </div>
 
@@ -121,15 +121,6 @@
     <script>
         const sections = [
             {
-                title: "Theater",
-                videos: [
-                    { name: "“I Put a Spell on You”", id: "./content/media/theater/Hocus_Pocus.mp4", description: "Event contract performing as Winnifred from Hocus Pocus", link1: "#", link2: "#" },
-                    { name: "Halle SJ - Big Fish, Sandra", id: "https://www.youtube.com/embed/WBfaJTDtaAk", description: "Halle SJ - Big Fish, Sandra", link1: "#", link2: "#" },
-                ],
-                // extraClasses: "justify-content-center",
-                colSizes: "col-lg-6"
-            },
-            {
                 title: "Voice",
                 videos: [
                     { name: "Jazz Demo", id: "https://www.youtube.com/embed/CM03NQl5jt4", description: "Demo showcasing jazz offering", link1: "#", link2: "#" },
@@ -150,8 +141,17 @@
                     { name: "Hylan Dental Commercial", id: "./content/media/television/HylanTV.mp4", description: "Non-speaking commercial role", link1: "#", link2: "#" }
                 ]
             },
+            {
+                title: "Theater",
+                videos: [
+                    { name: "“I Put a Spell on You”", id: "./content/media/theater/Hocus_Pocus.mp4", description: "Event contract performing as Winnifred from Hocus Pocus", link1: "#", link2: "#" },
+                    { name: "Halle SJ - Big Fish, Sandra", id: "https://www.youtube.com/embed/WBfaJTDtaAk", description: "Halle SJ - Big Fish, Sandra", link1: "#", link2: "#" },
+                    { name: "Matilda the Musical", id: "https://www.youtube.com/embed/BXF9Ma95JJ0", description: "Halle St. John's performance as Miss Honey in Matilda the Musical.", link1: "#", link2: "#" },
+                ],
+                // extraClasses: "justify-content-center",
+                // colSizes: "col-lg-6"
+            },
         ];
-
 
 
         function createVideoSections() {
@@ -171,22 +171,25 @@
                                     <h3 class="card-title text-center">${video.name}</h3>
                                 </div>
                                 <div class="video-responsive">
-                                    <iframe src="${video.id}" frameborder="0"
-                                        allow=""
-                                        SameSite=None
-                                        allowfullscreen></iframe>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text arial">${video.description}</p>
-                                </div>
-                            </div>
-                        `;
-                    sectionDiv.children[1].appendChild(colDiv);
-                });
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text arial">${video.description}</p>
+                                        </div>
+                                        </div>
+                                        `;
+                                        sectionDiv.children[1].appendChild(colDiv);
+                                    });
+                                    
+                                    container.appendChild(sectionDiv);
+                                });
+                            }
+                            // <iframe src="${video.id}" frameborder="0"
+                            //     allow=""
+                            //     SameSite=None
+                            //     allowfullscreen></iframe>
 
-                container.appendChild(sectionDiv);
-            });
-        }
+
+                            
         // <a href="${video.link1}" class="btn btn-primary arial">More Info</a>
         // <a href="${video.link2}" class="btn btn-secondary arial">Watch More</a>
 
