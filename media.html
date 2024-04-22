@@ -38,12 +38,14 @@
 
         .video-responsive {
             position: relative;
-            padding-bottom: 56.25%;
-            /* 16:9 aspect ratio */
+            overflow: hidden;
+            padding-top: 56.25%;
+            /* 16:9 Aspect Ratio */
             height: 0;
         }
 
-        .video-responsive iframe {
+        .video-responsive iframe,
+        .video-responsive video {
             position: absolute;
             top: 0;
             left: 0;
@@ -123,35 +125,114 @@
             {
                 title: "Voice",
                 videos: [
-                    { name: "Jazz Demo", id: "https://www.youtube.com/embed/CM03NQl5jt4", description: "Demo showcasing jazz offering", link1: "#", link2: "#" },
-                    { name: "For Good", id: "./content/media/voice/ForGood.mp4", description: "'For Good' from WickedVocal cover of this famous Broadway tune.", link1: "#", link2: "#" },
-                    { name: "Laura Keene", id: "./content/media/voice/Infamous_vocal.mp4", description: "'Laura Keene' from Infamous The MusicalVocal from cast recording of Infamous The Musical, a brand new musical based in Cleveland by composer David Michaels.", link1: "#", link2: "#" },
-                    { name: "The Reckoning", id: "./content/media/voice/The Reckoning_vocal.mp4", description: "Vocal demo performed and recorded for musical in development.", link1: "#", link2: "#" }
+                    {
+                        name: "Jazz Demo",
+                        id: "https://www.youtube.com/embed/CM03NQl5jt4",
+                        description: "Demo showcasing jazz offering",
+                        link1: "#",
+                        link2: "#"
+                    },
+                    {
+                        name: "“For Good” from Wicked",
+                        id: "./content/media/voice/ForGood.mp4",
+                        description: "Vocal cover of this famous Broadway tune.",
+                        link1: "#",
+                        link2: "#"
+                    },
+                    {
+                        name: "“Laura Keene” from Infamous The Musical",
+                        id: "./content/media/voice/Infamous_vocal.mp4",
+                        description: "Vocal from cast recording of Infamous The Musical, a brand new musical based in Cleveland by composer David Michaels.",
+                        link1: "#",
+                        link2: "#"
+                    },
+                    {
+                        name: "“The Reckoning”",
+                        id: "./content/media/voice/The Reckoning_vocal.mp4",
+                        description: "Vocal demo performed and recorded for musical in development.",
+                        link1: "#",
+                        link2: "#"
+                    }
                 ],
                 colSizes: "col-lg-6"
             },
             {
                 title: "Television & Web",
                 videos: [
-                    { name: "Access Media Commercial ", id: "./content/media/television/Access.mp4", description: "Non-speaking commercial role", link1: "#", link2: "#" },
-                    { name: "Hylan Dental Testimonial", id: "./content/media/television/Hylan_test.mp4", description: "Web advertisement based on personal experience with Hylan", link1: "#", link2: "#" },
-                    { name: "Lynx Rack General Ad", id: "./content/media/television/Lynx1.mp4", description: "Web advertisement for billiards product", link1: "#", link2: "#" },
-                    { name: "Lynx Rack Holiday Ad", id: "./content/media/television/Lynx2.mp4", description: "Web advertisement for the holiday season", link1: "#", link2: "#" },
-                    { name: "Pink Nannies", id: "./content/media/television/PinkNannies.mp4", description: "Social media advertising for Cleveland-based nanny agency, Pink Nannies", link1: "#", link2: "#" },
-                    { name: "Hylan Dental Commercial", id: "./content/media/television/HylanTV.mp4", description: "Non-speaking commercial role", link1: "#", link2: "#" }
+                    {
+                        name: "Access Media Commercial",
+                        id: "./content/media/television/Access.mp4",
+                        description: "Non-speaking commercial role",
+                        link1: "#",
+                        link2: "#"
+                    },
+                    {
+                        name: "Hylan Dental Testimonial",
+                        id: "./content/media/television/Hylan_test.mp4",
+                        description: "Web advertisement based on personal experience with Hylan",
+                        link1: "#",
+                        link2: "#"
+                    },
+                    {
+                        name: "Lynx Rack General Ad",
+                        id: "./content/media/television/Lynx1.mp4",
+                        description: "Web advertisement for billiards product",
+                        link1: "#",
+                        link2: "#"
+                    },
+                    {
+                        name: "Lynx Rack Holiday Ad",
+                        id: "./content/media/television/Lynx2.mp4",
+                        description: "Web advertisement for the holiday season",
+                        link1: "#",
+                        link2: "#"
+                    },
+                    {
+                        name: "Pink Nannies",
+                        id: "./content/media/television/PinkNannies.mp4",
+                        description: "Social media advertising for Cleveland-based nanny agency, Pink Nannies",
+                        link1: "#",
+                        link2: "#"
+                    },
+                    {
+                        name: "Hylan Dental Commercial",
+                        id: "./content/media/television/HylanTV.mp4",
+                        description: "Non-speaking commercial role",
+                        link1: "#",
+                        link2: "#"
+                    }
                 ]
             },
             {
                 title: "Theater",
                 videos: [
-                    { name: "“I Put a Spell on You”", id: "./content/media/theater/Hocus_Pocus.mp4", description: "Event contract performing as Winnifred from Hocus Pocus", link1: "#", link2: "#" },
-                    { name: "Halle SJ - Big Fish, Sandra", id: "https://www.youtube.com/embed/WBfaJTDtaAk", description: "Halle SJ - Big Fish, Sandra", link1: "#", link2: "#" },
-                    { name: "Matilda the Musical", id: "https://www.youtube.com/embed/BXF9Ma95JJ0", description: "Halle St. John's performance as Miss Honey in Matilda the Musical.", link1: "#", link2: "#" },
+                    {
+                        name: "“I Put a Spell on You”",
+                        id: "./content/media/theater/Hocus_Pocus.mp4",
+                        description: "Event contract performing as Winnifred from Hocus Pocus",
+                        link1: "#",
+                        link2: "#"
+                    },
+                    {
+                        name: "Halle SJ - Big Fish, Sandra",
+                        id: "https://www.youtube.com/embed/WBfaJTDtaAk",
+                        description: "Halle SJ - Big Fish, Sandra",
+                        link1: "#",
+                        link2: "#"
+                    },
+                    {
+                        name: "Matilda the Musical",
+                        id: "https://www.youtube.com/embed/BXF9Ma95JJ0",
+                        description: "Halle St. John's performance as Miss Honey in Matilda the Musical.",
+                        link1: "#",
+                        link2: "#"
+                    },
                 ],
-                // extraClasses: "justify-content-center",
-                // colSizes: "col-lg-6"
+                isYoutube: true
             },
         ];
+
+
 
 
         function createVideoSections() {
@@ -165,31 +246,47 @@
                 section.videos.forEach(video => {
                     const colDiv = document.createElement('div');
                     colDiv.className = `col-12 col-lg-4 col-md-6 mb-4 ${section.colSizes || ''}`;
-                    colDiv.innerHTML = `
-                            <div class="card text-center">
-                                <div class="card-header">
-                                    <h3 class="card-title text-center">${video.name}</h3>
-                                </div>
-                                <div class="video-responsive">
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text arial">${video.description}</p>
-                                        </div>
-                                        </div>
-                                        `;
-                                        sectionDiv.children[1].appendChild(colDiv);
-                                    });
-                                    
-                                    container.appendChild(sectionDiv);
-                                });
-                            }
-                            // <iframe src="${video.id}" frameborder="0"
-                            //     allow=""
-                            //     SameSite=None
-                            //     allowfullscreen></iframe>
+                    //if video is from youtube use iframe else use video tag
+                    if (section.isYoutube) {
+                        colDiv.innerHTML = `
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h3 class="card-title text-center">${video.name}</h3>
+                        </div>
+                        <div class="video-responsive">
+                            <iframe src="${video.id}" title="${video.name}" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text arial">${video.description}</p>
+                        </div>
+                    </div>
+                    `;
+                    } else {
+                        colDiv.innerHTML = `
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h3 class="card-title text-center">${video.name}</h3>
+                        </div>
+                        <div class="video-responsive">
+                            <video controls style="max-height: 300px;">
+                                <source src="${video.id}" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text arial">${video.description}</p>
+                        </div>
+                    </div>
+                    `;
+                    }
+                    sectionDiv.children[1].appendChild(colDiv);
+                });
+
+                container.appendChild(sectionDiv);
+            });
+        }
 
 
-                            
+
         // <a href="${video.link1}" class="btn btn-primary arial">More Info</a>
         // <a href="${video.link2}" class="btn btn-secondary arial">Watch More</a>
 
