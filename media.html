@@ -22,11 +22,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            /* font-family: 'Arial', sans-serif; */
-            /* background-color: #f8f9fa; */
-        }
-
         .section-padding {
             padding: 40px 0;
         }
@@ -102,6 +97,7 @@
         </div>
     </nav>
 
+    <!-- videos are dynimacally loaded using javascript -->
     <div id="videoContainer"></div>
 
     <!-- footer -->
@@ -128,21 +124,22 @@
                     {
                         name: "Jazz Demo",
                         id: "https://www.youtube.com/embed/CM03NQl5jt4",
-                        description: "Demo showcasing jazz offering",
+                        description: "Demo showcasing jazz offering.",
                         link1: "#",
-                        link2: "#"
+                        link2: "#",
+                        isYoutube: true
                     },
                     {
-                        name: "“For Good” from Wicked",
+                        name: "“For Good” from <i>Wicked</i>",
                         id: "./content/media/voice/ForGood.mp4",
                         description: "Vocal cover of this famous Broadway tune.",
                         link1: "#",
                         link2: "#"
                     },
                     {
-                        name: "“Laura Keene” from Infamous The Musical",
+                        name: "“Laura Keene” from <i>Infamous The Musical</i>",
                         id: "./content/media/voice/Infamous_vocal.mp4",
-                        description: "Vocal from cast recording of Infamous The Musical, a brand new musical based in Cleveland by composer David Michaels.",
+                        description: "Vocal from cast recording of <i>Infamous The Musical</i>, a brand new musical based in Cleveland by composer David Michaels.",
                         link1: "#",
                         link2: "#"
                     },
@@ -162,42 +159,42 @@
                     {
                         name: "Access Media Commercial",
                         id: "./content/media/television/Access.mp4",
-                        description: "Non-speaking commercial role",
+                        description: "Non-speaking commercial role.",
                         link1: "#",
                         link2: "#"
                     },
                     {
                         name: "Hylan Dental Testimonial",
                         id: "./content/media/television/Hylan_test.mp4",
-                        description: "Web advertisement based on personal experience with Hylan",
+                        description: "Web advertisement based on personal experience with Hylan.",
                         link1: "#",
                         link2: "#"
                     },
                     {
                         name: "Lynx Rack General Ad",
                         id: "./content/media/television/Lynx1.mp4",
-                        description: "Web advertisement for billiards product",
+                        description: "Web advertisement for billiards product.",
                         link1: "#",
                         link2: "#"
                     },
                     {
                         name: "Lynx Rack Holiday Ad",
                         id: "./content/media/television/Lynx2.mp4",
-                        description: "Web advertisement for the holiday season",
+                        description: "Web advertisement for the holiday season.",
                         link1: "#",
                         link2: "#"
                     },
                     {
                         name: "Pink Nannies",
                         id: "./content/media/television/PinkNannies.mp4",
-                        description: "Social media advertising for Cleveland-based nanny agency, Pink Nannies",
+                        description: "Social media advertising for Cleveland-based nanny agency, Pink Nannies.",
                         link1: "#",
                         link2: "#"
                     },
                     {
                         name: "Hylan Dental Commercial",
                         id: "./content/media/television/HylanTV.mp4",
-                        description: "Non-speaking commercial role",
+                        description: "Non-speaking commercial role.",
                         link1: "#",
                         link2: "#"
                     }
@@ -209,26 +206,27 @@
                     {
                         name: "“I Put a Spell on You”",
                         id: "./content/media/theater/Hocus_Pocus.mp4",
-                        description: "Event contract performing as Winnifred from Hocus Pocus",
+                        description: "Event contract performing as Winnifred from <i>Hocus Pocus</i>.",
                         link1: "#",
                         link2: "#"
                     },
                     {
-                        name: "Halle SJ - Big Fish, Sandra",
+                        name: "<i>Big Fish</i>, Sandra",
                         id: "https://www.youtube.com/embed/WBfaJTDtaAk",
-                        description: "Halle SJ - Big Fish, Sandra",
+                        description: "Halle St. John's performance as Sandra <i>Big Fish</i>",
                         link1: "#",
-                        link2: "#"
+                        link2: "#",
+                        isYoutube: true
                     },
                     {
-                        name: "Matilda the Musical",
+                        name: "<i>Matilda the Musical</i>, Miss Honey",
                         id: "https://www.youtube.com/embed/BXF9Ma95JJ0",
-                        description: "Halle St. John's performance as Miss Honey in Matilda the Musical.",
+                        description: "Halle St. John's performance as Miss Honey in <i>Matilda the Musical</i>.",
                         link1: "#",
-                        link2: "#"
+                        link2: "#",
+                        isYoutube: true
                     },
                 ],
-                isYoutube: true
             },
         ];
 
@@ -247,7 +245,7 @@
                     const colDiv = document.createElement('div');
                     colDiv.className = `col-12 col-lg-4 col-md-6 mb-4 ${section.colSizes || ''}`;
                     //if video is from youtube use iframe else use video tag
-                    if (section.isYoutube) {
+                    if (video.isYoutube) {
                         colDiv.innerHTML = `
                     <div class="card text-center">
                         <div class="card-header">
