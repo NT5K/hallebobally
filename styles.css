@@ -1,25 +1,43 @@
 body {
   font-family: 'Linux Libertine', serif;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Ensure the navbar is always on top */
 .navbar {
-    z-index: 1030; /* Bootstrap's default z-index for navbar is 1030 */
+  z-index: 1030;
+  /* Bootstrap's default z-index for navbar is 1030 */
 }
 
 /* Absolute positioning for mobile screens */
-@media (max-width: 991px) { /* Adjust this breakpoint according to your design */
-    .navbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
+@media (max-width: 991px) {
 
-    body {
-        padding-top: 70px; /* Adjust this value based on the actual height of your navbar */
-    }
+  /* Adjust this breakpoint according to your design */
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  body {
+    padding-top: 70px;
+    /* Adjust this value based on the actual height of your navbar */
+  }
+}
+
+@media (min-width:1285px) {
+  .hero {
+    margin-top: -70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    margin-top: 15px;
+  }
 }
 
 @font-face {
@@ -79,10 +97,12 @@ body {
   background-size: fill;
   background-repeat: no-repeat;
   background-position: top right;
-  
+
 }
+
 .contact-section {
-  background-image: url('./content/svg/contact-background.svg');;
+  background-image: url('./content/svg/contact-background.svg');
+  ;
   background-size: fill;
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -94,8 +114,10 @@ body {
   background-color: #cbe5fe;
   /* background-color: #2b9abf; */
 }
+
 .princess-section {
-  background-image: url('./content/svg/princess-background.svg');;
+  background-image: url('./content/svg/princess-background.svg');
+  ;
   background-size: fill;
   background-repeat: no-repeat;
   background-position: top right;
@@ -228,14 +250,14 @@ label.error {
 
 /* Custom style to remove text decoration from all links within the navbar */
 .navbar-no-decoration a {
-  text-decoration: none !important; 
+  text-decoration: none !important;
 }
 
 @media screen and (max-width: 683px) {
   #boballe_princess_separator {
     display: none;
   }
-  
+
 }
 
 .custom-shape-divider-top-1713145993 {
