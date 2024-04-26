@@ -21,6 +21,11 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+    defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+    crossorigin="anonymous">
   <style>
     .container {
       background-color: #fff;
@@ -55,6 +60,12 @@
       line-height: 1.7;
       color: #666;
     }
+
+    @media (prefers-reduced-motion: no-preference) {
+  .swiffy-slider.slider-nav-animation.slider-nav-animation-fadein .slider-container > * > * {
+    opacity: 1 !important;
+  }
+}
   </style>
 
 </head>
@@ -145,47 +156,14 @@
       <!-- international -->
       <div class="col-md-4">
         <div class="highlight p-4 text-center">
-          <div id="international-carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#international-carousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#international-carousel" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#international-carousel" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./content/about/vocalist/IMG_8837.PNG" style="max-height: 250px;" class=""
-                  alt="International Performances">
-              </div>
-              <div class="carousel-item">
-                <img src="./content/about/vocalist/IMG_8838.PNG" style="max-height: 250px;" class=""
-                  alt="International Performances 2">
-              </div>
-              <div class="carousel-item">
-                <img src="./content/about/vocalist/IMG_8847.PNG" style="max-height: 250px;" class=""
-                  alt="International Performances 3">
-              </div>
-              <div class="carousel-item">
-                <img src="./content/about/vocalist/IMG_8848.PNG" style="max-height: 250px;" class=""
-                  alt="International Performances 3">
-              </div>
-              <div class="carousel-item">
-                <img src="./content/about/vocalist/IMG_8849.PNG" style="max-height: 250px;" class=""
-                  alt="International Performances 3">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#international-carousel"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#international-carousel"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+          <div
+            class="swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
+            <ul class="slider-container py-4" id="vocalist">
+              <!-- Images will be dynamically added here -->
+            </ul>
+
+            <button type="button" class="slider-nav" aria-label="Go left"></button>
+            <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
           </div>
           <h3>International Vocalist</h3>
           <p class="arial">Performed as a soloist in Italy and as a vocalist at NYC's Ellen's Stardust Diner, showcasing
@@ -195,45 +173,14 @@
       <!-- theatrical -->
       <div class="col-md-4">
         <div class="highlight p-4 text-center">
-          <div id="theater-carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#theater-carousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#theater-carousel" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#theater-carousel" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./content/about/theater/Big_Fish/bf3.png" style="max-height: 250px;" class=""
-                  alt="Theatrical Performances">
-              </div>
-              <div class="carousel-item">
-                <img src="./content/about/theater/Joseph_and_the_Technicolor_Dreamcoat/joe3.png"
-                  style="max-height: 250px;" class="" alt="Theatrical Performances 2">
-              </div>
-              <div class="carousel-item">
-                <img src="./content/about/theater/Mary_Poppins/mary3.png" style="max-height: 250px;" class=""
-                  alt="Theatrical Performances 3">
-              </div>
-              <div class="carousel-item">
-                <img src="./content/about/theater/Matilda/matilda4.png" style="max-height: 250px;" class=""
-                  alt="Theatrical Performances 3">
-              </div>
-              <div class="carousel-item">
-                <img src="./content/about/theater/Once_Upon_A_Mattress/mattress2.png" style="max-height: 250px;"
-                  class="" alt="Theatrical Performances 3">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#theater-carousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#theater-carousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+          <div
+            class="swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
+            <ul class="slider-container py-4" id="theatrical">
+              <!-- Images will be dynamically added here -->
+            </ul>
+
+            <button type="button" class="slider-nav" aria-label="Go left"></button>
+            <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
           </div>
           <h3>Theatrical Excellence</h3>
           <p class="arial">Featured in leading roles such as Mary Poppins, the Narrator in Joseph and the Technicolor
@@ -243,45 +190,16 @@
       <!-- director and mentor -->
       <div class="col-md-4">
         <div class="highlight p-4 text-center">
-          <div id="director_mentor_carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#director_mentor_carousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#director_mentor_carousel" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#director_mentor_carousel" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./content/about/director/IMG_7990.JPG" style="max-height: 250px;" class=""
-                  alt="Director and Mentor Performances">
-              </div>
-              <div class="carousel-item">
-                <img src="./content/about/director/IMG_8827.PNG" style="max-height: 250px;" class=""
-                  alt="Director and Mentor Performances 2">
-              </div>
-              <div class="carousel-item">
-                <img src="./content/about/director/IMG_8829.JPG" style="max-height: 250px;" class=""
-                  alt="Director and Mentor Performances 3">
-              </div>
-              <div class="carousel-item">
-                <img src="./content/about/director/Josh_me.png" style="max-height: 250px;" class=""
-                  alt="Director and Mentor Performances 3">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#director_mentor_carousel"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#director_mentor_carousel"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+          <div
+            class="swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
+            <ul class="slider-container py-4" id="acting-coach">
+              <!-- Images will be dynamically added here -->
+            </ul>
+
+            <button type="button" class="slider-nav" aria-label="Go left"></button>
+            <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
           </div>
-          <h3>Director & Mentor</h3>
+          <h3>Acting Coach</h3>
           <p class="arial">Currently directing the Edwardian Players at St. Edward High School, blending leadership with
             mentorship to foster young talent in the arts.</p>
         </div>
@@ -384,6 +302,59 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+    <script>
+      // Function to dynamically create Swiffy Sliders with variable images
+      function createSwiffySlider(containerId, imageFolder, imageCount, data) {
+        const container = document.getElementById(containerId);
+        if (!container) {
+          console.error('Slider container not found:', containerId);
+          return;
+        }
+  
+        container.innerHTML = ''; // Clear any existing content in the container
+  
+        for (let i = 0; i < imageCount; i++) {
+          const path = `./content/about/${imageFolder}/${data[i]}`;
+          const li = document.createElement('li');
+          li.style.cssText = 'display: flex; justify-content: center; align-items: flex-start; height: 200px; overflow: hidden; opacity:1';  // Ensures the container does not grow beyond 200px height
+  
+          const img = document.createElement('img');
+          img.src = path;
+          img.className = 'img-fluid rounded shadow';
+          img.style.cssText = 'height: 100%; width: auto; object-fit: cover; object-position: top;'; // Ensures images fit properly, showing the top part
+          img.alt = "Event Image " + path.match(/([^\/]+)$/)[0]; // Use the file name as alt text
+  
+          li.appendChild(img);
+          container.appendChild(li);
+        }
+      }
+  
+      // Example usage of the function for different sliders
+      document.addEventListener('DOMContentLoaded', function() {
+        createSwiffySlider('vocalist', 'vocalist', 5, [
+          'IMG_8837.PNG',
+          'IMG_8838.PNG',
+          'IMG_8847.PNG',
+          'IMG_8848.PNG',
+          'IMG_8849.PNG',
+        ]);
+        createSwiffySlider('theatrical', 'theater', 5, [
+          'Alice_in_Danceland/alice1.png',
+          'Alice_in_Danceland/alice2.png',
+          'Alice_in_Danceland/alice3.png',
+          'Alice_in_Danceland/alice4.png',
+          'Alice_in_Danceland/alice5.png',
+        ]);
+        createSwiffySlider('acting-coach', 'director', 4, [
+          'IMG_7990.JPG',
+          'IMG_8827.PNG',
+          'IMG_8829.JPG',
+          'Josh_me.png'
+        ]);
+      });
+  </script>
+  
+
 </body>
 
 </html>
