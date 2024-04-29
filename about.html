@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Halle St. John" />
   <meta property="og:url" content="https://www.hallestjohn.com" />
   <meta property="og:image" content="https://nt5k.github.io/hallebobally/content/hbb/images/logos/logo1.jpg" />
-  <title>About | Halle St. John - Vocalist for Hire | Princess Parties & Story Time in Cleveland</title>
+  <title>About | Halle St. John</title>
   <meta name="description"
     content="Halle St. John offers enchanting princess parties and engaging story time sessions in Cleveland. Discover professional vocalist services for any event.">
   <meta name="keywords"
@@ -62,10 +62,10 @@
     }
 
     @media (prefers-reduced-motion: no-preference) {
-  .swiffy-slider.slider-nav-animation.slider-nav-animation-fadein .slider-container > * > * {
-    opacity: 1 !important;
-  }
-}
+      .swiffy-slider.slider-nav-animation.slider-nav-animation-fadein .slider-container>*>* {
+        opacity: 1 !important;
+      }
+    }
   </style>
 
 </head>
@@ -99,23 +99,25 @@
               <li><a class="dropdown-item" href="hallebobally.html">Halle Bo Bally</a></li>
               <li><a class="dropdown-item" href="princessparties.html">Princess Parties</a></li>
               <!-- <li><a class="dropdown-item" href="#">Story Time</a></li> -->
-              <li><a class="dropdown-item" href="#">Vocalist</a></li>
+              <li><a class="dropdown-item" href="vocalist.html">Vocalist</a></li>
               <li><a class="dropdown-item" href="theater.html">Theater</a></li>
             </ul>
           </div>
 
           <a class="nav-link" href="media.html">Media</a>
           <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="https://www.instagram.com/hallebobally_cle/" target="_blank"><i
+              class="bi bi-instagram"></i></a>
         </div>
         <div class="navbar-nav">
-          <a class="nav-link" href="#"><i class="bi bi-twitter"></i></a>
+          <!-- <a class="nav-link" href="#"><i class="bi bi-twitter"></i></a>
           <a class="nav-link" href="#"><i class="bi bi-facebook"></i></a>
-          <a class="nav-link" href="#"><i class="bi bi-instagram"></i></a>
-          <a class="nav-link" href="#"><i class="bi bi-linkedin"></i></a>
+          <a class="nav-link" href="#"><i class="bi bi-linkedin"></i></a> -->
         </div>
       </div>
     </div>
   </nav>
+
   <!-- about section -->
   <div class="container my-5">
     <div class="row">
@@ -132,11 +134,11 @@
           locally and internationally, including being a soloist in Italy.</p>
         <p class="arial">I have enjoyed a colorful career life - sales, PR agency work, and motivational speaking for
           middle & high school students. My performance background includes public speaking, modeling, theater,
-          television, voice over, and directing. I have recorded cast tracks for up and coming musicals, as well as
+          television and voice over. I have recorded cast tracks for up and coming musicals, as well as
           recorded at the famous
           Gaither Studios.</p>
         <p class="arial">Currently, I keep myself in a chaotic spin of Halle Bo Bally appearances, princess party
-          engagements, theatrical contracts, jazz and wedding contracts, commercial and voice over work and acting
+          engagements, theatrical contracts, jazz and wedding contracts, commercial and voice over work, and acting
           coaching.</p>
         <div class="arial">
           <!-- Resume view and download buttons -->
@@ -200,8 +202,9 @@
             <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
           </div>
           <h3>Acting Coach</h3>
-          <p class="arial">Currently directing the Edwardian Players at St. Edward High School, blending leadership with
-            mentorship to foster young talent in the arts.</p>
+          <p class="arial">Blending leadership with mentorship, I look forward to helping your child grow as a performer
+            as we work closely on acting skills and stage craft.
+          </p>
         </div>
       </div>
     </div>
@@ -209,8 +212,8 @@
 
   <section class="py-5 bg-light">
     <div class="container">
-      <blockquote class="blockquote p-4 p-lg-5 shadow rounded">
-        <p class="mb-2 display-6 arial">
+      <blockquote class="blockquote p-4 p-lg-5 shadow rounded" style="background-color: #FF10F0;">
+        <p class="mb-2 display-6 arial" style="color: white;">
           “From Halle Bo Bally appearances to directing plays, I am constantly moving, shaping, and
           embracing the chaos of
           creativity. It's a wild life, but incredibly fulfilling.”
@@ -290,10 +293,10 @@
   <footer class="text-center py-3">
     <p class="arial">&copy; <span id="current-year"></span> Halle St. John</p>
     <span>
-      <a class="" href="#"><i class="bi bi-twitter"></i></a>
-      <a class="" href="#"><i class="bi bi-facebook"></i></a>
-      <a class="" href="#"><i class="bi bi-instagram"></i></a>
-      <a class="" href="#"><i class="bi bi-linkedin"></i></a>
+      <!-- <a class="" href="#"><i class="bi bi-twitter"></i></a> -->
+      <!-- <a class="" href="#"><i class="bi bi-facebook"></i></a> -->
+      <a class="" href="https://www.instagram.com/hallebobally_cle/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <!-- <a class="" href="#"><i class="bi bi-linkedin"></i></a> -->
     </span>
   </footer>
   </section>
@@ -302,58 +305,60 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-    <script>
-      // Function to dynamically create Swiffy Sliders with variable images
-      function createSwiffySlider(containerId, imageFolder, imageCount, data) {
-        const container = document.getElementById(containerId);
-        if (!container) {
-          console.error('Slider container not found:', containerId);
-          return;
-        }
-  
-        container.innerHTML = ''; // Clear any existing content in the container
-  
-        for (let i = 0; i < imageCount; i++) {
-          const path = `./content/about/${imageFolder}/${data[i]}`;
-          const li = document.createElement('li');
-          li.style.cssText = 'display: flex; justify-content: center; align-items: flex-start; height: 200px; overflow: hidden; opacity:1';  // Ensures the container does not grow beyond 200px height
-  
-          const img = document.createElement('img');
-          img.src = path;
-          img.className = 'img-fluid rounded shadow';
-          img.style.cssText = 'height: 100%; width: auto; object-fit: cover; object-position: top;'; // Ensures images fit properly, showing the top part
-          img.alt = "Event Image " + path.match(/([^\/]+)$/)[0]; // Use the file name as alt text
-  
-          li.appendChild(img);
-          container.appendChild(li);
-        }
+  <script>
+    // Function to dynamically create Swiffy Sliders with variable images
+    function createSwiffySlider(containerId, imageFolder, imageCount, data) {
+      const container = document.getElementById(containerId);
+      if (!container) {
+        console.error('Slider container not found:', containerId);
+        return;
       }
-  
-      // Example usage of the function for different sliders
-      document.addEventListener('DOMContentLoaded', function() {
-        createSwiffySlider('vocalist', 'vocalist', 5, [
-          'IMG_8837.PNG',
-          'IMG_8838.PNG',
-          'IMG_8847.PNG',
-          'IMG_8848.PNG',
-          'IMG_8849.PNG',
-        ]);
-        createSwiffySlider('theatrical', 'theater', 5, [
-          'Alice_in_Danceland/alice1.png',
-          'Alice_in_Danceland/alice2.png',
-          'Alice_in_Danceland/alice3.png',
-          'Alice_in_Danceland/alice4.png',
-          'Alice_in_Danceland/alice5.png',
-        ]);
-        createSwiffySlider('acting-coach', 'director', 4, [
-          'IMG_7990.JPG',
-          'IMG_8827.PNG',
-          'IMG_8829.JPG',
-          'Josh_me.png'
-        ]);
-      });
+
+      container.innerHTML = ''; // Clear any existing content in the container
+
+      for (let i = 0; i < imageCount; i++) {
+        const path = `./content/about/${imageFolder}/${data[i]}`;
+        const li = document.createElement('li');
+        li.style.cssText = 'display: flex; justify-content: center; align-items: flex-start; height: 200px; overflow: hidden; opacity:1';  // Ensures the container does not grow beyond 200px height
+
+        const img = document.createElement('img');
+        img.src = path;
+        img.className = 'img-fluid rounded shadow';
+        img.style.cssText = 'height: 100%; width: auto; object-fit: cover; object-position: top;'; // Ensures images fit properly, showing the top part
+        img.alt = "Event Image " + path.match(/([^\/]+)$/)[0]; // Use the file name as alt text
+
+        li.appendChild(img);
+        container.appendChild(li);
+      }
+    }
+
+    // Example usage of the function for different sliders
+    document.addEventListener('DOMContentLoaded', function () {
+      createSwiffySlider('vocalist', 'vocalist', 5, [
+        'IMG_8837.PNG',
+        'IMG_8838.PNG',
+        'IMG_8847.PNG',
+        'IMG_8848.PNG',
+        'IMG_8849.PNG',
+      ]);
+      createSwiffySlider('theatrical', 'theater', 5, [
+        'Alice_in_Danceland/alice1.png',
+        'Alice_in_Danceland/alice2.png',
+        'Alice_in_Danceland/alice3.png',
+        'Alice_in_Danceland/alice4.png',
+        'Alice_in_Danceland/alice5.png',
+      ]);
+      createSwiffySlider('acting-coach', 'director', 6, [
+        'IMG_7990.JPG',
+        'IMG_8827.PNG',
+        'IMG_8829.JPG',
+        'Josh_me.png',
+        'Coach2.png',
+        'Coach1.png'
+      ]);
+    });
   </script>
-  
+
 
 </body>
 

@@ -124,11 +124,59 @@
       height: 100%;
     }
 
+    .video-responsive+p {
+      margin-top: -10px;
+      /* Adjust the space between the video and the paragraph */
+      font-size: 1.7rem;
+      /* Increase font size for better readability */
+    }
+
     .yellow-border {
       border: 10px solid var(--princess-gold-border-color);
     }
   </style>
 
+  <style>
+    @keyframes colorCycle {
+
+      0%,
+      100% {
+        color: red;
+      }
+
+      20% {
+        color: blue;
+      }
+
+      40% {
+        color: green;
+      }
+
+      60% {
+        color: yellow;
+      }
+
+      80% {
+        color: purple;
+      }
+    }
+
+    .letter {
+      display: inline-block;
+      animation: colorCycle 5s infinite;
+    }
+  </style>
+
+  <style>
+    .video-responsive+p {
+      /* margin-top: -10px; */
+      /* Adjust the space between the video and the paragraph */
+      font-size: 1.7rem;
+      /* Increase font size for better readability */
+    }
+
+    
+  </style>
 </head>
 
 <body>
@@ -160,19 +208,20 @@
               <li><a class="dropdown-item" href="hallebobally.html">Halle Bo Bally</a></li>
               <li><a class="dropdown-item" href="princessparties.html">Princess Parties</a></li>
               <!-- <li><a class="dropdown-item" href="#">Story Time</a></li> -->
-              <li><a class="dropdown-item" href="#">Vocalist</a></li>
+              <li><a class="dropdown-item" href="vocalist.html">Vocalist</a></li>
               <li><a class="dropdown-item" href="theater.html">Theater</a></li>
             </ul>
           </div>
 
           <a class="nav-link" href="media.html">Media</a>
           <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="https://www.instagram.com/hallebobally_cle/" target="_blank"><i
+              class="bi bi-instagram"></i></a>
         </div>
         <div class="navbar-nav">
-          <a class="nav-link" href="#"><i class="bi bi-twitter"></i></a>
+          <!-- <a class="nav-link" href="#"><i class="bi bi-twitter"></i></a>
           <a class="nav-link" href="#"><i class="bi bi-facebook"></i></a>
-          <a class="nav-link" href="#"><i class="bi bi-instagram"></i></a>
-          <a class="nav-link" href="#"><i class="bi bi-linkedin"></i></a>
+          <a class="nav-link" href="#"><i class="bi bi-linkedin"></i></a> -->
         </div>
       </div>
     </div>
@@ -192,10 +241,11 @@
         </h1>
         <p class="lead arial">As a professional actress and vocalist, I bring the magic to life by truly becoming
           the character.</p>
-        <p class="arial">Completely customizable to your specific needs, I will partner with you to turn your
+        <p class="lead arial"><span class="" id="animated-text"></span> to your specific needs, I will partner with you
+          to turn your
           event's vision into a reality!</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-          <button type="button" class="btn btn-outline-dark btn-lg px-4 me-md-2 fw-bold arial">Contact Me</button>
+          <button type="button" class="btn btn-outline-dark btn-lg px-4 me-md-2 fw-bold arial">Contact Me Now!</button>
         </div>
       </div>
       <div class="col-12 col-lg-4  text-center">
@@ -208,7 +258,8 @@
   <div class="my-5">
     <h1 class="display-2 text-center mb-3 gioviale">Meet the Princesses</h1>
     <!-- subheader -->
-    <p class="lead text-center px-1 mx-1 px-md-5 mx-md-5 arial">I currently offer the following princesses. However, if your event is
+    <p class="lead text-center px-1 mx-1 px-md-5 mx-md-5 arial">I currently offer the following princesses. However, if
+      your event is
       looking for a
       different character — even if it's simply an animated character and not specifically a princess — <a href="#">Chat
         with me!</a> I'm always open to expansion!</p>
@@ -366,7 +417,8 @@
           </div>
           <div class="col-12 col-lg-4">
             <blockquote class="blockquote">
-              <p class="leadmb-3 arial">"I loved having 'Elsa' attend my daughter's 4th birthday- I was able to relax and
+              <p class="leadmb-3 arial">"I loved having 'Elsa' attend my daughter's 4th birthday- I was able to relax
+                and
                 watch kiddos play and have a blast. My daughter still talks about it!”</p>
               <footer class="blockquote-footer">Delighted Father</footer>
             </blockquote>
@@ -442,16 +494,13 @@
   </div>
 
   <div class="container section-padding">
-
     <h1 class="display-1 text-center mb-3 gioviale">Videos</h1>
     <div class="row">
-
       <div class="col-12 col-lg-6 mb-4">
         <div class="video-responsive">
           <video class="w-100" controls style="max-height: 300px;">
             <source src="./content/princess_parties/videos/video_1.mp4" type="video/mp4">
           </video>
-
         </div>
         <p class="text-center arial">Storytime with Belle is a special treat for kids and parents alike!</p>
       </div>
@@ -461,19 +510,21 @@
             <source src="./content/princess_parties/videos/video_2.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="text-center arial">Watch as Elsa sings one of her most favorite songs with some of her new most favorite little princesses!        </p>
+        <p class="text-center arial">Watch as Elsa sings one of her most favorite songs with some of her new most
+          favorite little princesses!</p>
       </div>
     </div>
   </div>
+
 
   <!-- footer -->
   <footer class="text-center py-3">
     <p>&copy; <span id="current-year"></span> Halle St. John</p>
     <span>
-      <a class="" href="#"><i class="bi bi-twitter"></i></a>
+      <!-- <a class="" href="#"><i class="bi bi-twitter"></i></a>
       <a class="" href="#"><i class="bi bi-facebook"></i></a>
-      <a class="" href="#"><i class="bi bi-instagram"></i></a>
-      <a class="" href="#"><i class="bi bi-linkedin"></i></a>
+      <a class="" href="#"><i class="bi bi-linkedin"></i></a> -->
+      <a class="" href="https://www.instagram.com/hallebobally_cle/" target="_blank"><i class="bi bi-instagram"></i></a>
     </span>
   </footer>
 
@@ -482,7 +533,23 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
+  <script>
+    const text = "Completely customizable";
+    const target = document.getElementById('animated-text');
 
+    // Split the text into characters and wrap each one in a span, unless it's a space
+    text.split('').forEach((char, index) => {
+      const span = document.createElement('span');
+      if (char !== ' ') {
+        span.textContent = char;
+        span.classList.add('letter');
+        span.style.animationDelay = `${index * 0.1}s`;  // Stagger the animation start
+      } else {
+        span.innerHTML = '&nbsp;';  // Non-breaking space for preserving spaces in HTML
+      }
+      target.appendChild(span);
+    });
+  </script>
   <!-- <script>
     // magic wand script
     window.addEventListener('mousemove', function (e) {
