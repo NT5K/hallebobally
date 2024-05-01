@@ -85,8 +85,9 @@
                     </div>
 
                     <a class="nav-link" href="media.html">Media</a>
-                    <a class="nav-link" href="#">Contact</a>
-                    <a class="nav-link" href="https://www.instagram.com/hallebobally_cle/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="https://www.instagram.com/hallebobally_cle/" target="_blank"><i
+                            class="bi bi-instagram"></i></a>
                 </div>
                 <div class="navbar-nav">
                     <!-- <a class="nav-link" href="#"><i class="bi bi-twitter"></i></a>
@@ -100,17 +101,86 @@
     <!-- videos are dynimacally loaded using javascript -->
     <div id="videoContainer"></div>
 
-    <!-- footer -->
-    <footer class="text-center py-3">
-        <p class="arial">&copy; <span id="current-year"></span> Halle St. John</p>
-        <span>
-            <!-- <a class="" href="#"><i class="bi bi-twitter"></i></a>
-            <a class="" href="#"><i class="bi bi-facebook"></i></a>
-            <a class="" href="#"><i class="bi bi-linkedin"></i></a> -->
-            <a class="" href="https://www.instagram.com/hallebobally_cle/" target="_blank"><i class="bi bi-instagram"></i></a>
-        </span>
-    </footer>
+    <!-- contact -->
+    <section class="container-fluid px-5 py-5" id="contact">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 class="display-3 mb-4">Let's talk about everything!</h3>
+                <h5 class="arial">
+                    Don't like forms? Send me an email instead. <a
+                        href="mailto:hallesaintj@gmail.com">hallesaintj@gmail.com</a>
+                </h5>
+                <h5 class="arial mb-3">
+                    Want to talk on the phone? Give me a call at <a href="tel:216-577-2428">216-577-2428</a>
+                </h5>
+            </div>
+            <div class="col-12 col-lg-4 mx-auto pb-3 p-0">
+                <h3 class="display-5 mb-4 text-center">Contact Me</h3>
+                <form id="myCustomForm" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="firstname" class="form-label arial">First Name</label>
+                        <input type="text" class="form-control border" id="firstname" name="entry.1854831876" required>
+                        <div class="invalid-feedback">
+                            Please enter your first name.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="lastname" class="form-label arial">Last Name</label>
+                        <input type="text" class="form-control border" id="lastname" name="entry.1146938562" required>
+                        <div class="invalid-feedback">
+                            Please enter your last name.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label arial">Email</label>
+                        <input type="email" class="form-control border" id="email" name="entry.1184860373" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label arial">Message</label>
+                        <textarea class="form-control border" id="message" name="entry.427335266" rows="5"
+                            required></textarea>
+                        <div class="invalid-feedback">
+                            What would you like to tell me?
+                        </div>
+                    </div>
+
+                    <!-- this is incorrect name -->
+                    <div class="mb-3">
+                        <label for="message" class="form-label arial">Phone Number</label>
+                        <textarea class="form-control border" id="message" name="entry.427335266" rows="5"
+                            required></textarea>
+                        <div class="invalid-feedback">
+                            What would you like to tell me?
+                        </div>
+                    </div>
+
+                    <button class="btn btn-success text-white m-1 py-2 px-4 arial" type="submit"><strong>Send
+                            Message</strong></button>
+                    <div id="submitSuccessMessage" class="alert alert-success mt-3 d-none" role="alert">
+                        Thanks for reaching out! I'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="text-center py-3">
+            <p class="arial">&copy; <span id="current-year"></span> Halle St. John</p>
+            <span>
+                <!-- <a class="" href="#"><i class="bi bi-twitter"></i></a> -->
+                <!-- <a class="" href="#"><i class="bi bi-facebook"></i></a> -->
+                <a class="" href="https://www.instagram.com/hallebobally_cle/" target="_blank"><i
+                        class="bi bi-instagram"></i></a>
+                <!-- <a class="" href="#"><i class="bi bi-linkedin"></i></a> -->
+            </span>
+        </footer>
     </section>
+
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
