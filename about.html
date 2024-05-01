@@ -66,6 +66,36 @@
         opacity: 1 !important;
       }
     }
+
+    /* Default pink shadow for larger screens */
+    .container.pink-shadow {
+      box-shadow: 0 0 40px rgba(255, 105, 180, 0.5);
+      background-color: white;
+      border-radius: 8px;
+    }
+
+    /* Media query for mobile devices */
+    @media (max-width: 576px) {
+
+      /* Remove the shadow from the container */
+      .container.pink-shadow {
+        box-shadow: none;
+      }
+
+      /* Apply the pink shadow specifically to the image */
+      .container.pink-shadow .img-fluid.rounded-circle {
+        box-shadow: 0 0 40px rgba(255, 105, 180, 0.5);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .btn {
+      background-color: #FF69B4;
+    }
+
+    @media screen and (max-width: 576px) {}
   </style>
 
 </head>
@@ -105,7 +135,7 @@
           </div>
 
           <a class="nav-link" href="media.html">Media</a>
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="contact.html">Contact</a>
           <a class="nav-link" href="https://www.instagram.com/hallebobally_cle/" target="_blank"><i
               class="bi bi-instagram"></i></a>
         </div>
@@ -118,13 +148,11 @@
     </div>
   </nav>
 
-  <!-- about section -->
-  <div class="container my-5">
+  <!-- about section with pink shadow -->
+  <div class="container  my-5 pink-shadow">
     <div class="row">
       <div class="col-md-4">
-        <div>
-          <img src="./content/about/profile_new.png" alt="Profile Picture" class="img-fluid rounded-circle mb-4">
-        </div>
+        <img src="./content/about/profile_new.png" alt="Profile Picture" class="img-fluid rounded-circle mb-4">
       </div>
       <div class="col-md-8">
         <h1 class="display-4 mb-4">About</h1>
@@ -158,8 +186,12 @@
       <!-- international -->
       <div class="col-md-4">
         <div class="highlight p-4 text-center">
-          <div
-            class="swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
+          <h3>International Vocalist</h3>
+          <p class="arial">Performed as a soloist in Italy and as a vocalist at NYC's Ellen's Stardust Diner, showcasing
+            my talents on both local and international stages.
+          </p>
+          <div class="swiffy-slider slider-nav-round slider-nav-visible slider-indicators-outside 
+            slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
             <ul class="slider-container py-4" id="vocalist">
               <!-- Images will be dynamically added here -->
             </ul>
@@ -167,16 +199,16 @@
             <button type="button" class="slider-nav" aria-label="Go left"></button>
             <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
           </div>
-          <h3>International Vocalist</h3>
-          <p class="arial">Performed as a soloist in Italy and as a vocalist at NYC's Ellen's Stardust Diner, showcasing
-            my talents on both local and international stages.</p>
         </div>
       </div>
       <!-- theatrical -->
       <div class="col-md-4">
         <div class="highlight p-4 text-center">
-          <div
-            class="swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
+          <h3>Theatrical Excellence</h3>
+          <p class="arial">Featured in leading roles such as Mary Poppins, the Narrator in Joseph and the Technicolor
+            Dreamcoat, Sandra in Big Fish, and Miss Honey in Matilda The Musical.</p>
+          <div class="swiffy-slider slider-nav-round slider-nav-visible slider-indicators-outside 
+            slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
             <ul class="slider-container py-4" id="theatrical">
               <!-- Images will be dynamically added here -->
             </ul>
@@ -184,16 +216,17 @@
             <button type="button" class="slider-nav" aria-label="Go left"></button>
             <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
           </div>
-          <h3>Theatrical Excellence</h3>
-          <p class="arial">Featured in leading roles such as Mary Poppins, the Narrator in Joseph and the Technicolor
-            Dreamcoat, Sandra in Big Fish, and Miss Honey in Matilda The Musical.</p>
         </div>
       </div>
       <!-- director and mentor -->
       <div class="col-md-4">
         <div class="highlight p-4 text-center">
-          <div
-            class="swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
+          <h3>Acting Coach</h3>
+          <p class="arial">Blending leadership with mentorship, I look forward to helping your child grow as a performer
+            as we work closely on acting skills and stage craft.
+          </p>
+          <div class="swiffy-slider slider-nav-round slider-nav-visible slider-indicators-outside 
+          slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
             <ul class="slider-container py-4" id="acting-coach">
               <!-- Images will be dynamically added here -->
             </ul>
@@ -201,10 +234,6 @@
             <button type="button" class="slider-nav" aria-label="Go left"></button>
             <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
           </div>
-          <h3>Acting Coach</h3>
-          <p class="arial">Blending leadership with mentorship, I look forward to helping your child grow as a performer
-            as we work closely on acting skills and stage craft.
-          </p>
         </div>
       </div>
     </div>
@@ -212,20 +241,20 @@
 
   <section class="py-5 bg-light">
     <div class="container">
-      <blockquote class="blockquote p-4 p-lg-5 shadow rounded" style="background-color: #FF10F0;">
-        <p class="mb-2 display-6 arial" style="color: white;">
+      <blockquote class="blockquote p-4 p-lg-5 shadow-lg rounded"
+        style="background: linear-gradient(145deg, #FF69B4, #FFB6C1);">
+        <p class="mb-0 display-6" style="color: white; text-shadow: 0px 2px 4px rgba(0,0,0,0.5);">
           “From Halle Bo Bally appearances to directing plays, I am constantly moving, shaping, and
-          embracing the chaos of
-          creativity. It's a wild life, but incredibly fulfilling.”
+          embracing the chaos of creativity. It's a wild life, but incredibly fulfilling.”
         </p>
-        <footer class="blockquote-footer">
+        <footer class="blockquote-footer text-white mt-4 arial" style="font-size: 1.2rem;">
           Halle St. John <cite title="Source Title"></cite>
         </footer>
       </blockquote>
     </div>
   </section>
   <!-- contact -->
-  <section class="container-fluid px-5 py-5 contact-section">
+  <section class="container-fluid px-5 py-5 contact-section2" id="contact">
     <div class="row">
       <div class="col-lg-12 text-center">
         <h3 class="display-3 mb-4">Let's talk about everything!</h3>
@@ -288,17 +317,17 @@
         </form>
       </div>
     </div>
-  </section>
-  <!-- footer -->
-  <footer class="text-center py-3">
-    <p class="arial">&copy; <span id="current-year"></span> Halle St. John</p>
-    <span>
-      <!-- <a class="" href="#"><i class="bi bi-twitter"></i></a> -->
-      <!-- <a class="" href="#"><i class="bi bi-facebook"></i></a> -->
-      <a class="" href="https://www.instagram.com/hallebobally_cle/" target="_blank"><i class="bi bi-instagram"></i></a>
-      <!-- <a class="" href="#"><i class="bi bi-linkedin"></i></a> -->
-    </span>
-  </footer>
+    <!-- footer -->
+    <footer class="text-center py-3">
+      <p class="arial">&copy; <span id="current-year"></span> Halle St. John</p>
+      <span>
+        <!-- <a class="" href="#"><i class="bi bi-twitter"></i></a> -->
+        <!-- <a class="" href="#"><i class="bi bi-facebook"></i></a> -->
+        <a class="" href="https://www.instagram.com/hallebobally_cle/" target="_blank"><i
+            class="bi bi-instagram"></i></a>
+        <!-- <a class="" href="#"><i class="bi bi-linkedin"></i></a> -->
+      </span>
+    </footer>
   </section>
 
   <script src="script.js"></script>
@@ -319,12 +348,12 @@
       for (let i = 0; i < imageCount; i++) {
         const path = `./content/about/${imageFolder}/${data[i]}`;
         const li = document.createElement('li');
-        li.style.cssText = 'display: flex; justify-content: center; align-items: flex-start; height: 200px; overflow: hidden; opacity:1';  // Ensures the container does not grow beyond 200px height
+        li.style.cssText = 'display: flex; justify-content: center; align-items: center; height: 500px; overflow: hidden; opacity:1';  // Ensures the container does not grow beyond 200px height
 
         const img = document.createElement('img');
         img.src = path;
         img.className = 'img-fluid rounded shadow';
-        img.style.cssText = 'height: 100%; width: auto; object-fit: cover; object-position: top;'; // Ensures images fit properly, showing the top part
+        img.style.cssText = 'height: auto; width: 100%; object-fit: cover; object-position: top;'; // Ensures images fit properly, showing the top part
         img.alt = "Event Image " + path.match(/([^\/]+)$/)[0]; // Use the file name as alt text
 
         li.appendChild(img);
@@ -334,6 +363,7 @@
 
     // Example usage of the function for different sliders
     document.addEventListener('DOMContentLoaded', function () {
+
       createSwiffySlider('vocalist', 'vocalist', 5, [
         'IMG_8837.PNG',
         'IMG_8838.PNG',
@@ -341,17 +371,26 @@
         'IMG_8848.PNG',
         'IMG_8849.PNG',
       ]);
-      createSwiffySlider('theatrical', 'theater', 5, [
+      createSwiffySlider('theatrical', 'theater', 14, [
+        'Matilda/matilda5.png',
+        'Matilda/matilda6.png',
+        'Joseph_and_the_Technicolor_Dreamcoat/joe1.png',
+        'Joseph_and_the_Technicolor_Dreamcoat/joe4.png',
+        'Big_Fish/bf4.png',
+        'Big_Fish/bf5.png',
+        'Once_Upon_A_Mattress/mattress1.png',
+        'Once_Upon_A_Mattress/mattress4.png',
         'Alice_in_Danceland/alice1.png',
         'Alice_in_Danceland/alice2.png',
-        'Alice_in_Danceland/alice3.png',
-        'Alice_in_Danceland/alice4.png',
-        'Alice_in_Danceland/alice5.png',
+        'Mary_Poppins/mary2.png',
+        'Mary_Poppins/mary6.png',
+        'Mary_Poppins/mary11.png',
+        'Mary_Poppins/mary12.png',
       ]);
-      createSwiffySlider('acting-coach', 'director', 6, [
-        'IMG_7990.JPG',
+      createSwiffySlider('acting-coach', 'director', 4, [
+        //'IMG_7990.JPG',
         'IMG_8827.PNG',
-        'IMG_8829.JPG',
+        // 'IMG_8829.JPG',
         'Josh_me.png',
         'Coach2.png',
         'Coach1.png'
