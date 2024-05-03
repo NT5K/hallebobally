@@ -139,7 +139,7 @@
     }
 
     .yellow-border {
-      border: 10px solid var(--princess-gold-border-color);
+      border: 2px solid var(--princess-gold-border-color);
     }
   </style>
 
@@ -171,6 +171,14 @@
     .letter {
       display: inline-block;
       animation: colorCycle 5s infinite;
+    }
+
+    .card {
+      min-height: 750px;
+    }
+
+    .blockquote {
+      border-bottom: 1px solid #000;
     }
   </style>
 
@@ -260,7 +268,9 @@
     </div>
   </div>
 
-  <div class="my-5">
+
+  <!-- Princess Showcase Section -->
+  <div class="container-fluid my-5">
     <h1 class="display-2 text-center mb-3 gioviale">Meet the Princesses</h1>
     <!-- subheader -->
     <p class="lead text-center px-1 mx-1 px-md-5 mx-md-5 arial">I currently offer the following princesses. However, if
@@ -268,130 +278,52 @@
       looking for a
       different character — even if it's simply an animated character and not specifically a princess — <a href="#">Chat
         with me!</a> I'm always open to expansion!</p>
-    <div class="row g-4 px-md-5 d-none d-md-flex">
+    <div class="row g-4 justify-content-center">
       <!-- Elsa -->
-      <div class="col-lg-4 col-12">
-        <div class="card h-100 yellow-border" style="background-color: var(--elsa-custom-color, #ffffff);">
-          <img src="./content/princess_parties/images/princesses/elsa1.png" class="card-img-top" alt="Princess Elsa"
-            style="height: 550px; object-fit: cover; object-position: top center;">
-          <div class="card-body text-center">
-            <img src="./content/princess_parties/images/logos/princess_elsa_scaled.png" style="max-height: 150px;">
-            <p class="card-text mt-3  arial">
+      <div class="col-12 col-md-6 col-lg-4 text-center">
+        <div class="card yellow-border">
+          <div class="card-body">
+            <img src="./content/princess_parties/images/princesses/elsa1.png" class="img-fluid" alt="Princess Elsa"
+              style="height: 500px; object-fit: cover; object-position: top center;">
+            <h3 class="card-title">Princess Elsa</h3>
+            <p class="lead arial">
               All the way from Arendelle, Elsa is ready to share tales of what life is like back home with Sven, Olaf,
               and of course, Anna! Get ready to sing “Let it Go” with her!
             </p>
           </div>
         </div>
       </div>
-
       <!-- Belle -->
-      <div class="col-lg-4 col-12">
-        <div class="card h-100 yellow-border" style="background-color: var(--belle-custom-color, #ffffff);">
-          <img src="./content/princess_parties/images/princesses/belle2.png" class="card-img-top" alt="Princess Belle"
-            style="height: 550px; object-fit: cover; object-position: top center;">
-          <div class="card-body text-center">
-            <img src="./content/princess_parties/images/logos/princess_belle.png" style="max-height: 150px;">
-            <p class="card-text mt-3 arial">
+      <div class="col-12 col-md-6 col-lg-4 text-center">
+        <div class="card yellow-border">
+          <div class="card-body">
+            <img src="./content/princess_parties/images/princesses/belle2.png" class="img-fluid" alt="Princess Belle"
+              style="height: 500px; object-fit: cover; object-position: top center;">
+            <h3 class="card-title">Princess Belle</h3>
+            <p class="lead arial">
               Small town Belle can't wait to make special memories with you in your hometown as you have a dance party
               to “Be Our Guest” and read lots of Belle's favorite books!
-
             </p>
           </div>
         </div>
       </div>
-
       <!-- Ariel -->
-      <div class="col-lg-4 col-12">
-        <div class="card h-100 yellow-border" style="background-color: var(--ariel-custom-color, #ffffff);">
-          <img src="./content/princess_parties/images/princesses/ariel1.png" class="card-img-top" alt="Princess Ariel"
-            style="height: 550px; object-fit: cover; object-position: top center;">
-          <div class="card-body text-center">
-            <img src="./content/princess_parties/images/logos/princess_ariel.png" style="max-height: 150px;">
-            <p class="card-text mt-3 arial">
+      <div class="col-12 col-md-6 col-lg-4 text-center">
+        <div class="card yellow-border">
+          <div class="card-body">
+            <img src="./content/princess_parties/images/princesses/ariel1.png" class="img-fluid" alt="Princess Ariel"
+              style="height: 500px; object-fit: cover; object-position: top center;">
+            <h3 class="card-title">Princess Ariel</h3>
+            <p class="lead arial">
               Ariel is beyond excited to become “Part of Your World,” as you celebrate your special day! Because she's
               not in water, she won't be in mermaid form, but she'll still be oceanically dressed!
-
             </p>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- princess carousel for mobile -->
-    <div class="container">
-      <div class="row g-4 d-md-none"> <!-- Only visible on mobile and smaller devices -->
-        <!-- new mobile carousel -->
-        <div
-          class=" d-md-none swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
-          <ul class="slider-container py-4">
-            <!-- elsa card -->
-            <li class="list-unstyled">
-              <div class="card" style="background-color: var(--belle-custom-color, #ffffff);">
-                <img src="./content/princess_parties/images/princesses/elsa1.png" class="card-img-top img-fluid"
-                  alt="Princess Belle" style="object-fit: cover; object-position: top center;">
-
-                <div class="card-body text-center">
-                  <img src="./content/princess_parties/images/logos/princess_elsa_scaled.png"
-                    class="img-fluid mx-auto d-block" style="max-height: 150px;">
-                  <p class="card-text mt-3 arial">
-                    All the way from Arendelle, Elsa is ready to share tales of what life is like back home with Sven,
-                    Olaf, and of course, Anna! Get ready to sing “Let it Go” with her!
-
-                  </p>
-                </div>
-              </div>
-            </li>
-            <!-- belle card -->
-            <li class="list-unstyled">
-              <div class="card" style="background-color: var(--belle-custom-color, #ffffff);">
-                <img src="./content/princess_parties/images/princesses/belle2.png" class="card-img-top img-fluid"
-                  alt="Princess Belle" style="object-fit: cover; object-position: top center;">
-
-                <div class="card-body text-center">
-                  <img src="./content/princess_parties/images/logos/princess_belle.png"
-                    class="img-fluid mx-auto d-block" style="max-height: 150px;">
-                  <p class="card-text mt-3 arial">
-                    Small town Belle can't wait to make special memories with you in your hometown as you have a dance
-                    party to “Be Our Guest” and read lots of Belle's favorite books!
-
-                  </p>
-                </div>
-              </div>
-            </li>
-            <!-- ariel   card -->
-            <li class="list-unstyled">
-              <div class="card" style="background-color: var(--belle-custom-color, #ffffff);">
-                <img src="./content/princess_parties/images/princesses/ariel1.png" class="card-img-top img-fluid"
-                  alt="Princess Belle" style="object-fit: cover; object-position: top center;">
-
-                <div class="card-body text-center">
-                  <img src="./content/princess_parties/images/logos/princess_ariel.png"
-                    class="img-fluid mx-auto d-block" style="max-height: 150px;">
-                  <p class="card-text mt-3 arial">
-                    Ariel is beyond excited to become “Part of Your World,” as you celebrate your special day! Because
-                    she's not in water, she won't be in mermaid form, but she'll still be oceanically dressed!
-
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-          <button type="button" class="slider-nav" aria-label="Go left"></button>
-          <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
-
-          <div class="slider-indicators">
-            <button class="" aria-label="Go to slide"></button>
-            <button aria-label="Go to slide" class=""></button>
-            <button aria-label="Go to slide" class="active"></button>
-            <button aria-label="Go to slide" class=""></button>
-            <button aria-label="Go to slide" class=""></button>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
+
 
   <!-- testimonials -->
   <div class="text-center my-5 px-2 mx-4">
@@ -429,6 +361,17 @@
             </blockquote>
           </div>
         </div>
+        <div class="col-12">
+          <blockquote class="blockquote">
+            <p class="lead mb-3 arial">"Halle is a party starter, party saver, and the perfect addition to any
+              children's gathering. She comes with a bright smile, an enthusiastic vibe and most importantly, a flexible
+              approach. Kids are in awe of her costume, songs, and dance moves. For days after my daughter's fifth Elsa
+              themed birthday she kept remarking that she could not believe that the 'REAL Elsa' had come to her house.
+              Halle is truly magical at what she does."
+            </p>
+            <footer class="blockquote-footer">Happy Mother</footer>
+          </blockquote>
+        </div>
       </div>
     </div>
   </div>
@@ -450,7 +393,8 @@
             <source src="./content/princess_parties/videos/video_1.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="text-center arial mt-2 gioviale" style="font-size: 3.2rem; line-height: 75%;">Storytime with Belle is a special treat for kids and parents alike!</p>
+        <p class="text-center arial mt-2 gioviale" style="font-size: 3.2rem; line-height: 75%;">Storytime with Belle is
+          a special treat for kids and parents alike!</p>
       </div>
       <div class="col-12 col-lg-6 mb-4">
         <div class="video-responsive">
@@ -458,7 +402,8 @@
             <source src="./content/princess_parties/videos/video_2.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="text-center arial mt-2 gioviale" style="font-size: 3.2rem; line-height: 75%;">Watch as Elsa sings one of her most favorite songs with some of her new most
+        <p class="text-center arial mt-2 gioviale" style="font-size: 3.2rem; line-height: 75%;">Watch as Elsa sings one
+          of her most favorite songs with some of her new most
           favorite little princesses!</p>
       </div>
     </div>
@@ -478,7 +423,7 @@
         </h5>
       </div>
       <div class="col-12 col-lg-4 mx-auto pb-3 p-0">
-        <h3 class="display-5 mb-4 text-center">Contact Me</h3>
+        <p class="display-5 my-4 text-center">Contact Form:</p>
         <form id="myCustomForm" class="needs-validation" novalidate>
           <div class="mb-3">
             <label for="firstname" class="form-label arial">First Name</label>
