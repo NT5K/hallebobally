@@ -59,6 +59,158 @@
       font-size: 1.2rem;
     }
   </style>
+  <style>
+    /* ebe1da-3d3732-c39e70-ac7e53-8a4f32-9e8371-d8bca2 */
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      /* font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+      background-color: #ffffff;
+      /* Keeping the background consistently white */
+      color: #3d3732;
+      /* Dark charcoal for text, providing good contrast */
+    }
+
+    /* Navbar and footer styling */
+    .navbar,
+    .footer {
+      background-color: #ffffff;
+      /* White background for consistency */
+      border-bottom: 1px solid #d8bca2;
+      /* Subtle border color for navbar */
+      color: #3d3732;
+    }
+
+    /* Card styling with specific background colors from the palette */
+    .card {
+      /* background-color: #ac7e53; */
+      /* Brownish Tan for general card backgrounds */
+      border: 3px solid #c39e70 !important;
+      /* shadow */
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      /* Muted Gold for borders */
+      padding: 20px;
+      margin-bottom: 20px;
+      min-height: 630px;
+    }
+
+    /* Example card modifications for variety */
+    .card-one {
+      background-color: #ebe1da;
+      border-color: #735530;
+    }
+
+    /* Light Beige with Warm Grey border */
+    .card-two {
+      background-color: #9e8371;
+      border-color: #735530;
+    }
+
+    /* Warm Grey with Brownish Tan border */
+    .card-three {
+      background-color: #d8bca2;
+      border-color: #735530;
+    }
+
+    #why-choose-me {
+      background-color: #C39E70;
+      border: 3px solid #735530 !important;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      margin: 10px;
+      /* Adds margin around each column */
+      padding: 20px;
+    }
+
+    #past-vocalists {
+      background-color: #ebe1da;
+      border: 3px solid #735530 !important;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    #past-events {
+      background-color: #d8bca2;
+      border: 3px solid #735530 !important;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    #vocalist-hero {
+      background-color: #EBE1DA;
+      border: 3px solid #735530 !important;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      padding: 20px;
+    }
+
+    #vocalist-hero img {
+      border: 3px solid #735530 !important;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Soft Beige with Deep Copper border */
+
+    /* Other elements */
+    h1,
+    h2,
+    h3,
+    p,
+    a {
+      color: #3d3732;
+      /* Dark charcoal used for text for better readability */
+    }
+
+    a:hover {
+      color: #c39e70;
+      /* Muted Gold for hover effects */
+    }
+
+    ul,
+    li {
+      list-style-type: none;
+      /* Remove default list styles */
+      
+    }
+
+    /* Styling for the events and vocal styles columns */
+    #past-events-column .event-styles,
+    #past-vocalists-column .vocal-styles {
+      background-color: #c39e70;
+      border: 3px solid #735530 !important;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      margin: 10px;
+      /* Adds margin around each column */
+      padding: 20px;
+      /* border-radius: 5px; */
+    }
+
+    #past-events-column .event-styles {
+      background-color: #ac7e53;
+      /* Specific background color for events column */
+    }
+
+    #past-vocalists-column .vocal-styles {
+      background-color: #9e8371;
+      /* Specific background color for vocal styles column */
+      
+
+    }
+    /* Responsive adjustments for better spacing */
+    @media (min-width: 768px) {
+      .row>[class^="col-"] {
+        padding-right: 15px;
+        /* Adds right padding to each column */
+        padding-left: 15px;
+        /* Adds left padding to each column */
+      }
+    }
+    .lead {
+      font-size: 1.5rem;
+    }
+
+    /* .card {
+      min-height: 650px;
+    } */
+  </style>
+
 </head>
 
 <body>
@@ -109,108 +261,123 @@
     </div>
   </nav>
   <!-- Hero Section -->
-  <div class="p-5 bg-light text-center">
-    <h1 class="mb-3">Vocalist Services</h1>
-    <p class="lead arial">As a trained vocalist, I have experience in a variety of event types. With the ability to
-      stylize my
-      voice to match your event's feel, I look forward to meeting the musical needs of your event!</p>
+  <!-- Hero Section -->
+  <div class="container mt-5">
+    <div class="row align-items-center" id="vocalist-hero">
+      <div class="col-md-6">
+        <!-- Placeholder for Image -->
+        <img src="./content/vocalist/wedding/image1.PNG" class="img-fluid" alt="Vocalist">
+      </div>
+      <div class="col-md-6">
+        <h1 class="display-2 mb-3">Vocalist Services</h1>
+        <p class="lead arial">As a trained vocalist, I have experience in a variety of event types. With the ability to
+          stylize my
+          voice to match your event's feel, I look forward to meeting the musical needs of your event!</p>
+      </div>
+    </div>
   </div>
-
+  <hr class="m-5">
   <!-- Events and Styles Section -->
   <div class="container my-5">
-    <div class="row">
-      <div class="col-md-6">
-        <h2 class="centered-text" style="font-size: 2rem; font-weight: bold;">Past Event Types</h2>
-        <ul style="list-style-type: none; text-align: center; padding: 0;">
-          <li>★ Weddings</li>
-          <li>★ Funerals/Celebrations of Life</li>
-          <li>★ Jazz events</li>
-          <li>★ Holiday entertainment</li>
-          <li>★ Private parties</li>
-        </ul>
+    <div class="row" id="events-row">
+      <div class="col-md-6 mb-4" id="past-events-column">
+        <!-- Added margin-bottom for spacing between stacked columns on small devices -->
+        <div class="event-styles">
+          <h1 class="display-5 centered-text">Past Event Types</h1>
+          <ul class="list-unstyled text-center arial">
+            <li>★ Weddings</li>
+            <li>★ Funerals/Celebrations of Life</li>
+            <li>★ Jazz events</li>
+            <li>★ Holiday entertainment</li>
+            <li>★ Private parties</li>
+          </ul>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h2 class="centered-text" style="font-size: 2rem; font-weight: bold;">Past Vocal Styles</h2>
-        <ul style="list-style-type: none; text-align: center; padding: 0;">
-          <li>★ Classical</li>
-          <li>★ Modern</li>
-          <li>★ Jazz</li>
-          <li>★ Country</li>
-          <li>★ Rock Ballad</li>
-          <li>★ Musical theater</li>
-        </ul>
+      <div class="col-md-6" id="past-vocalists-column">
+        <div class="vocal-styles">
+          <h1 class="display-5 centered-text">Past Vocal Styles</h1>
+          <ul class="list-unstyled text-center arial">
+            <li>★ Classical</li>
+            <li>★ Modern</li>
+            <li>★ Jazz</li>
+            <li>★ Country</li>
+            <li>★ Rock Ballad</li>
+            <li>★ Musical theater</li>
+          </ul>
+        </div>
       </div>
-      <hr class="m-5">
     </div>
   </div>
 
-  <div class="row mt-4 highlight-background">
-    <div class="col-12 text-center">
-      <h1>Why Choose Me?</h1>
-      <p class="lead">If you don't see your specific style request, share your vision with me. I'd love to work with you
-        on it. Also, there's no need to find an accompanist - I have a network of instrumentalists that I collaborate
-        with. One stop shop!</p>
-      <hr class="m-5">
-    </div>
+  <hr class="m-5">
+  <section class="container">
 
-  </div>
+    <div class="row p-5" id="why-choose-me">
+      <div class="col-12 text-center">
+        <h1 class="display-5 mb-3">Why Choose Me?</h1>
+        <p class="lead arial">If you don't see your specific style request, share your vision with me. I'd love to work
+          with you
+          on it. Also, there's no need to find an accompanist - I have a network of instrumentalists that I collaborate
+          with. <br>One stop shop!</p>
+      </div>
+
+    </div>
+  </section>
+  <hr class="m-5">
 
   <!-- Showcase Examples Section -->
-  <div class="container-fluid my-5 ">
-    <h1 class="display-4 mb-4 text-center">Showcase Examples</h1>
-    <div class="row g-4">
-      <!-- Wedding -->
-      <div class="col-md-4">
-        <div class="highlight p-4 text-center">
-          <div
-            class="swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
-            <ul class="slider-container py-4" id="wedding">
-              <!-- Images will be dynamically added here -->
-            </ul>
+  <div class="container-fluid my-5">
+    <h1 class="display-4 text-center mb-4">Showcase Examples</h1>
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4 text-center">
+        <div class="card card-one">
+          <div class="card-body">
+            <div
+              class="swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
+              <ul class="slider-container py-4" id="wedding">
+                <!-- Images will be dynamically added here -->
+              </ul>
 
-            <button type="button" class="slider-nav" aria-label="Go left"></button>
-            <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+              <button type="button" class="slider-nav" aria-label="Go left"></button>
+              <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+            </div>
+            <h1 class="card-title">Weddings</h1>
+            <p class="lead arial">From a classical Ave Maria to a modern ballad as a bride walks down the aisle, I am
+              excited to make this
+              special day that much more special!</p>
           </div>
-          <h3>Weddings</h3>
-          <p class="arial">From a classical Ave Maria to a modern ballad as a bride walks down the aisle, I am excited
-            to make this special day that much more special!</p>
         </div>
       </div>
-      <!-- Jazz Events -->
-      <div class="col-md-4">
-        <div class="highlight p-4 text-center">
-          <!-- <div
-            class="swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein"> -->
-          <ul class="slider-container py-4" id="jazz">
-            <!-- Images will be dynamically added here -->
-          </ul>
-
-          <!-- <button type="button" class="slider-nav" aria-label="Go left"></button>
-            <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
-          </div> -->
-          <h3>Jazz Events</h3>
-          <p class="arial">Have an event that needs the smooth feel of a jazz lounge? We have you covered. Take a listen
-            to the demo below.
-          </p>
-        </div>
-      </div>
-      <!-- Holiday Entertainment -->
-      <div class="col-md-4">
-        <div class="highlight p-4 text-center">
-          <div
-            class="swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
-            <ul class="slider-container py-4" id="holiday">
+      <div class="col-12 col-md-6 col-lg-4 text-center">
+        <div class="card card-two">
+          <div class="card-body">
+            <ul class="slider-container py-4" id="jazz">
               <!-- Images will be dynamically added here -->
             </ul>
-
-            <button type="button" class="slider-nav" aria-label="Go left"></button>
-            <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+            <h1 class="card-title">Jazz Events</h1>
+            <p class="lead arial">Have an event that needs the smooth feel of a jazz lounge? We have you covered. Take a
+              listen to the demo
+              below.</p>
           </div>
-          <h3>Holiday Entertainment</h3>
-          <p class="arial">Hosting a holiday party that needs some entertainment? Get an idea of our holiday offering by
-            listening to these!
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 text-center">
+        <div class="card card-three">
+          <div class="card-body">
+            <div
+              class="swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
+              <ul class="slider-container py-4" id="holiday">
+                <!-- Images will be dynamically added here -->
+              </ul>
 
-          </p>
+              <button type="button" class="slider-nav" aria-label="Go left"></button>
+              <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+            </div>
+            <h1 class="card-title">Holiday Entertainment</h1>
+            <p class="lead arial">Hosting a holiday party that needs some entertainment? Get an idea of our holiday
+              offering by listening
+              to these!</p>
+          </div>
         </div>
       </div>
     </div>
@@ -229,7 +396,7 @@
         </h5>
       </div>
       <div class="col-12 col-lg-4 mx-auto pb-3 p-0">
-        <h3 class="display-5 mb-4 text-center">Contact Me</h3>
+        <p class="display-5 my-4 text-center">Contact Form:</p>
         <form id="myCustomForm" class="needs-validation" novalidate>
           <div class="mb-3">
             <label for="firstname" class="form-label arial">First Name</label>
@@ -299,68 +466,22 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script>
-    // Function to dynamically create Swiffy Sliders with variable media (images, videos, YouTube)
-    function createSwiffySlider(containerId, imageFolder, mediaList) {
-      const container = document.getElementById(containerId);
-      if (!container) {
-        console.error('Slider container not found:', containerId);
-        return;
-      }
-
-      container.innerHTML = ''; // Clear any existing content in the container
-
-      mediaList.forEach(media => {
-        const path = `./content/vocalist/${imageFolder}/${media.src}`;
-        const li = document.createElement('li');
-        li.style.cssText = 'display: flex; justify-content: center; align-items: center; height: 300px; overflow: hidden; opacity:1';  // Set height for all media types
-
-        if (media.type === 'image') {
-          const img = document.createElement('img');
-          img.src = path;
-          img.className = 'img-fluid rounded shadow';
-          img.style.cssText = 'height: 100%; width: auto; object-fit: cover; object-position: top;';
-          img.alt = "Event Image " + path.match(/([^\/]+)$/)[0];
-          li.appendChild(img);
-        } else if (media.type === 'video') {
-          const video = document.createElement('video');
-          video.className = 'w-100';
-          video.controls = true;
-          video.style.cssText = 'max-height: 300px;';
-          const source = document.createElement('source');
-          source.src = path;
-          source.type = 'video/mp4';
-          video.appendChild(source);
-          li.appendChild(video);
-        } else if (media.type === 'youtube') {
-          const iframe = document.createElement('iframe');
-          iframe.src = `https://www.youtube.com/embed/${media.src}`;
-          iframe.className = 'w-100';
-          iframe.allow = '';
-          // iframe.style.cssText = 'max-height: 300px;';
-          iframe.setAttribute('frameborder', "0");
-          iframe.setAttribute('allowfullscreen', "");
-          li.appendChild(iframe);
-        }
-
-        container.appendChild(li);
-      });
-    }
 
     // Example usage of the function for different sliders with mixed media types
     document.addEventListener('DOMContentLoaded', function () {
-      createSwiffySlider('holiday', 'holiday', [
+      createSwiffySlider('vocalist', 'holiday', 'holiday', [
         { src: 'holiday1.PNG', type: 'image' },
         { src: 'video1.mp4', type: 'video' },
         { src: '7xMQLO5Tsts', type: 'youtube' },
         { src: 'holiday2.PNG', type: 'image' },
       ]);
-      createSwiffySlider('wedding', 'wedding', [
+      createSwiffySlider('vocalist', 'wedding', 'wedding', [
         { src: 'image1.PNG', type: 'image' },
         { src: 'image2.PNG', type: 'image' },
         { src: 'image3.PNG', type: 'image' },
         { src: 'Wedding_demo2.mp4', type: 'video' },
       ]);
-      createSwiffySlider('jazz', 'jazz', [
+      createSwiffySlider('vocalist', 'jazz', 'jazz', [
         { src: 'CM03NQl5jt4', type: 'youtube' },
       ]);
     });
