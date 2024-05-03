@@ -118,6 +118,15 @@ body {
   background-size: 75rem;
 
 }
+.about-contact-section {
+  background-image: url('./content/svg/contact-background3.svg');
+  ;
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 75rem;
+
+}
 
 .bobally-section {
   background-color: #cbe5fe;
