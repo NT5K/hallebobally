@@ -46,6 +46,7 @@
 
     ul {
       list-style-type: disc;
+
       margin-left: 20px;
     }
 
@@ -97,19 +98,19 @@
 
     /* Example card modifications for variety */
     .card-one {
-      background-color: #ebe1da;
+      background-color: #EBE1DA;
       border-color: #735530;
     }
 
     /* Light Beige with Warm Grey border */
     .card-two {
-      background-color: #9e8371;
+      background-color: #EBE1DA;
       border-color: #735530;
     }
 
     /* Warm Grey with Brownish Tan border */
     .card-three {
-      background-color: #d8bca2;
+      background-color: #EBE1DA;
       border-color: #735530;
     }
 
@@ -134,14 +135,14 @@
       box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     }
 
-    #vocalist-hero {
+    .vocalist-hero {
       background-color: #EBE1DA;
       border: 3px solid #735530 !important;
       box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
       padding: 20px;
     }
 
-    #vocalist-hero img {
+    .vocalist-hero img {
       border: 3px solid #735530 !important;
       box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     }
@@ -167,7 +168,7 @@
     li {
       list-style-type: none;
       /* Remove default list styles */
-      
+
     }
 
     /* Styling for the events and vocal styles columns */
@@ -180,19 +181,33 @@
       /* Adds margin around each column */
       padding: 20px;
       /* border-radius: 5px; */
+      /* color: #537eac */
     }
 
     #past-events-column .event-styles {
-      background-color: #ac7e53;
+      background-color: #EBE1DA;
       /* Specific background color for events column */
     }
 
     #past-vocalists-column .vocal-styles {
-      background-color: #9e8371;
+      background-color: #EBE1DA;
       /* Specific background color for vocal styles column */
-      
+
 
     }
+
+    input, textarea {
+      background-color: #EBE1DA !important;
+    }
+
+    .btn {
+      background-color: #735530;
+    }
+
+    .btn:hover {
+      background-color: #c39e70;
+    }
+
     /* Responsive adjustments for better spacing */
     @media (min-width: 768px) {
       .row>[class^="col-"] {
@@ -202,6 +217,7 @@
         /* Adds left padding to each column */
       }
     }
+
     .lead {
       font-size: 1.5rem;
     }
@@ -262,57 +278,77 @@
   </nav>
   <!-- Hero Section -->
   <!-- Hero Section -->
-  <div class="container mt-5">
-    <div class="row align-items-center" id="vocalist-hero">
-      <div class="col-md-6">
-        <!-- Placeholder for Image -->
-        <img src="./content/vocalist/wedding/image1.PNG" class="img-fluid" alt="Vocalist">
+  <section class="container-fluid">
+    <div class="container mt-5">
+      <!-- This row will be hidden on small screens and visible on others -->
+      <div class="row align-items-center vocalist-hero d-none d-md-flex">
+        <div class="col-md-6">
+          <img src="./content/vocalist/wedding/image1.PNG" class="img-fluid" alt="Vocalist">
+        </div>
+        <div class="col-md-6">
+          <h1 class="display-2 mb-3">Vocalist Services</h1>
+          <p class="lead arial">As a trained vocalist, I have experience in a variety of event types. With the ability
+            to stylize my voice to match your event's feel, I look forward to meeting the musical needs of your event!
+          </p>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h1 class="display-2 mb-3">Vocalist Services</h1>
-        <p class="lead arial">As a trained vocalist, I have experience in a variety of event types. With the ability to
-          stylize my
-          voice to match your event's feel, I look forward to meeting the musical needs of your event!</p>
+
+      <!-- This row will be visible only on small screens and hidden on others -->
+      <div class="row d-md-none vocalist-hero">
+        <div class="col-12 text-center">
+          <h1 class="display-2 mb-3">Vocalist Services</h1>
+        </div>
+        <div class="col-12">
+          <img src="./content/vocalist/wedding/image1.PNG" class="img-fluid mb-3" alt="Vocalist">
+        </div>
+        <div class="col-12">
+          <p class="lead arial">As a trained vocalist, I have experience in a variety of event types. With the ability
+            to stylize my voice to match your event's feel, I look forward to meeting the musical needs of your event!
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
   <hr class="m-5">
+
+
   <!-- Events and Styles Section -->
   <div class="container my-5">
     <div class="row" id="events-row">
       <div class="col-md-6 mb-4" id="past-events-column">
         <!-- Added margin-bottom for spacing between stacked columns on small devices -->
         <div class="event-styles">
-          <h1 class="display-5 centered-text">Past Event Types</h1>
-          <ul class="list-unstyled text-center arial">
-            <li>★ Weddings</li>
-            <li>★ Funerals/Celebrations of Life</li>
-            <li>★ Jazz events</li>
-            <li>★ Holiday entertainment</li>
-            <li>★ Private parties</li>
+          <h1 class="display-5">Past Event Types</h1>
+          <ul class="list-unstyled text-start arial">
+            <li>■ Weddings</li>
+            <li>■ Funerals/Celebrations of Life</li>
+            <li>■ Jazz events</li>
+            <li>■ Holiday entertainment</li>
+            <li>■ Private parties</li>
           </ul>
         </div>
       </div>
       <div class="col-md-6" id="past-vocalists-column">
         <div class="vocal-styles">
-          <h1 class="display-5 centered-text">Past Vocal Styles</h1>
-          <ul class="list-unstyled text-center arial">
-            <li>★ Classical</li>
-            <li>★ Modern</li>
-            <li>★ Jazz</li>
-            <li>★ Country</li>
-            <li>★ Rock Ballad</li>
-            <li>★ Musical theater</li>
+          <h1 class="display-5">Past Vocal Styles</h1>
+          <ul class="list-unstyled text-start arial">
+            <li>■ Classical</li>
+            <li>■ Modern</li>
+            <li>■ Jazz</li>
+            <li>■ Country</li>
+            <li>■ Rock Ballad</li>
+            <li>■ Musical theater</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 
+
   <hr class="m-5">
   <section class="container">
 
-    <div class="row p-5" id="why-choose-me">
+    <div class="row p-5 vocalist-hero">
       <div class="col-12 text-center">
         <h1 class="display-5 mb-3">Why Choose Me?</h1>
         <p class="lead arial">If you don't see your specific style request, share your vision with me. I'd love to work

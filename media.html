@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,12 +96,19 @@
             </div>
         </div>
     </nav>
-
+    <div class="row justify-content-center pt-5">
+        <div class="col-12 col-md-8 text-center lead arial">
+            <h1>Take a look at some of my artistic highlights in vocal performance, television and web commercial work,
+                and theater.</h1>
+        </div>
+    </div>
+    <hr>
     <!-- videos are dynimacally loaded using javascript -->
     <div id="videoContainer"></div>
 
     <!-- contact -->
     <section class="container-fluid px-5 py-5" id="contact">
+
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h3 class="display-3 mb-4">Let's talk about everything!</h3>
@@ -323,7 +329,7 @@
             sections.forEach(section => {
                 const sectionDiv = document.createElement('div');
                 sectionDiv.className = "container section-padding";
-                sectionDiv.innerHTML = `<h2>${section.title}</h2><div class="row ${section.extraClasses || ''}">`;
+                sectionDiv.innerHTML = `<h2 class="text-center display-4">${section.title}</h2><div class="row ${section.extraClasses || ''}">`;
 
                 section.videos.forEach(video => {
                     const colDiv = document.createElement('div');

@@ -299,3 +299,9 @@ label.error {
 .custom-shape-divider-top-1713145993 .shape-fill {
   fill: #CBE5FE;
 }
+
+.pink-shadow2 {
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.5);
+  background-color: white;
+  border-radius: 8px;
+}
