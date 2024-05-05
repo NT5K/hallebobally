@@ -67,7 +67,7 @@
       /* Underline on hover for better interaction feedback */
     }
 
-    .custom-shape-divider-top-1713124181 {
+    .hbb-top-divider {
       position: absolute;
       top: 0;
       left: 0;
@@ -76,15 +76,33 @@
       line-height: 0;
     }
 
-    .custom-shape-divider-top-1713124181 svg {
+    .hbb-top-divider svg {
       position: relative;
       display: block;
       width: calc(100% + 1.3px);
       height: 35px;
     }
 
-    .custom-shape-divider-top-1713124181 .shape-fill {
+    .hbb-top-divider .shape-fill {
       fill: #FFFFFF;
+    }
+
+    .custom-image-box {
+      padding: 20px 40px 60px 30px;
+      /* Different padding sizes for uneven walls */
+      background-color: #f4f4f2;
+      /* Light grey background color */
+      display: inline-block;
+      /* Keeps the box size close to the image */
+      border-radius: 10px;
+      /* Adds rounded corners to the box */
+    }
+
+    .img-fluid {
+      max-width: 100%;
+      /* Ensures the image is responsive */
+      height: auto;
+      /* Maintains the aspect ratio of the image */
     }
   </style>
 </head>
@@ -137,28 +155,47 @@
     </div>
   </nav>
 
-  <!-- hero -->
-  <section class="container-fluid hero g-0 pt-5 pt-md-0">
-    <div class="row g-0 p-0 m-0 align-items-center">
-      <div class="col-12 col-md-6 text-center order-2 order-md-1">
-        <img src="./content/home/9-crop-cut-2.png" alt="Halle St. John at a princess party event in Cleveland"
-          class="img-fluid rounded">
+  <!-- Hero Section -->
+  <section class="container-fluid hero">
+    <div class="container mt-3 ">
+      <!-- This row will be hidden on small screens and visible on others -->
+      <div class="row align-items-center  d-none d-md-flex">
+        <div class="col-md-6">
+          <img src="./content/home/9-crop-cut-2.png" class="img-fluid"
+            alt="Halle St. John at a princess party event in Cleveland">
+        </div>
+        <div class="col-md-6">
+          <h1 class="display-2 mb-3">Princess Parties, Story Time, Professional Vocalist for Hire in Cleveland</h1>
+          <p class="lead arial">Explore top-notch vocalist services and children's entertainment with Halle St. John.
+            Perfect for your next Cleveland event.</p>
+          <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="hallebobally.html"
+            role="button"><strong>Halle Bo Bally</strong></a>
+          <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="princessparties.html"
+            role="button"><strong>Princess Parties</strong></a>
+        </div>
       </div>
-      <div class="col-12 col-md-6 text-center text-md-start  order-1 order-md-2">
-        <!-- Gradient applied through CSS -->
-        <h1 class="display-1 display-md-4 pt-sm-5">Princess Parties, Story Time, Professional Vocalist for Hire in
-          Cleveland
-        </h1>
-        <p class="lead arial" style="font-size: 1.5em;">Explore top-notch vocalist services and children's entertainment
-          with Halle St. John.
-          Perfect for your next Cleveland event.</p>
-        <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="hallebobally.html"
-          role="button"><strong>Halle Bo Bally</strong></a>
-        <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="princessparties.html"
-          role="button"><strong>Princess Parties</strong></a>
+
+      <!-- This row will be visible only on small screens and hidden on others -->
+      <div class="row d-md-none ">
+        <div class="col-12 text-center">
+          <h1 class="display-2 mb-3">Princess Parties, Story Time, Professional Vocalist for Hire in Cleveland</h1>
+        </div>
+        <div class="col-12 justify-content-center">
+          <img src="./content/home/9-crop-cut-2.png" class="img-fluid mb-3"
+            alt="Halle St. John at a princess party event in Cleveland">
+        </div>
+        <div class="col-12">
+          <p class="lead arial">Explore top-notch vocalist services and children's entertainment with Halle St. John.
+            Perfect for your next Cleveland event.</p>
+        </div>
+        <div class="text-center p-2">
+          <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="hallebobally.html"
+            role="button"><strong>Halle Bo Bally</strong></a>
+          <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="princessparties.html"
+            role="button"><strong>Princess Parties</strong></a>
+        </div>
       </div>
     </div>
-
   </section>
 
   <!-- about -->
@@ -180,7 +217,7 @@
 
   <!-- halle bo bally -->
   <section class="container-fluid bobally-section g-0 p-md-5" style="position: relative;" id="halle-bo-bally">
-    <div class="custom-shape-divider-top-1713124181">
+    <div class="hbb-top-divider">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path
           d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
@@ -241,7 +278,7 @@
           Don't like forms? Send me an email instead. <a href="mailto:hallesaintj@gmail.com">hallesaintj@gmail.com</a>
         </h5>
         <h5 class="arial mb-3">
-          Want to talk on the phone? Give me a call at <a href="tel:216-577-2428">216-577-2428</a>
+          Want to talk on the phone? Give me a call at <a href="tel:216-245-5195">216-245-5195</a>
         </h5>
       </div>
       <div class="col-12 col-lg-4 mx-auto pb-3 p-0">

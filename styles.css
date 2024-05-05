@@ -47,6 +47,13 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'CHERL';
+  src: url('fonts/CHERI.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .hero {
   background-color: #fdcff1;
 }
@@ -301,7 +308,7 @@ label.error {
 }
 
 .pink-shadow2 {
-  box-shadow: 0 0 40px rgba(255, 105, 180, 0.5);
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.5) !important;
   background-color: white;
   border-radius: 8px;
 }
