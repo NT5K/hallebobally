@@ -180,12 +180,13 @@
                             Please select a reason for contacting me.
                         </div>
                     </div>
+                    
                     <!-- message -->
                     <div class="mb-3">
                         <label for="message" class="form-label arial">Message</label>
                         <textarea class="form-control" id="message" name="entry.365137442" rows="5" required></textarea>
                         <div class="invalid-feedback">
-                            Please enter a message?
+                            Please enter a message.
                         </div>
                     </div>
 
@@ -194,7 +195,7 @@
                         <label for="phone" class="form-label arial">Phone Number</label>
                         <input type="text" class="form-control" id="phone" name="entry.1460823130" required>
                         <div class="invalid-feedback">
-                            Please enter a valid phone number?
+                            Please enter a valid phone number.
                         </div>
                     </div>
 
@@ -364,7 +365,7 @@
             sections.forEach(section => {
                 const sectionDiv = document.createElement('div');
                 sectionDiv.className = "container section-padding";
-                sectionDiv.innerHTML = `<h2 class="text-center display-4">${section.title}</h2><div class="row ${section.extraClasses || ''}">`;
+                sectionDiv.innerHTML = `<h2 class="text-center display-3">${section.title}</h2><div class="row ${section.extraClasses || ''}">`;
 
                 section.videos.forEach(video => {
                     const colDiv = document.createElement('div');
