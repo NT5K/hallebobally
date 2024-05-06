@@ -312,3 +312,7 @@ label.error {
   background-color: white;
   border-radius: 8px;
 }
+
+form.label {
+  justify-content: left !important;
+}

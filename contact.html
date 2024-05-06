@@ -144,7 +144,8 @@
         <h1 class="display-6 mb-4 arial">
           <span style="font-family: 'CHERL', serif;font-size: 4rem;">Oh hey!</span> <br>
           I'm so glad you made it here! Shoot me a message or give me a call -
-          I can't wait to hear from you!</h1>
+          I can't wait to hear from you!
+        </h1>
       </div>
       <div class="col-lg-4">
         <img src="./content/contact/contact1.png" alt="Contact Image" class="img-fluid rounded shadow"
@@ -160,46 +161,95 @@
           class="shape-fill"></path>
       </svg>
     </div>
-    <div class="container  text-center ">
+    <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-6 pb-3">
-          <div class="mt-4 bg-white border shadow">
+          <div class="mt-4 bg-white border shadow text-center">
             <h5 class="arial"> Don't like forms? Send me an email instead. <a
                 href="mailto:hallesaintj@gmail.com">hallesaintj@gmail.com</a> </h5>
             <h5 class="arial mb-3"> Want to talk on the phone? Give me a call at <a
                 href="tel:216-245-5195">216-245-5195</a> </h5>
           </div>
-          <p class="display-5 my-4">Contact Form:</p>
+          <p class="display-5 my-4 text-center ">Contact Form</p>
           <form id="myCustomForm" class="needs-validation" novalidate>
+            <!-- first name -->
             <div class="mb-3">
               <label for="firstname" class="form-label arial">First Name</label>
-              <input type="text" class="form-control" id="firstname" name="entry.1854831876" required>
-              <div class="invalid-feedback"> Please enter your first name. </div>
+              <input type="text" class="form-control" id="firstname" name="entry.251350530" required>
+              <div class="invalid-feedback">
+                Please enter your first name.
+              </div>
             </div>
+            <!-- last name -->
             <div class="mb-3">
               <label for="lastname" class="form-label arial">Last Name</label>
-              <input type="text" class="form-control" id="lastname" name="entry.1146938562" required>
-              <div class="invalid-feedback"> Please enter your last name. </div>
+              <input type="text" class="form-control" id="lastname" name="entry.1691571590" required>
+              <div class="invalid-feedback">
+                Please enter your last name.
+              </div>
             </div>
+            <!-- email -->
             <div class="mb-3">
               <label for="email" class="form-label arial">Email</label>
-              <input type="email" class="form-control" id="email" name="entry.1184860373" required>
-              <div class="invalid-feedback"> Please enter a valid email address. </div>
+              <input type="email" class="form-control" id="email" name="entry.1731961914" required>
+              <div class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
             </div>
+
+            <!-- hidden input for selected reason -->
+            <input type="hidden" id="selectedReason" name="entry.52929734" value="Halle Bo Bally">
+
+            <!-- reason -->
+            <div class="mb-3 arial">
+              <label class="form-label arial">Reason for Contact</label>
+              <div>
+                <input type="radio" id="reason_halle" name="reason" value="Halle Bo Bally">
+                <label for="reason_halle">Halle Bo Bally</label>
+              </div>
+              <div>
+                <input type="radio" id="reason_princess" name="reason" value="Princess Parties">
+                <label for="reason_princess">Princess Parties</label>
+              </div>
+              <div>
+                <input type="radio" id="reason_vocalist" name="reason" value="Vocalist for Hire">
+                <label for="reason_vocalist">Vocalist for Hire</label>
+              </div>
+              <div>
+                <input type="radio" id="reason_other" name="reason" value="Other" checked>
+                <label for="reason_other">Other</label>
+              </div>
+
+              <div class="invalid-feedback">
+                Please select a reason for contacting me.
+              </div>
+            </div>
+            <!-- message -->
             <div class="mb-3">
               <label for="message" class="form-label arial">Message</label>
-              <textarea class="form-control" id="message" name="entry.427335266" rows="5" required></textarea>
-              <div class="invalid-feedback"> What would you like to tell me? </div>
+              <textarea class="form-control" id="message" name="entry.365137442" rows="5" required></textarea>
+              <div class="invalid-feedback">
+                Please enter a message?
+              </div>
             </div>
+
+            <!-- phone -->
             <div class="mb-3">
               <label for="phone" class="form-label arial">Phone Number</label>
-              <input type="text" class="form-control" id="phone" name="entry.427335266" required>
-              <div class="invalid-feedback"> Please enter your phone number. </div>
+              <input type="text" class="form-control" id="phone" name="entry.1460823130" required>
+              <div class="invalid-feedback">
+                Please enter a valid phone number?
+              </div>
             </div>
-            <button class="btn btn-success text-white m-1 py-2 px-4 arial" type="submit"><strong>Send
-                Message</strong></button>
-            <div id="submitSuccessMessage" class="alert alert-success mt-3 d-none" role="alert"> Thanks for reaching
-              out! I'll get back to you soon. </div>
+
+            <!-- submit button -->
+            <div class="text-center">
+              <button class="btn btn-success text-white m-1 py-2 px-4 arial" type="submit"><strong>Send
+                  Message</strong></button>
+              <div id="submitSuccessMessage" class="alert alert-success mt-3 d-none" role="alert">
+                Thanks for reaching out! I'll get back to you soon!
+              </div>
+            </div>
           </form>
         </div>
       </div>

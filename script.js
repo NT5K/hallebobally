@@ -1,50 +1,59 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var formId = "1FAIpQLSehsrCqZrw0rwtZTA4aoFl58kkmRcgzYJLEFzDNSML8iliqCQ";
+  var formId = "1FAIpQLSd2sEDtvU3rFtk_FV2mhkfmx2f3wt5JBKSxwTO7c9ES6Au8QA";
   var form = document.getElementById('myCustomForm');
   var validationMessages = document.getElementsByClassName('invalid-feedback');
+  var selectedReasonInput = document.getElementById('selectedReason');
+  var radioButtons = document.querySelectorAll('input[type="radio"][name="reason"]');
+
+  radioButtons.forEach(function (radio) {
+      radio.addEventListener('change', function () {
+          selectedReasonInput.value = this.value;
+      });
+  });
 
   form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent default form submission
+      event.preventDefault(); // Prevent default form submission
 
-    if (!this.checkValidity()) {
-      event.stopPropagation(); // Stop the form from submitting
-      Array.from(validationMessages).forEach(function (message) {
-        if (message.previousElementSibling && !message.previousElementSibling.validity.valid) {
-          message.style.display = 'block';
-        }
-      });
-      this.classList.add('was-validated');
-      return; // Prevent the form from submitting
-    }
+      if (!this.checkValidity()) {
+          event.stopPropagation(); // Stop the form from submitting
+          Array.from(validationMessages).forEach(function (message) {
+              if (message.previousElementSibling && message.previousElementSibling.tagName === 'INPUT' && !message.previousElementSibling.validity.valid) {
+                  message.style.display = 'block';
+              }
+          });
+          this.classList.add('was-validated');
+          return; // Prevent the form from submitting
+      }
 
-    var formData = new FormData(this);
-    
-    fetch(`https://docs.google.com/forms/d/e/${formId}/formResponse`, {
-      method: 'POST',
-      body: formData,
-      mode: 'no-cors' // CORS must be set to 'no-cors'
-    }).then(response => {
-      document.getElementById('submitSuccessMessage').classList.remove('d-none');
-      this.reset(); // Optionally reset the form after submission
-      this.classList.remove('was-validated');
-      Array.from(validationMessages).forEach(function (message) {
-        message.style.display = 'none';
+      var formData = new FormData(this);
+
+      fetch(`https://docs.google.com/forms/d/e/${formId}/formResponse`, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors' // CORS must be set to 'no-cors'
+      }).then(response => {
+          document.getElementById('submitSuccessMessage').classList.remove('d-none');
+          this.reset(); // Optionally reset the form after submission
+          this.classList.remove('was-validated');
+          Array.from(validationMessages).forEach(function (message) {
+              message.style.display = 'none';
+          });
+      }).catch(error => {
+          console.error('Error:', error);
       });
-    }).catch(error => {
-      console.error('Error:', error);
-    });
   });
 
   Array.from(form.elements).forEach(function (input) {
-    input.addEventListener('input', function () {
-      if (this.validity.valid) {
-        if (this.nextElementSibling && this.nextElementSibling.classList.contains('invalid-feedback')) {
-          this.nextElementSibling.style.display = 'none';
-        }
-      }
-    });
+      input.addEventListener('input', function () {
+          if (this.validity.valid) {
+              if (this.nextElementSibling && this.nextElementSibling.classList.contains('invalid-feedback')) {
+                  this.nextElementSibling.style.display = 'none';
+              }
+          }
+      });
   });
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
   var currentYear = new Date().getFullYear(); // Get the current year

@@ -260,8 +260,8 @@
             to turn your
             event's vision into a reality!</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-            <a href="#contact" class="btn btn-outline-dark btn-lg px-4 me-md-2 fw-bold arial"
-              role="button">Contact Me Now!</a>
+            <a href="#contact" class="btn btn-outline-dark btn-lg px-4 me-md-2 fw-bold arial" role="button">Contact Me
+              Now!</a>
 
           </div>
         </div>
@@ -432,53 +432,85 @@
         </h5>
       </div>
       <div class="col-12 col-lg-4 mx-auto pb-3 p-0">
-        <p class="display-5 my-4 text-center">Contact Form:</p>
+        <p class="display-5 my-4 text-center">Contact Form</p>
         <form id="myCustomForm" class="needs-validation" novalidate>
+          <!-- first name -->
           <div class="mb-3">
             <label for="firstname" class="form-label arial">First Name</label>
-            <input type="text" class="form-control border" id="firstname" name="entry.1854831876" required>
+            <input type="text" class="form-control" id="firstname" name="entry.251350530" required>
             <div class="invalid-feedback">
               Please enter your first name.
             </div>
           </div>
-
+          <!-- last name -->
           <div class="mb-3">
             <label for="lastname" class="form-label arial">Last Name</label>
-            <input type="text" class="form-control border" id="lastname" name="entry.1146938562" required>
+            <input type="text" class="form-control" id="lastname" name="entry.1691571590" required>
             <div class="invalid-feedback">
               Please enter your last name.
             </div>
           </div>
-
+          <!-- email -->
           <div class="mb-3">
             <label for="email" class="form-label arial">Email</label>
-            <input type="email" class="form-control border" id="email" name="entry.1184860373" required>
+            <input type="email" class="form-control" id="email" name="entry.1731961914" required>
             <div class="invalid-feedback">
               Please enter a valid email address.
             </div>
           </div>
 
+          <!-- hidden input for selected reason -->
+          <input type="hidden" id="selectedReason" name="entry.52929734" value="Halle Bo Bally">
+
+          <!-- reason -->
+          <div class="mb-3 arial">
+            <label class="form-label arial">Reason for Contact</label>
+            <div>
+              <input type="radio" id="reason_halle" name="reason" value="Halle Bo Bally">
+              <label for="reason_halle">Halle Bo Bally</label>
+            </div>
+            <div>
+              <input type="radio" id="reason_princess" name="reason" value="Princess Parties" checked>
+              <label for="reason_princess">Princess Parties</label>
+            </div>
+            <div>
+              <input type="radio" id="reason_vocalist" name="reason" value="Vocalist for Hire">
+              <label for="reason_vocalist">Vocalist for Hire</label>
+            </div>
+            <div>
+              <input type="radio" id="reason_other" name="reason" value="Other">
+              <label for="reason_other">Other</label>
+            </div>
+
+            <div class="invalid-feedback">
+              Please select a reason for contacting me.
+            </div>
+          </div>
+          <!-- message -->
           <div class="mb-3">
             <label for="message" class="form-label arial">Message</label>
-            <textarea class="form-control border" id="message" name="entry.427335266" rows="5" required></textarea>
+            <textarea class="form-control" id="message" name="entry.365137442" rows="5" required></textarea>
             <div class="invalid-feedback">
-              What would you like to tell me?
+              Please enter a message?
             </div>
           </div>
 
-          <!-- this is incorrect name -->
+          <!-- phone -->
           <div class="mb-3">
-            <label for="message" class="form-label arial">Phone Number</label>
-            <textarea class="form-control border" id="message" name="entry.427335266" rows="5" required></textarea>
+            <label for="phone" class="form-label arial">Phone Number</label>
+            <input type="text" class="form-control" id="phone" name="entry.1460823130" required>
             <div class="invalid-feedback">
-              What would you like to tell me?
+              Please enter a valid phone number?
             </div>
           </div>
 
-          <button class="btn btn-success text-white m-1 py-2 px-4 arial" type="submit"><strong>Send
-              Message</strong></button>
-          <div id="submitSuccessMessage" class="alert alert-success mt-3 d-none" role="alert">
-            Thanks for reaching out! I'll get back to you soon.
+          <!-- submit button -->
+          <div class="text-center">
+            <button class="btn btn-success text-white m-1 py-2 px-4 arial" type="submit"><strong>Send
+                Message</strong></button>
+            <div id="submitSuccessMessage" class="alert alert-success mt-3 d-none" role="alert">
+              Thanks for reaching out! I'll get back to you soon!
+            </div>
           </div>
         </form>
       </div>
@@ -517,39 +549,8 @@
       }
       target.appendChild(span);
     });
-
-
-    // document.addEventListener('DOMContentLoaded', function () {
-    //   var images = [
-    //     "./content/princess_parties/images/gallery/princess1.png",
-    //     "./content/princess_parties/images/gallery/princess_hero.png",
-    //     "./content/princess_parties/images/gallery/princess5.png",
-    //     "./content/princess_parties/images/gallery/princess6.png",
-    //     "./content/princess_parties/images/gallery/princess7.png",
-    //     "./content/princess_parties/images/gallery/princess8.png",
-    //     "./content/princess_parties/images/gallery/princess9.png",
-    //     "./content/princess_parties/images/gallery/princess10.png",
-    //     "./content/princess_parties/images/gallery/princess11.png",
-    //     "./content/princess_parties/images/gallery/princess12.png",
-    //     "./content/princess_parties/images/gallery/princess13.png",
-    //     "./content/princess_parties/images/gallery/princess14.png",
-    //   ];
-
-    //   var gallery = document.getElementById('imageGallery');
-
-    //   images.forEach(function (src) {
-    //     var col = document.createElement('div');
-    //     col.className = 'col-12 col-md-6 col-lg-3';
-    //     var img = document.createElement('img');
-    //     img.src = src;
-    //     img.className = 'img-fluid rounded shadow';
-    //     img.alt = 'Event Image';
-    //     col.appendChild(img);
-    //     gallery.appendChild(col);
-    //   });
-    // });
   </script>
-  <!-- <script>
+  <script>
     // magic wand script
     window.addEventListener('mousemove', function (e) {
       //trail
@@ -589,7 +590,7 @@
       });
 
     }, false);
-  </script> -->
+  </script>
   <script>
     function initializeGallery(galleryID, items, title, description) {
       jQuery(`#${galleryID}`).nanogallery2({

@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            overflow-x: hidden;
+        }
+
         .section-padding {
             padding: 40px 0;
         }
@@ -122,55 +126,85 @@
                 </h5>
             </div>
             <div class="col-12 col-lg-4 mx-auto pb-3 p-0">
-                <p class="display-5 my-4 text-center">Contact Form:</p>
+                <p class="display-5 my-4 text-center">Contact Form</p>
                 <form id="myCustomForm" class="needs-validation" novalidate>
+                    <!-- first name -->
                     <div class="mb-3">
                         <label for="firstname" class="form-label arial">First Name</label>
-                        <input type="text" class="form-control border" id="firstname" name="entry.1854831876" required>
+                        <input type="text" class="form-control" id="firstname" name="entry.251350530" required>
                         <div class="invalid-feedback">
                             Please enter your first name.
                         </div>
                     </div>
-
+                    <!-- last name -->
                     <div class="mb-3">
                         <label for="lastname" class="form-label arial">Last Name</label>
-                        <input type="text" class="form-control border" id="lastname" name="entry.1146938562" required>
+                        <input type="text" class="form-control" id="lastname" name="entry.1691571590" required>
                         <div class="invalid-feedback">
                             Please enter your last name.
                         </div>
                     </div>
-
+                    <!-- email -->
                     <div class="mb-3">
                         <label for="email" class="form-label arial">Email</label>
-                        <input type="email" class="form-control border" id="email" name="entry.1184860373" required>
+                        <input type="email" class="form-control" id="email" name="entry.1731961914" required>
                         <div class="invalid-feedback">
                             Please enter a valid email address.
                         </div>
                     </div>
 
+                    <!-- hidden input for selected reason -->
+                    <input type="hidden" id="selectedReason" name="entry.52929734" value="Halle Bo Bally">
+
+                    <!-- reason -->
+                    <div class="mb-3 arial">
+                        <label class="form-label arial">Reason for Contact</label>
+                        <div>
+                            <input type="radio" id="reason_halle" name="reason" value="Halle Bo Bally" checked>
+                            <label for="reason_halle">Halle Bo Bally</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="reason_princess" name="reason" value="Princess Parties">
+                            <label for="reason_princess">Princess Parties</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="reason_vocalist" name="reason" value="Vocalist for Hire">
+                            <label for="reason_vocalist">Vocalist for Hire</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="reason_other" name="reason" value="Other">
+                            <label for="reason_other">Other</label>
+                        </div>
+
+                        <div class="invalid-feedback">
+                            Please select a reason for contacting me.
+                        </div>
+                    </div>
+                    <!-- message -->
                     <div class="mb-3">
                         <label for="message" class="form-label arial">Message</label>
-                        <textarea class="form-control border" id="message" name="entry.427335266" rows="5"
-                            required></textarea>
+                        <textarea class="form-control" id="message" name="entry.365137442" rows="5" required></textarea>
                         <div class="invalid-feedback">
-                            What would you like to tell me?
+                            Please enter a message?
                         </div>
                     </div>
 
-                    <!-- this is incorrect name -->
+                    <!-- phone -->
                     <div class="mb-3">
-                        <label for="message" class="form-label arial">Phone Number</label>
-                        <textarea class="form-control border" id="message" name="entry.427335266" rows="5"
-                            required></textarea>
+                        <label for="phone" class="form-label arial">Phone Number</label>
+                        <input type="text" class="form-control" id="phone" name="entry.1460823130" required>
                         <div class="invalid-feedback">
-                            What would you like to tell me?
+                            Please enter a valid phone number?
                         </div>
                     </div>
 
-                    <button class="btn btn-success text-white m-1 py-2 px-4 arial" type="submit"><strong>Send
-                            Message</strong></button>
-                    <div id="submitSuccessMessage" class="alert alert-success mt-3 d-none" role="alert">
-                        Thanks for reaching out! I'll get back to you soon.
+                    <!-- submit button -->
+                    <div class="text-center">
+                        <button class="btn btn-success text-white m-1 py-2 px-4 arial" type="submit"><strong>Send
+                                Message</strong></button>
+                        <div id="submitSuccessMessage" class="alert alert-success mt-3 d-none" role="alert">
+                            Thanks for reaching out! I'll get back to you soon!
+                        </div>
                     </div>
                 </form>
             </div>

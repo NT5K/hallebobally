@@ -157,41 +157,52 @@
 
   <!-- Hero Section -->
   <section class="container-fluid hero">
-    <div class="container mt-3 ">
+    <div class="container mt-3">
       <!-- This row will be hidden on small screens and visible on others -->
-      <div class="row align-items-center  d-none d-md-flex">
-        <div class="col-md-6">
-          <img src="./content/home/9-crop-cut-2.png" class="img-fluid"
-            alt="Halle St. John at a princess party event in Cleveland">
+      <div class="row align-items-center no-gutters d-none d-md-flex">
+        <div class=" col-xl-7 col-lg-6 col-md-12 text-lg-right text-center">
+          <img src="./content/home/9-crop-cut-2.png" alt="" class="img-fluid">
         </div>
-        <div class="col-md-6">
-          <h1 class="display-2 mb-3">Princess Parties, Story Time, Professional Vocalist for Hire in Cleveland</h1>
-          <p class="lead arial">Explore top-notch vocalist services and children's entertainment with Halle St. John.
-            Perfect for your next Cleveland event.</p>
-          <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="hallebobally.html"
-            role="button"><strong>Halle Bo Bally</strong></a>
-          <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="princessparties.html"
-            role="button"><strong>Princess Parties</strong></a>
+        <div class="col-xl-5 col-lg-6 col-md-12">
+          <div class="py-5 py-lg-0">
+            <h1 class="display-3 fw-bold">Princess Parties, Story Time, Professional Vocalist for Hire in Cleveland
+            </h1>
+            <p class="mb-4 lead">
+              Explore top-notch vocalist services and children's entertainment with Halle St. John.
+              Perfect for your next Cleveland event.
+            </p>
+            <div class="">
+              <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="hallebobally.html"
+                role="button"><strong>Halle Bo Bally</strong></a>
+              <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="princessparties.html"
+                role="button"><strong>Princess Parties</strong></a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- This row will be visible only on small screens and hidden on others -->
-      <div class="row d-md-none ">
+      <div class="row d-md-none justify-content-center">
         <div class="col-12 text-center">
-          <h1 class="display-2 mb-3">Princess Parties, Story Time, Professional Vocalist for Hire in Cleveland</h1>
+          <h1 class="display-2 mb-3 mt-4">Professional Vocalist for Hire in Cleveland</h1>
         </div>
-        <div class="col-12 justify-content-center">
-          <img src="./content/home/9-crop-cut-2.png" class="img-fluid mb-3"
-            alt="Halle St. John at a princess party event in Cleveland">
+        <div class="col-12 text-center">
+          <div class="rounded-circle" style="width: 200px; height: 200px; overflow: hidden; position: relative; margin: 0 auto;">
+            <img src="./content/home/9-crop-cut-2.png" class="img-fluid border shadow"
+              style="background-color: #cbe5fe; position: absolute; top: 50%; left: 60%; transform: translate(-50%, -50%) scale(1.2);"
+              alt="Halle St. John at a princess party event in Cleveland">
+          </div>
         </div>
-        <div class="col-12">
-          <p class="lead arial">Explore top-notch vocalist services and children's entertainment with Halle St. John.
+        <div class="col-12 text-center">
+          <p class="lead arial" style="font-size: 1.5em;">Princess Parties, Story Time, Explore top-notch vocalist
+            services and children's
+            entertainment with Halle St. John.
             Perfect for your next Cleveland event.</p>
         </div>
         <div class="text-center p-2">
-          <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="hallebobally.html"
+          <a class="btn btn-light text-dark m-1 arial text-decoration-none" href="hallebobally.html"
             role="button"><strong>Halle Bo Bally</strong></a>
-          <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="princessparties.html"
+          <a class="btn btn-light text-dark m-1 arial text-decoration-none" href="princessparties.html"
             role="button"><strong>Princess Parties</strong></a>
         </div>
       </div>
@@ -234,8 +245,8 @@
           an interactive story time
           that not only includes books, but songs and movement too! Click below to learn more about Halle Bo Bally
           appearances or to book your private event.</p>
-        <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="#contact"
-          role="button"><strong>Contact Me</strong></a>
+        <!-- <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="#contact"
+          role="button"><strong>Contact Me</strong></a> -->
         <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="hallebobally.html"
           role="button"><strong>Learn More</strong></a>
       </div>
@@ -258,8 +269,8 @@
           Make that event even more magical with a visit from a Princess! With a New York City
           singing background, I will bring each character to life when I tell her story and sing her songs!
         </p>
-        <a class="btn btn-outline-dark btn-lg text-dark m-1 arial text-decoration-none" href="#contact"
-          role="button"><strong>Book Now</strong></a>
+        <!-- <a class="btn btn-outline-dark btn-lg text-dark m-1 arial text-decoration-none" href="#contact"
+          role="button"><strong>Book Now</strong></a> -->
         <a class="btn btn-outline-dark btn-lg text-dark m-1 arial text-decoration-none" href="princessparties.html"
           role="button"><strong>Learn More</strong></a>
       </div>
@@ -282,53 +293,85 @@
         </h5>
       </div>
       <div class="col-12 col-lg-4 mx-auto pb-3 p-0">
-        <p class="display-5 my-4 text-center">Contact Form:</p>
+        <p class="display-5 my-4 text-center">Contact Form</p>
         <form id="myCustomForm" class="needs-validation" novalidate>
+          <!-- first name -->
           <div class="mb-3">
             <label for="firstname" class="form-label arial">First Name</label>
-            <input type="text" class="form-control" id="firstname" name="entry.1854831876" required>
+            <input type="text" class="form-control" id="firstname" name="entry.251350530" required>
             <div class="invalid-feedback">
               Please enter your first name.
             </div>
           </div>
-
+          <!-- last name -->
           <div class="mb-3">
             <label for="lastname" class="form-label arial">Last Name</label>
-            <input type="text" class="form-control" id="lastname" name="entry.1146938562" required>
+            <input type="text" class="form-control" id="lastname" name="entry.1691571590" required>
             <div class="invalid-feedback">
               Please enter your last name.
             </div>
           </div>
-
+          <!-- email -->
           <div class="mb-3">
             <label for="email" class="form-label arial">Email</label>
-            <input type="email" class="form-control" id="email" name="entry.1184860373" required>
+            <input type="email" class="form-control" id="email" name="entry.1731961914" required>
             <div class="invalid-feedback">
               Please enter a valid email address.
             </div>
           </div>
 
+          <!-- hidden input for selected reason -->
+          <input type="hidden" id="selectedReason" name="entry.52929734" value="Halle Bo Bally">
+
+          <!-- reason -->
+          <div class="mb-3 arial">
+            <label class="form-label arial">Reason for Contact</label>
+            <div>
+              <input type="radio" id="reason_halle" name="reason" value="Halle Bo Bally" checked>
+              <label for="reason_halle">Halle Bo Bally</label>
+            </div>
+            <div>
+              <input type="radio" id="reason_princess" name="reason" value="Princess Parties">
+              <label for="reason_princess">Princess Parties</label>
+            </div>
+            <div>
+              <input type="radio" id="reason_vocalist" name="reason" value="Vocalist for Hire">
+              <label for="reason_vocalist">Vocalist for Hire</label>
+            </div>
+            <div>
+              <input type="radio" id="reason_other" name="reason" value="Other">
+              <label for="reason_other">Other</label>
+            </div>
+
+            <div class="invalid-feedback">
+              Please select a reason for contacting me.
+            </div>
+          </div>
+          <!-- message -->
           <div class="mb-3">
             <label for="message" class="form-label arial">Message</label>
-            <textarea class="form-control" id="message" name="entry.427335266" rows="5" required></textarea>
+            <textarea class="form-control" id="message" name="entry.365137442" rows="5" required></textarea>
             <div class="invalid-feedback">
-              What would you like to tell me?
+              Please enter a message?
             </div>
           </div>
 
-          <!-- this is incorrect name -->
+          <!-- phone -->
           <div class="mb-3">
-            <label for="message" class="form-label arial">Phone Number</label>
-            <textarea class="form-control" id="message" name="entry.427335266" rows="5" required></textarea>
+            <label for="phone" class="form-label arial">Phone Number</label>
+            <input type="text" class="form-control" id="phone" name="entry.1460823130" required>
             <div class="invalid-feedback">
-              What would you like to tell me?
+              Please enter a valid phone number?
             </div>
           </div>
 
-          <button class="btn btn-success text-white m-1 py-2 px-4 arial" type="submit"><strong>Send
-              Message</strong></button>
-          <div id="submitSuccessMessage" class="alert alert-success mt-3 d-none" role="alert">
-            Thanks for reaching out! I'll get back to you soon.
+          <!-- submit button -->
+          <div class="text-center">
+            <button class="btn btn-success text-white m-1 py-2 px-4 arial" type="submit"><strong>Send
+                Message</strong></button>
+            <div id="submitSuccessMessage" class="alert alert-success mt-3 d-none" role="alert">
+              Thanks for reaching out! I'll get back to you soon!
+            </div>
           </div>
         </form>
       </div>
