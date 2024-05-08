@@ -84,17 +84,35 @@ function createSwiffySlider(initialFolder, containerId, imageFolder, mediaList,)
       img.alt = "Event Image " + path.match(/([^\/]+)$/)[0];
       li.appendChild(img);
     } else if (media.type === 'video') {
+      // create image element
+      const img = document.createElement('img');
+      img.src = `./content/${initialFolder}/${imageFolder}/${media.screenshot}`;
+      img.alt = "Video Thumbnail"
+      img.id = media.imageId;
+      img.className = 'img-fluid rounded shadow h-100';
+      li.appendChild(img);
       const video = document.createElement('video');
+      video.id = media.videoId;
       video.className = 'w-100';
       video.controls = true;
-      video.style.cssText = 'max-height: 300px;';
+      video.style.cssText = 'max-height: 300px; display: none;';
       const source = document.createElement('source');
       source.src = path;
       source.type = 'video/mp4';
       video.appendChild(source);
       li.appendChild(video);
+
+      img.addEventListener('click', () => {
+        const videoContainer = img.parentNode;
+        const videoElement = videoContainer.querySelector('video');
+        img.style.display = 'none';
+        videoElement.style.display = 'block';
+        videoElement.play();
+      });
     } else if (media.type === 'youtube') {
       const iframe = document.createElement('iframe');
+      iframe.width = media.width;
+      iframe.height = media.height;
       iframe.src = `https://www.youtube.com/embed/${media.src}`;
       iframe.className = 'w-100';
       iframe.allow = '';
