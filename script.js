@@ -111,8 +111,6 @@ function createSwiffySlider(initialFolder, containerId, imageFolder, mediaList,)
       });
     } else if (media.type === 'youtube') {
       const iframe = document.createElement('iframe');
-      iframe.width = media.width;
-      iframe.height = media.height;
       iframe.src = `https://www.youtube.com/embed/${media.src}`;
       iframe.className = 'w-100';
       iframe.allow = '';
