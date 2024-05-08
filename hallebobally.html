@@ -720,7 +720,21 @@
       imagesListContainer.appendChild(li); // Append the list item to the container
     });
   </script>
-  
+
+  <script>
+    // Add click event listener to toggle video and image
+    const thumbnails = document.querySelectorAll('.video-thumbnail');
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+        const videoContainer = thumbnail.parentNode;
+        const video = videoContainer.querySelector('video');
+        thumbnail.style.display = 'none';
+        video.style.display = 'block';
+        video.play();
+      });
+    });
+  </script>
+
 </body>
 
 </html>
