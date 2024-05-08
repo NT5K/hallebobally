@@ -552,24 +552,36 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script>
-
-    // Example usage of the function for different sliders with mixed media types
+    // Create Swiffy Slider for each section
     document.addEventListener('DOMContentLoaded', function () {
-      createSwiffySlider('vocalist', 'holiday', 'holiday', [
-        { src: 'holiday1.PNG', type: 'image' },
-        { src: 'video1.mp4', type: 'video' },
-        { src: '7xMQLO5Tsts', type: 'youtube' },
-        { src: 'holiday2.PNG', type: 'image' },
-      ]);
+      // wedding
       createSwiffySlider('vocalist', 'wedding', 'wedding', [
         { src: 'image1.PNG', type: 'image' },
         { src: 'image2.PNG', type: 'image' },
         { src: 'image3.PNG', type: 'image' },
-        { src: 'Wedding_demo2.mp4', type: 'video' },
+        { src: 'Wedding_demo2.mp4', type: 'video', screenshot: "screenshot1.png", videoId: "wedding1_video", imageId: "wedding1" },
       ]);
+      // jazz
       createSwiffySlider('vocalist', 'jazz', 'jazz', [
-        { src: 'CM03NQl5jt4', type: 'youtube' },
+        { src: 'CM03NQl5jt4', type: 'youtube', width: 480, height: 800},
       ]);
+      // holiday
+      createSwiffySlider('vocalist', 'holiday', 'holiday', [
+        { src: 'holiday1.PNG', type: 'image' },
+        { src: 'video1.mp4', type: 'video', screenshot: "screenshot1.png", videoId: "holiday1_video", imageId: "holiday1" },
+        { src: '7xMQLO5Tsts', type: 'youtube' },
+        { src: 'holiday2.PNG', type: 'image' },
+      ]);
+
+      // Create event listeners for the video thumbnails inside the createSwiffySlider function
+      // const thumbnails = document.getElementById('wedding1');
+      // thumbnails.addEventListener('click', () => {
+      //   const videoContainer = thumbnails.parentNode;
+      //   const video = videoContainer.querySelector('video');
+      //   thumbnails.style.display = 'none';
+      //   video.style.display = 'block';
+      //   video.play();
+      // });
     });
   </script>
 
