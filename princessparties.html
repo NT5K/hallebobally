@@ -564,9 +564,33 @@
     });
   </script>
   <script>
+    window.addEventListener('mousemove', function (e) {
+      var j = 25; // Set a fixed value for j
+      var elem = document.createElement('div');
+      var size = Math.ceil(Math.random() * 10 * 0.5) + 'px'; // Random size up to 5px
+      var precision = 50;
+      var randomnum = Math.floor(Math.random() * (10 * precision - 1 * precision) + 1 * precision) / (1 * precision);
+      var rOpacity = randomnum / 10;
+      var rSize = randomnum / 120;
+      elem.style.position = 'fixed';
+      elem.classList.add('star-five');
+      elem.style.zIndex = 6;
+      elem.style.transform = `rotate(35deg) scale(${rSize})`;
+      elem.style.top = e.pageY - window.scrollY + Math.round(Math.random() * j - j / 2) - 100 + 'px';
+      elem.style.left = e.pageX + Math.round(Math.random() * j - j / 2) - 100 + 'px';
+      elem.style.opacity = rOpacity;
+      elem.style.pointerEvents = 'none';
+      document.body.appendChild(elem);
+      window.setTimeout(function () {
+        document.body.removeChild(elem);
+      }, Math.round(Math.random() * 0.5 * 1000)); // Remove the element after a random time up to 500ms
+    });
+  </script>
+  <!-- <script>
     // magic wand script
     window.addEventListener('mousemove', function (e) {
       //trail
+      // [.7, .9, .8, .5, .25, .6, .4, .3, .2].forEach(function (i) {
       [.7, .9, .8, .5, .25, .6, .4, .3, .2].forEach(function (i) {
         var j = (1 - i) * 50;
         var elem = document.createElement('div');
@@ -603,7 +627,7 @@
       });
 
     }, false);
-  </script>
+  </script> -->
   <script>
     function initializeGallery(galleryID, items, title, description) {
       jQuery(`#${galleryID}`).nanogallery2({
