@@ -36,8 +36,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
+        html, body {
             overflow-x: hidden;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
         }
 
         .section-padding {
@@ -49,42 +52,84 @@
             margin-bottom: 30px;
         }
 
-        .video-responsive {
-            position: relative;
-            overflow: hidden;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-        }
-
-        .video-responsive iframe,
-        .video-responsive video {
+        /* YouTube player styling */
+        .youtube-player {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
         }
+        
+        .youtube-player iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .youtube-thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        
+        /* Add YouTube play button overlay */
+        .youtube-thumbnail::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 68px;
+            height: 48px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/><path d="M45 24 27 14v20" fill="white"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
-        /* Fixed height for all card headers */
+        /* Simplified card structure */
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
         .card-header {
-            height: 70px;
+            padding: 15px 10px;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
         }
 
-        /* Fixed height for all card bodies */
+        .card-header h3 {
+            font-size: 1.1rem;
+            margin: 0;
+            width: 100%;
+        }
+
         .card-body {
-            height: 120px;
+            padding: 15px;
+            flex: 1 0 auto;
             overflow-y: auto;
         }
 
-        /* Equal height for all media containers */
+        /* Improved video container */
         .video-container {
             position: relative;
             overflow: hidden;
             padding-top: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
+            width: 100%;
         }
 
         .video-thumbnail {
@@ -106,21 +151,19 @@
             object-fit: contain;
         }
 
-        /* Make all cards the same height in each row */
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Make the card body take up remaining space */
-        .card-body {
-            flex: 1 0 auto;
+        /* Media queries for better responsiveness */
+        @media (max-width: 767px) {
+            .card {
+                margin-bottom: 15px;
+            }
+            
+            .card-header h3 {
+                font-size: 1rem;
+            }
+            
+            .card-body {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -172,16 +215,19 @@
             </div>
         </div>
     </nav>
-    <div class="row justify-content-center pt-5">
-        <div class="col-12 col-md-8 text-center lead arial">
-            <h1>Take a look at some of my artistic highlights in vocal performance, television and web commercial work,
-                and theater.</h1>
+    
+    <div class="container">
+        <div class="row justify-content-center pt-5">
+            <div class="col-12 col-md-8 text-center lead arial">
+                <h1>Take a look at some of my artistic highlights in vocal performance, television and web commercial work,
+                    and theater.</h1>
+            </div>
         </div>
+        <hr>
     </div>
-    <hr>
-    <!-- videos are dynimacally loaded using javascript -->
-    <div id="videoContainer"></div>
-    <!-- <div id="video-container"></div> -->
+    
+    <!-- Video container for dynamic content -->
+    <div id="videoContainer" class="container-fluid px-2"></div>
 
     <!-- contact -->
     <section class="container-fluid px-5 py-5" id="contact">
@@ -465,99 +511,167 @@
             sections.forEach(section => {
                 const sectionDiv = document.createElement('div');
                 sectionDiv.className = "container section-padding";
-                sectionDiv.innerHTML = `<h2 class="text-center display-3">${section.title}</h2><div class="row ${section.extraClasses || ''}">`;
-
+                
+                // Create section header
+                const sectionHeader = document.createElement('h2');
+                sectionHeader.className = "text-center display-3";
+                sectionHeader.textContent = section.title;
+                sectionDiv.appendChild(sectionHeader);
+                
+                // Create row for videos
+                const row = document.createElement('div');
+                row.className = "row";
+                
                 section.videos.forEach(video => {
                     const colDiv = document.createElement('div');
-                    colDiv.className = `col-12 col-lg-4 col-md-6 mb-4 ${section.colSizes || ''}`;
-
+                    colDiv.className = `col-12 col-md-6 col-lg-4 mb-4`;
+                    
+                    const card = document.createElement('div');
+                    card.className = "card";
+                    
+                    // Card header
+                    const cardHeader = document.createElement('div');
+                    cardHeader.className = "card-header";
+                    const title = document.createElement('h3');
+                    title.className = "card-title";
+                    title.innerHTML = video.name;
+                    cardHeader.appendChild(title);
+                    
+                    // Video container
+                    const videoContainerDiv = document.createElement('div');
+                    
                     if (video.isYoutube) {
-                        colDiv.innerHTML = `
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <h3 class="card-title text-center">${video.name}</h3>
-                        </div>
-                        <div class="video-responsive">
-                            <iframe src="${video.id}" title="${video.name}" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text arial">${video.description}</p>
-                        </div>
-                    </div>
-                `;
+                        videoContainerDiv.className = "video-container";
+                        // Extract YouTube video ID from embed URL
+                        const videoId = video.id.split('/').pop();
+                        
+                        // Use custom thumbnail if provided, otherwise use YouTube's thumbnail
+                        let thumbnailSrc = video.placeholder && video.placeholder !== './content/media/screenshots/1.png' 
+                            ? video.placeholder 
+                            : `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                            
+                        videoContainerDiv.innerHTML = `
+                            <img src="${thumbnailSrc}" alt="YouTube Thumbnail" class="video-thumbnail youtube-thumbnail" data-youtube-id="${video.id}">
+                            <div class="youtube-player" style="display: none;" data-id="${video.id}"></div>
+                        `;
                     } else {
-                        colDiv.innerHTML = `
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <h3 class="card-title text-center">${video.name}</h3>
-                        </div>
-                        <div class="video-container">
+                        videoContainerDiv.className = "video-container";
+                        videoContainerDiv.innerHTML = `
                             <img src="${video.placeholder}" alt="Video Thumbnail" class="video-thumbnail">
                             <video controls style="display: none;">
                                 <source src="${video.id}" type="video/mp4">
                             </video>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text arial">${video.description}</p>
-                        </div>
-                    </div>
-                `;
+                        `;
                     }
-
-                    sectionDiv.children[1].appendChild(colDiv);
+                    
+                    // Card body
+                    const cardBody = document.createElement('div');
+                    cardBody.className = "card-body";
+                    const description = document.createElement('p');
+                    description.className = "card-text arial";
+                    description.innerHTML = video.description;
+                    cardBody.appendChild(description);
+                    
+                    // Assemble card
+                    card.appendChild(cardHeader);
+                    card.appendChild(videoContainerDiv);
+                    card.appendChild(cardBody);
+                    
+                    colDiv.appendChild(card);
+                    row.appendChild(colDiv);
                 });
-
+                
+                sectionDiv.appendChild(row);
                 container.appendChild(sectionDiv);
             });
 
-            // Add click event listener to toggle video and image
-            const thumbnails = document.querySelectorAll('.video-thumbnail');
-            thumbnails.forEach(thumbnail => {
-                thumbnail.addEventListener('click', () => {
-                    const videoContainer = thumbnail.parentNode;
+            // Add click event listeners for both regular videos and YouTube videos
+            const regularThumbnails = document.querySelectorAll('.video-thumbnail:not(.youtube-thumbnail)');
+            regularThumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    const videoContainer = this.parentNode;
                     const video = videoContainer.querySelector('video');
-                    thumbnail.style.display = 'none';
+                    this.style.display = 'none';
                     video.style.display = 'block';
                     video.play();
-                });
-            });
-
-            // Optional: Equalize card heights within each row after all content is loaded
-            window.addEventListener('load', equalizeCardHeights);
-            window.addEventListener('resize', equalizeCardHeights);
-        }
-
-        // Function to equalize card heights in each row
-        function equalizeCardHeights() {
-            const rows = document.querySelectorAll('.row');
-            
-            rows.forEach(row => {
-                const cards = row.querySelectorAll('.card');
-                let maxHeight = 0;
-                
-                // Reset heights first
-                cards.forEach(card => {
-                    card.style.height = 'auto';
-                });
-                
-                // Find the tallest card
-                cards.forEach(card => {
-                    const height = card.offsetHeight;
-                    if (height > maxHeight) {
-                        maxHeight = height;
-                    }
-                });
-                
-                // Set all cards to the height of the tallest card
-                if (maxHeight > 0) {
-                    cards.forEach(card => {
-                        card.style.height = `${maxHeight}px`;
+                    
+                    // Add event listener for when video ends to show thumbnail again
+                    video.addEventListener('ended', function() {
+                        this.style.display = 'none';
+                        thumbnail.style.display = 'block';
                     });
-                }
+                });
+            });
+            
+            // Handle YouTube thumbnails separately
+            const youtubeThumbnails = document.querySelectorAll('.youtube-thumbnail');
+            youtubeThumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    const youtubeId = this.getAttribute('data-youtube-id');
+                    const playerContainer = this.nextElementSibling;
+                    
+                    // Hide thumbnail
+                    this.style.display = 'none';
+                    
+                    // Show player container
+                    playerContainer.style.display = 'block';
+                    
+                    // Create iframe only when clicked
+                    playerContainer.innerHTML = `<iframe src="${youtubeId}?autoplay=1" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>`;
+                });
             });
         }
 
-        document.addEventListener('DOMContentLoaded', createVideoSections);
+        document.addEventListener('DOMContentLoaded', function() {
+            createVideoSections();
+            
+            // Set copyright year
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+            
+            // Form handling
+            const form = document.getElementById('myCustomForm');
+            if (form) {
+                // Get all radio buttons
+                const radioButtons = document.querySelectorAll('input[name="reason"]');
+                const selectedReasonInput = document.getElementById('selectedReason');
+                
+                // Add event listeners to radio buttons
+                radioButtons.forEach(radio => {
+                    radio.addEventListener('change', function() {
+                        if (this.checked) {
+                            selectedReasonInput.value = this.value;
+                        }
+                    });
+                });
+                
+                // Form validation
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        event.preventDefault();
+                        
+                        // Show success message and reset form
+                        const successMessage = document.getElementById('submitSuccessMessage');
+                        successMessage.classList.remove('d-none');
+                        form.reset();
+                        
+                        // Hide message after 5 seconds
+                        setTimeout(function() {
+                            successMessage.classList.add('d-none');
+                        }, 5000);
+                    }
+                    
+                    form.classList.add('was-validated');
+                });
+            }
+        });
     </script>
 </body>
 
