@@ -226,8 +226,8 @@
       <blockquote class="blockquote p-4 p-lg-5 pink-shadow2 rounded "
         style="background: linear-gradient(145deg, #FF69B4, #FFB6C1);">
         <p class="mb-0 display-6" style="color: white; text-shadow: 0px 2px 4px rgba(0,0,0,0.5);">
-          “From Halle Bo Bally appearances to directing plays, I am constantly moving, shaping, and
-          embracing the chaos of creativity. It's a wild life, but incredibly fulfilling.”
+          "From Halle Bo Bally appearances to directing plays, I am constantly moving, shaping, and
+          embracing the chaos of creativity. It's a wild life, but incredibly fulfilling."
         </p>
         <footer class="blockquote-footer text-white mt-4 arial" style="font-size: 1.2rem;">
           Halle St. John <cite title="Source Title"></cite>
@@ -243,42 +243,64 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script>
+    // Function to dynamically create Swiffy Sliders with variable images
+    function createSwiffySlider(containerId, imageFolder, imageCount, data) {
+      const container = document.getElementById(containerId);
+      if (!container) {
+        console.error('Slider container not found:', containerId);
+        return;
+      }
 
+      container.innerHTML = ''; // Clear any existing content in the container
+
+      for (let i = 0; i < imageCount; i++) {
+        const path = `./content/about/${imageFolder}/${data[i]}`;
+        const li = document.createElement('li');
+        li.style.cssText = 'display: flex; justify-content: center; align-items: center; height: 500px; overflow: hidden; opacity:1';  // Ensures the container does not grow beyond 500px height
+
+        const img = document.createElement('img');
+        img.src = path;
+        img.className = 'img-fluid rounded shadow';
+        img.style.cssText = 'height: auto; width: 100%; object-fit: cover; object-position: top;'; // Ensures images fit properly, showing the top part
+        img.alt = "Event Image " + path.match(/([^\/]+)$/)[0]; // Use the file name as alt text
+
+        li.appendChild(img);
+        container.appendChild(li);
+      }
+    }
 
     // Example usage of the function for different sliders
     document.addEventListener('DOMContentLoaded', function () {
-      createSwiffySlider('about', 'vocalist', 'vocalist', [
-        { src: 'IMG_8837.PNG', type: 'image' },
-        { src: 'IMG_8838.PNG', type: 'image' },
-        { src: 'IMG_8847.PNG', type: 'image' },
-        { src: 'IMG_8848.PNG', type: 'image' },
-        { src: 'IMG_8849.PNG', type: 'image' },
+      createSwiffySlider('vocalist', 'vocalist', 5, [
+        'IMG_8837.PNG',
+        'IMG_8838.PNG',
+        'IMG_8847.PNG',
+        'IMG_8848.PNG',
+        'IMG_8849.PNG',
       ]);
-
-      createSwiffySlider('about', 'theatrical', 'theater', [
-        { src: 'Matilda/matilda5.png', type: 'image' },
-        { src: 'Matilda/matilda6.png', type: 'image' },
-        { src: 'Joseph_and_the_Technicolor_Dreamcoat/joe1.png', type: 'image' },
-        { src: 'Joseph_and_the_Technicolor_Dreamcoat/joe4.png', type: 'image' },
-        { src: 'Big_Fish/bf4.png', type: 'image' },
-        { src: 'Big_Fish/bf5.png', type: 'image' },
-        { src: 'Once_Upon_A_Mattress/mattress1.png', type: 'image' },
-        { src: 'Once_Upon_A_Mattress/mattress4.png', type: 'image' },
-        { src: 'Alice_in_Danceland/alice1.png', type: 'image' },
-        { src: 'Alice_in_Danceland/alice2.png', type: 'image' },
-        { src: 'Mary_Poppins/mary2.png', type: 'image' },
-        { src: 'Mary_Poppins/mary6.png', type: 'image' },
-        { src: 'Mary_Poppins/mary11.png', type: 'image' },
-        { src: 'Mary_Poppins/mary12.png', type: 'image' },
+      
+      createSwiffySlider('theatrical', 'theater', 14, [
+        'Matilda/matilda5.png',
+        'Matilda/matilda6.png',
+        'Joseph_and_the_Technicolor_Dreamcoat/joe1.png',
+        'Joseph_and_the_Technicolor_Dreamcoat/joe4.png',
+        'Big_Fish/bf4.png',
+        'Big_Fish/bf5.png',
+        'Once_Upon_A_Mattress/mattress1.png',
+        'Once_Upon_A_Mattress/mattress4.png',
+        'Alice_in_Danceland/alice1.png',
+        'Alice_in_Danceland/alice2.png',
+        'Mary_Poppins/mary2.png',
+        'Mary_Poppins/mary6.png',
+        'Mary_Poppins/mary11.png',
+        'Mary_Poppins/mary12.png',
       ]);
-
-      createSwiffySlider('about', 'acting-coach', 'director', [
-        { src: 'IMG_8827.PNG', type: 'image', object_position: 'right' },
-        { src: 'Josh_me.png', type: 'image' },
-        { src: 'Coach2.png', type: 'image' },
-        { src: 'Coach1.png', type: 'image' },
-        // { src: 'IMG_7990.JPG', type: 'image' },
-        // { src: 'IMG_8829.JPG', type: 'image' },
+      
+      createSwiffySlider('acting-coach', 'director', 4, [
+        'IMG_8827.PNG',
+        'Josh_me.png',
+        'Coach2.png',
+        'Coach1.png'
       ]);
     });
   </script>
