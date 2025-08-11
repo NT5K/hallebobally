@@ -365,9 +365,15 @@
       <div class="col-12 col-md-6 col-lg-4 text-center">
         <div class="card card-two">
           <div class="card-body">
-            <ul class="slider-container py-4" id="jazz">
-              <!-- Images will be dynamically added here -->
-            </ul>
+            <div
+              class="swiffy-slider slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
+              <ul class="slider-container py-4" id="jazz">
+                <!-- Images will be dynamically added here -->
+              </ul>
+
+              <button type="button" class="slider-nav" aria-label="Go left"></button>
+              <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+            </div>
             <h1 class="card-title"><strong>Jazz Events</strong></h1>
             <p class="lead arial">Have an event that needs the smooth feel of a jazz lounge? We have you covered. Take a
               listen to the demo
@@ -404,36 +410,132 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script>
+    // Enhanced function to dynamically create Swiffy Sliders with support for images, videos, and YouTube
+    function createSwiffySlider(containerId, imageFolder, data) {
+      const container = document.getElementById(containerId);
+      if (!container) {
+        console.error('Slider container not found:', containerId);
+        return;
+      }
+
+      container.innerHTML = ''; // Clear any existing content in the container
+
+      data.forEach(item => {
+        const li = document.createElement('li');
+        li.style.cssText = 'display: flex; justify-content: center; align-items: center; height: 500px; overflow: hidden; opacity:1; position: relative;';
+
+        if (item.type === 'image') {
+          // Handle regular images
+          const path = `./content/vocalist/${imageFolder}/${item.src}`;
+          const img = document.createElement('img');
+          img.src = path;
+          img.className = 'img-fluid rounded shadow';
+          img.style.cssText = 'height: auto; width: 100%; object-fit: cover; object-position: top;';
+          img.alt = "Event Image " + item.src;
+          li.appendChild(img);
+          
+        } else if (item.type === 'video') {
+          // Handle video with clickable screenshot
+          const videoPath = `./content/vocalist/${imageFolder}/${item.src}`;
+          const posterPath = item.screenshot ? `./content/vocalist/${imageFolder}/${item.screenshot}` : '';
+          
+          // Create container div
+          const videoContainer = document.createElement('div');
+          videoContainer.style.cssText = 'width: 100%; height: 100%; position: relative;';
+          
+          // Create the video element (initially hidden)
+          const video = document.createElement('video');
+          video.src = videoPath;
+          video.controls = true;
+          video.className = 'img-fluid rounded shadow';
+          video.style.cssText = 'height: auto; width: 100%; object-fit: cover; display: none;';
+          if (item.videoId) {
+            video.id = item.videoId;
+          }
+          
+          // Create the clickable thumbnail if screenshot is provided
+          if (posterPath) {
+            const thumbnail = document.createElement('img');
+            thumbnail.src = posterPath;
+            thumbnail.className = 'img-fluid rounded shadow';
+            thumbnail.style.cssText = 'height: auto; width: 100%; object-fit: cover; cursor: pointer;';
+            thumbnail.alt = "Click to play video";
+            if (item.imageId) {
+              thumbnail.id = item.imageId;
+            }
+            
+            // Add play button overlay
+            const playButton = document.createElement('div');
+            // playButton.style.cssText = 'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(0,0,0,0.7); border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;';
+            // playButton.innerHTML = '<svg width="40" height="40" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>';
+            
+            // Add click event to thumbnail and play button
+            const startVideo = () => {
+              thumbnail.style.display = 'none';
+              playButton.style.display = 'none';
+              video.style.display = 'block';
+              video.play();
+            };
+            
+            thumbnail.addEventListener('click', startVideo);
+            playButton.addEventListener('click', startVideo);
+            
+            videoContainer.appendChild(thumbnail);
+            videoContainer.appendChild(playButton);
+          } else {
+            // If no screenshot, just show the video with controls
+            video.style.display = 'block';
+          }
+          
+          videoContainer.appendChild(video);
+          li.appendChild(videoContainer);
+          
+        } else if (item.type === 'youtube') {
+          // Handle YouTube embeds
+          const iframe = document.createElement('iframe');
+          iframe.src = `https://www.youtube.com/embed/${item.src}`;
+          iframe.style.cssText = 'width: 100%; height: 100%; border: none; border-radius: 8px;';
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+          li.appendChild(iframe);
+        }
+
+        container.appendChild(li);
+      });
+    }
+
     // Create Swiffy Slider for each section
     document.addEventListener('DOMContentLoaded', function () {
-      // wedding
-      createSwiffySlider('vocalist', 'wedding', 'wedding', [
+      // Wedding section - mix of images and video
+      createSwiffySlider('wedding', 'wedding', [
         { src: 'image1.PNG', type: 'image' },
         { src: 'image2.PNG', type: 'image' },
         { src: 'image3.PNG', type: 'image' },
-        { src: 'Wedding_demo2.mp4', type: 'video', screenshot: "screenshot1.png", videoId: "wedding1_video", imageId: "wedding1" },
+        { src: 'Wedding_demo2.mp4', type: 'video', screenshot: "screenshot1.png", videoId: "wedding1_video" },
       ]);
-      // jazz
-      createSwiffySlider('vocalist', 'jazz', 'jazz', [
+      
+      // Jazz section - YouTube embed
+      createSwiffySlider('jazz', 'jazz', [
         { src: 'CM03NQl5jt4', type: 'youtube' },
       ]);
-      // holiday
-      createSwiffySlider('vocalist', 'holiday', 'holiday', [
+      
+      // Holiday section - mix of images, video, and YouTube
+      createSwiffySlider('holiday', 'holiday', [
         { src: 'holiday1.PNG', type: 'image' },
-        { src: 'video1.mp4', type: 'video', screenshot: "screenshot1.png", videoId: "holiday1_video", imageId: "holiday1" },
+        { src: 'video1.mp4', type: 'video', screenshot: "screenshot1.png", videoId: "holiday1_video" },
         { src: '7xMQLO5Tsts', type: 'youtube' },
         { src: 'holiday2.PNG', type: 'image' },
       ]);
 
       // Create event listeners for the video thumbnails inside the createSwiffySlider function
-      // const thumbnails = document.getElementById('wedding1');
-      // thumbnails.addEventListener('click', () => {
-      //   const videoContainer = thumbnails.parentNode;
-      //   const video = videoContainer.querySelector('video');
-      //   thumbnails.style.display = 'none';
-      //   video.style.display = 'block';
-      //   video.play();
-      // });
+      const thumbnails = document.getElementById('wedding1');
+      thumbnails.addEventListener('click', () => {
+        const videoContainer = thumbnails.parentNode;
+        const video = videoContainer.querySelector('video');
+        thumbnails.style.display = 'none';
+        video.style.display = 'block';
+        video.play();
+      });
     });
   </script>
 
