@@ -42,8 +42,14 @@ function renderNavbar(targetElementId) {
 
           <a class="nav-link" href="media.html">Media</a>
           <a class="nav-link" href="contact.html">Contact</a>
-          <a class="nav-link" href="https://www.instagram.com/hallebobally_cle/" target="_blank"><i
-              class="bi bi-instagram"></i></a>
+          <a
+            class="nav-link"
+            href="https://www.youtube.com/@hallebobally337"
+            target="_blank"
+            style="color: #ff69b4;"
+          >
+            <i class="bi bi-youtube"></i>
+          </a>
         </div>
         <div class="navbar-nav">
           <!-- <a class="nav-link" href="#"><i class="bi bi-twitter"></i></a>
@@ -170,8 +176,8 @@ function renderContactForm(targetElementId) {
       <span>
         <!-- <a class="" href="#"><i class="bi bi-twitter"></i></a> -->
         <!-- <a class="" href="#"><i class="bi bi-facebook"></i></a> -->
-        <a class="" href="https://www.instagram.com/hallebobally_cle/" target="_blank">
-          <i class="bi bi-instagram" style="font-size: 2.5rem; color: #ff69b4;"></i>
+        <a class="" href="https://www.youtube.com/@hallebobally337" target="_blank">
+          <i class="bi bi-youtube" style="font-size: 2.5rem; color: #ff69b4;"></i>
         </a>
         <!-- <a class="" href="#"><i class="bi bi-linkedin"></i></a> -->
       </span>
