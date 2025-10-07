@@ -1,8 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Linux Libertine', serif;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  /* Prevent horizontal overscroll / wobble on mobile */
+  overscroll-behavior-x: contain;
+  touch-action: pan-y;
 }
 
 /* Ensure the navbar is always on top */
@@ -298,7 +309,7 @@ label.error {
 .custom-shape-divider-top-1713145993 svg {
   position: relative;
   display: block;
-  width: calc(100% + 1.3px);
+  width: 100%;
   height: 25px;
   transform: rotateY(180deg);
 }

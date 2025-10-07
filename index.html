@@ -108,7 +108,7 @@
     .hbb-top-divider svg {
       position: relative;
       display: block;
-      width: calc(100% + 1.3px);
+      width: 100%;
       height: 35px;
     }
 
@@ -135,14 +135,9 @@
     }
 
     .rounded-circle {
-      width: 40vw;
-      /* 40% of the viewport width */
-      height: 40vw;
-      /* Same value for maintaining aspect ratio */
-      max-width: 450px;
-      /* Optional: set a maximum width */
-      max-height: 450px;
-      /* Optional: set a maximum height */
+      width: min(40vw, 450px);
+      /* responsive: no wider than 450px */
+      height: min(40vw, 450px);
       overflow: hidden;
       position: relative;
       margin: 0 auto;
@@ -159,7 +154,7 @@
       <!-- This row will be hidden on small screens and visible on others -->
       <div class="row align-items-center no-gutters">
         <div class="col-lg-6 text-lg-right text-center">
-          <div class="overflow-hidden position-relative mx-auto rounded" style="width: 590px; height: 590px;">
+          <div class="overflow-hidden position-relative mx-auto rounded" style="width: min(90vw, 590px); height: min(90vw, 590px); max-width:590px;">
             <img src="./content/home/NEW_1_JPG.jfif" class="img-fluid w-100 position-absolute"
               style="object-fit: cover; left: 0; transform: translateY(-15%);"
               alt="Halle St. John at a princess party event in Cleveland">
@@ -186,7 +181,7 @@
     <!-- This row will be visible only on small screens and hidden on others -->
     <div class="row  justify-content-center hero">
       <div class="col-12 text-center mt-2">
-        <div class="overflow-hidden position-relative mx-auto rounded" style="width: 400px; height: 400px;">
+        <div class="overflow-hidden position-relative mx-auto rounded" style="width: min(80vw, 400px); height: min(80vw, 400px); max-width:400px;">
           <img src="./content/home/NEW_1_JPG.jfif" class="img-fluid w-100 position-absolute"
             style="object-fit: cover; left: 0; transform: translateY(-15%);"
             alt="Halle St. John at a princess party event in Cleveland">

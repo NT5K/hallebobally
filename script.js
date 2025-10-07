@@ -11,7 +11,17 @@ function renderNavbar(targetElementId) {
   <nav class="navbar navbar-expand-lg bg-light navbar-no-decoration">
     <div class="container-fluid">
       <!-- Branding -->
-      <a class="navbar-brand" href="index.html" style="font-size: 250%;">Halle St. John</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-size: 250%;">Halle St. John</a>
+
+      <!-- YouTube icon for small screens (visible next to title) -->
+      <a
+        class="nav-link d-inline-flex align-items-center d-lg-none ms-2 me-3"
+        href="https://www.youtube.com/@hallebobally337"
+        target="_blank"
+        aria-label="YouTube channel"
+      >
+        <i class="bi bi-youtube" style="color: #ff69b4; font-size: 2rem; display:block;"></i>
+      </a>
 
       <!-- Toggler for mobile view -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -22,11 +32,11 @@ function renderNavbar(targetElementId) {
       <!-- Navbar links -->
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav me-auto">
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link d-inline-flex align-items-center" href="index.html">Home</a>
+          <a class="nav-link d-inline-flex align-items-center" href="about.html">About</a>
 
           <!-- Dropdown Menu -->
-          <div class="nav-item dropdown">
+          <div class="nav-item dropdown d-inline-flex align-items-center">
             <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Services
@@ -40,15 +50,15 @@ function renderNavbar(targetElementId) {
             </ul>
           </div>
 
-          <a class="nav-link" href="media.html">Media</a>
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link d-inline-flex align-items-center" href="media.html">Media</a>
+          <a class="nav-link d-inline-flex align-items-center" href="contact.html">Contact</a>
           <a
-            class="nav-link"
+            class="nav-link d-none d-lg-inline-flex align-items-center align-self-center"
             href="https://www.youtube.com/@hallebobally337"
             target="_blank"
-            style="color: #ff69b4;"
+            aria-label="YouTube channel"
           >
-            <i class="bi bi-youtube"></i>
+            <i class="bi bi-youtube" style="color: #ff69b4; font-size: 2.4rem; display:block"></i>
           </a>
         </div>
         <div class="navbar-nav">
