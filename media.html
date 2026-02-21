@@ -451,13 +451,13 @@
                             : `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
                             
                         videoContainerDiv.innerHTML = `
-                            <img src="${thumbnailSrc}" alt="YouTube Thumbnail" class="video-thumbnail youtube-thumbnail" data-youtube-id="${video.id}">
+                            <img src="${thumbnailSrc}" alt="${video.title || 'Halle St. John performance video'}" class="video-thumbnail youtube-thumbnail" data-youtube-id="${video.id}">
                             <div class="youtube-player" style="display: none;" data-id="${video.id}"></div>
                         `;
                     } else {
                         videoContainerDiv.className = "video-container";
                         videoContainerDiv.innerHTML = `
-                            <img src="${video.placeholder}" alt="Video Thumbnail" class="video-thumbnail">
+                            <img src="${video.placeholder}" alt="${video.title || 'Halle St. John performance video'}" class="video-thumbnail">
                             <video controls style="display: none;">
                                 <source src="${video.id}" type="video/mp4">
                             </video>
