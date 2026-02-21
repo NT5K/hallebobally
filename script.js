@@ -11,25 +11,25 @@ function renderNavbar(targetElementId) {
   <nav class="navbar navbar-expand-lg bg-light navbar-no-decoration">
     <div class="container-fluid">
       <!-- Branding -->
-      <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-size: 250%;">Halle St. John</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">Halle St. John</a>
 
       <!-- YouTube icon for small screens (visible next to title) -->
       <a
-        class="nav-link d-inline-flex align-items-center d-lg-none ms-2"
+        class="nav-link d-inline-flex align-items-center d-lg-none ms-2 navbar-icon-link"
         href="https://www.youtube.com/@hallebobally337"
         target="_blank"
         aria-label="YouTube channel"
       >
-        <i class="bi bi-youtube" style="color: #ff69b4; font-size: 2rem; display:block;"></i>
+        <i class="bi bi-youtube navbar-icon"></i>
       </a>
       <!-- Instagram icon for small screens -->
       <a
-        class="nav-link d-inline-flex align-items-center d-lg-none me-3"
+        class="nav-link d-inline-flex align-items-center d-lg-none me-3 navbar-icon-link"
         href="https://www.instagram.com/hallebobally_cle/"
         target="_blank"
         aria-label="Instagram"
       >
-        <i class="bi bi-instagram" style="color: #ff69b4; font-size: 1.8rem; display:block;"></i>
+        <i class="bi bi-instagram navbar-icon"></i>
       </a>
 
       <!-- Toggler for mobile view -->
@@ -62,20 +62,20 @@ function renderNavbar(targetElementId) {
           <a class="nav-link d-inline-flex align-items-center" href="media.html">Media</a>
           <a class="nav-link d-inline-flex align-items-center" href="contact.html">Contact</a>
           <a
-            class="nav-link d-none d-lg-inline-flex align-items-center align-self-center"
+            class="nav-link d-none d-lg-inline-flex align-items-center align-self-center navbar-icon-link"
             href="https://www.youtube.com/@hallebobally337"
             target="_blank"
             aria-label="YouTube channel"
           >
-            <i class="bi bi-youtube" style="color: #ff69b4; font-size: 2.4rem; display:block"></i>
+            <i class="bi bi-youtube navbar-icon"></i>
           </a>
           <a
-            class="nav-link d-none d-lg-inline-flex align-items-center align-self-center"
+            class="nav-link d-none d-lg-inline-flex align-items-center align-self-center navbar-icon-link"
             href="https://www.instagram.com/hallebobally_cle/reels/"
             target="_blank"
             aria-label="Instagram"
           >
-            <i class="bi bi-instagram" style="color: #ff69b4; font-size: 2rem; display:block"></i>
+            <i class="bi bi-instagram navbar-icon"></i>
           </a>
         </div>
         <div class="navbar-nav">
