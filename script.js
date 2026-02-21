@@ -209,6 +209,7 @@ function renderContactForm(targetElementId) {
         <a class="ms-2" href="https://www.instagram.com/hallebobally_cle/reels/" target="_blank">
           <i class="bi bi-instagram" style="font-size: 2.2rem; color: #ff69b4;"></i>
         </a>
+        
         <!-- <a class="" href="#"><i class="bi bi-linkedin"></i></a> -->
       </span>
     </footer>
