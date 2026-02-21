@@ -133,19 +133,19 @@ body {
   #navbarNavAltMarkup .navbar-nav .nav-link {
     margin-right: 0;
     padding: 6px 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .navbar-brand {
-    font-size: 1.55rem;
+    font-size: 1.7rem;
   }
 
   .navbar-icon {
-    font-size: 1.45rem;
+    font-size: 1.65rem;
   }
 
   .navbar-icon-link {
-    margin-inline: 0.15rem;
+    margin-inline: 0.2rem;
   }
 }
 
