@@ -25,7 +25,7 @@ function renderNavbar(targetElementId) {
       <!-- Instagram icon for small screens -->
       <a
         class="nav-link d-inline-flex align-items-center d-lg-none ms-3 me-3"
-        href="https://www.instagram.com/hallebobally/"
+        href="https://www.instagram.com/hallebobally_cle/"
         target="_blank"
         aria-label="Instagram"
       >
