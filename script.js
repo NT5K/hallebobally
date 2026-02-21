@@ -47,8 +47,8 @@ function renderNavbar(targetElementId) {
           <a class="nav-link d-inline-flex align-items-center" href="about.html">About</a>
 
           <!-- Dropdown Menu -->
-          <div class="nav-item dropdown d-inline-flex align-items-center">
-            <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-inline-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Services
             </a>
