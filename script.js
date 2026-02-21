@@ -11,7 +11,9 @@ function renderNavbar(targetElementId) {
   <nav class="navbar navbar-expand-lg bg-light navbar-no-decoration">
     <div class="container-fluid">
       <!-- Branding -->
-      <a class="navbar-brand d-flex align-items-center" href="index.html">Halle St. John</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        Halle St. John
+      </a>
 
       <!-- YouTube icon for small screens (visible next to title) -->
       <a
@@ -24,7 +26,7 @@ function renderNavbar(targetElementId) {
       </a>
       <!-- Instagram icon for small screens -->
       <a
-        class="nav-link d-inline-flex align-items-center d-lg-none me-3 navbar-icon-link"
+        class="nav-link d-inline-flex align-items-center d-lg-none ms-3 me-3 navbar-icon-link"
         href="https://www.instagram.com/hallebobally_cle/"
         target="_blank"
         aria-label="Instagram"
@@ -70,7 +72,7 @@ function renderNavbar(targetElementId) {
             <i class="bi bi-youtube navbar-icon"></i>
           </a>
           <a
-            class="nav-link d-none d-lg-inline-flex align-items-center align-self-center navbar-icon-link"
+            class="nav-link d-none d-lg-inline-flex align-items-center align-self-center ms-2 navbar-icon-link"
             href="https://www.instagram.com/hallebobally_cle/reels/"
             target="_blank"
             aria-label="Instagram"
