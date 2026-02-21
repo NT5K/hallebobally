@@ -20,16 +20,16 @@ function renderNavbar(targetElementId) {
         target="_blank"
         aria-label="YouTube channel"
       >
-        <i class="bi bi-youtube" style="color: #ff69b4; font-size: 2rem; display:block;"></i>
+        <i class="bi bi-youtube" style="color: #ff69b4; font-size: 1.6rem; display:block;"></i>
       </a>
       <!-- Instagram icon for small screens -->
       <a
-        class="nav-link d-inline-flex align-items-center d-lg-none me-3"
+        class="nav-link d-inline-flex align-items-center d-lg-none ms-3 me-3"
         href="https://www.instagram.com/hallebobally/"
         target="_blank"
         aria-label="Instagram"
       >
-        <i class="bi bi-instagram" style="color: #ff69b4; font-size: 1.8rem; display:block;"></i>
+        <i class="bi bi-instagram" style="color: #ff69b4; font-size: 1.5rem; display:block;"></i>
       </a>
 
       <!-- Toggler for mobile view -->
