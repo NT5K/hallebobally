@@ -70,20 +70,176 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* Hero Section - 3 Column Design */
     .hero {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      /* This will make the section take up the remaining vertical space */
+      min-height: 70vh;
+      overflow: hidden;
     }
 
-    @media (max-width: 991.98px) {
-      .hero .row {
-        padding-top: 2rem;
-        /* Adjust this value as needed */
+    .hero-three-column {
+      display: flex;
+      gap: 0;
+      height: 100%;
+      align-items: stretch;
+      margin-top: -5%;
+    }
+
+    .hero-column {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateX(-30px);
+      animation: fadeInPan 1s ease-out forwards;
+    }
+
+    .hero-column:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    .hero-column:nth-child(2) {
+      animation-delay: 0.6s;
+    }
+
+    .hero-column:nth-child(3) {
+      animation-delay: 1s;
+    }
+
+    .hero-column img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @keyframes fadeInPan {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
       }
     }
 
+    /* Mobile - Custom Slideshow */
+    .hero-slideshow {
+      display: none;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 2.5s ease-in-out;
+      animation: kenBurns 14s linear infinite alternate;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    .hero-slide:nth-child(2) {
+      animation-delay: -5s;
+    }
+
+    .hero-slide:nth-child(3) {
+      animation-delay: -10s;
+    }
+
+    @keyframes kenBurns {
+      0%   { background-position-x: 40%; transform: scale(1); }
+      50%  { transform: scale(1.05); }
+      100% { background-position-x: 60%; transform: scale(1); }
+    }
+
+    @media (max-width: 991.98px) {
+      .hero {
+        min-height: 100vh;
+      }
+
+      .hero-three-column {
+        display: none;
+      }
+
+      .hero-slideshow {
+        display: block;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .hero-slideshow {
+        display: none;
+      }
+    }
+
+    /* Hero Text Overlay */
+    .hero-text-overlay {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      text-align: center;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .hero-text-overlay h1 {
+      /* font-family: 'CHERL', serif; */
+      font-size: clamp(2.5rem, 8vw, 6rem);
+      color: white;
+      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7),
+                   0 0 20px rgba(0, 0, 0, 0.5);
+      margin: 0;
+      letter-spacing: 0.05em;
+      font-weight: normal;
+    }
+
+    .scroll-down-arrow {
+      display: inline-block;
+      margin-top: 0.25rem;
+      color: white;
+      font-size: 2.5rem;
+      text-decoration: none;
+      animation: bounce 2s infinite;
+      opacity: 0.85;
+      transition: opacity 0.3s;
+    }
+
+    .scroll-down-arrow:hover {
+      opacity: 1;
+      color: white;
+    }
+
+    .scroll-down-arrow .bi-chevron-down {
+      font-weight: bold !important;
+      -webkit-text-stroke: 2px white;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(10px); }
+      60% { transform: translateY(5px); }
+    }
+
+    @media (max-width: 991.98px) {
+      .hero-text-overlay {
+        bottom: 20px;
+      }
+      
+      .hero-text-overlay h1 {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+      }
+    }
 
     .contact-col {
       background-color: #f8f9fa;
@@ -150,6 +306,26 @@
       fill: #FFFFFF;
     }
 
+    .featured-top-divider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .featured-top-divider svg {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 35px;
+    }
+
+    .featured-top-divider .shape-fill {
+      fill: #FFFFFF;
+    }
+
     .custom-image-box {
       padding: 20px 40px 60px 30px;
       /* Different padding sizes for uneven walls */
@@ -183,64 +359,74 @@
   <div id="navbar-container"></div>
 
   <!-- Hero Section -->
-  <section class="container-fluid hero p-5 mt-0 d-none d-lg-flex">
-    <div class="container mt-3">
-      <!-- This row will be hidden on small screens and visible on others -->
-      <div class="row align-items-center no-gutters">
-        <div class="col-lg-6 text-lg-right text-center">
-          <div class="overflow-hidden position-relative mx-auto rounded" style="width: min(90vw, 590px); height: min(90vw, 590px); max-width:590px;">
-            <img src="./content/home/NEW_1_JPG.jfif" class="img-fluid w-100 position-absolute"
-              style="object-fit: cover; left: 0; transform: translateY(-15%);"
-              alt="Halle St. John at a princess party event in Cleveland">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="py-5 py-lg-0">
-            <h1 class="display-3">Princess Parties, Story Time, Professional Vocalist for Hire in Cleveland</h1>
-            <p class="mb-4 lead arial" style="font-size: 1.5em;">
-              Explore top-notch vocalist services and children's entertainment with Halle St. John.
-              Perfect for your next Cleveland event.
-            </p>
-            <div class="">
-              <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="hallebobally.html"
-                role="button"><strong>Halle Bo Bally</strong></a>
-              <a class="btn btn-light btn-lg text-dark m-1 arial text-decoration-none" href="princessparties.html"
-                role="button"><strong>Princess Parties</strong></a>
-            </div>
-        </div>
+  <section class="container-fluid hero p-0 mt-0">
+    <!-- Desktop: 3 Column Layout -->
+    <div class="hero-three-column">
+      <div class="hero-column">
+        <img
+          src="./content/home/landing_page_columns/Side1.png"
+          alt="Halle St. John - Professional Vocalist in Cleveland"
+          style="object-position: 50% 50%;"
+        >
+      </div>
+      <div class="hero-column">
+        <img
+          src="./content/home/landing_page_columns/Middle.png"
+          alt="Halle Bo Bally Story Time - Princess Parties in Cleveland"
+          style="object-position: 50% 50%;"
+        >
+      </div>
+      <div class="hero-column">
+        <img
+          src="./content/home/landing_page_columns/Side2.png"
+          alt="Halle St. John - Children's Entertainment Cleveland"
+          style="object-position: 50% 50%;"
+        >
       </div>
     </div>
-  </section>
-  <section class="container-fluid hero p-0 mt-0 d-lg-none">
-    <!-- This row will be visible only on small screens and hidden on others -->
-    <div class="row  justify-content-center hero">
-      <div class="col-12 text-center mt-2">
-        <div class="overflow-hidden position-relative mx-auto rounded" style="width: min(80vw, 400px); height: min(80vw, 400px); max-width:400px;">
-          <img src="./content/home/NEW_1_JPG.jfif" class="img-fluid w-100 position-absolute"
-            style="object-fit: cover; left: 0; transform: translateY(-15%);"
-            alt="Halle St. John at a princess party event in Cleveland">
-        </div>
+
+    <!-- Mobile: Custom Slideshow -->
+    <div class="hero-slideshow">
+      <div class="hero-slide active"
+        role="img"
+        aria-label="Halle St. John - Professional Vocalist in Cleveland"
+        style="
+          background-image: url('./content/home/landing_page_columns/Side1.png');
+          background-position: 50% 50%;
+          background-size: auto 130%;"
+        >
       </div>
-      <div class="col-12 text-center">
-        <h1 class="display-2"><strong>Princess Parties, Story Time, <i>and MORE!</i></strong></h1>
+      <div class="hero-slide"
+        role="img"
+        aria-label="Halle Bo Bally Story Time - Princess Parties in Cleveland"
+        style="
+          background-image: url('./content/home/landing_page_columns/Middle.png');
+          background-position: 35% 50%;
+          background-size: auto 100%;"
+        >
       </div>
-      <div class="col-12 text-center">
-        <p class="arial" style="font-size: 1.5em;">Explore top-notch vocalist services and children's entertainment
-          with <br>Halle St. John.</p>
-        <p class="arial" style="font-size: 1.8em;">Perfect for your next Cleveland event.</p>
+      <div class="hero-slide"
+        role="img"
+        aria-label="Halle St. John - Children's Entertainment Cleveland"
+        style="
+          background-image: url('./content/home/landing_page_columns/Side2.png');
+          background-position: 40% 80%;
+          background-size: auto 110%;">
       </div>
-      <div class="text-center p-2">
-        <a class="btn btn-light text-dark m-1 arial text-decoration-none" href="hallebobally.html"
-          role="button"><strong>Halle Bo Bally</strong></a>
-        <a class="btn btn-light text-dark m-1 arial text-decoration-none" href="princessparties.html"
-          role="button"><strong>Princess Parties</strong></a>
-      </div>
+    </div>
+
+    <!-- Text Overlay -->
+    <div class="hero-text-overlay">
+      <h1>Halle St. John</h1>
+      <a href="#about" class="scroll-down-arrow" aria-label="Scroll down">
+        <i class="bi bi-chevron-down"></i>
+      </a>
     </div>
   </section>
 
 
   <!-- about -->
-  <section class="container-fluid about-section">
+  <section id="about" class="container-fluid about-section">
     <div class="row g-0 align-items-center">
       <div class="col-12 col-md-6 text-center text-md-start px-3 px-md-5 py-5 ml-5">
         <h1 class="display-1">About <br>Halle St. John</h1>
@@ -305,13 +491,90 @@
           role="button"><strong>Learn More</strong></a>
       </div>
       <div class="col-12 col-md-6 text-center px-3 px-md-5 py-5">
-        <img src="./content/home/princess3.png" alt="About Halle St. John" class="img-fluid w-75 mx-auto rounded">
+        <img
+          src="./content/home/IMG_2479.png"
+          alt="About Halle St. John"
+          class="img-fluid w-75 mx-auto rounded"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- featured video -->
+  <section
+    class="container-fluid"
+    style="background-color: #c8bbec; position: relative;"
+  >
+    <div class="custom-shape-divider-top-1713145993">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          style="fill: #FFFFFF;"></path>
+      </svg>
+    </div>
+    <div class="container py-5">
+      <div class="row g-0 align-items-center">
+        <div class="col-12 col-lg-6 text-center p-3 order-2 order-lg-1">
+          <div class="mx-auto" style="max-width: 960px;">
+            <img
+              src="./content/home/videos/videoframe_0_overlayed2.png"
+              alt="Halle Bo Bally video preview"
+              class="video-thumbnail img-fluid rounded shadow"
+              style="cursor: pointer; max-height: 560px;"
+            >
+            <video
+              controls
+              class="w-100"
+              style="max-height: 560px; display: none;"
+            >
+              <source
+                src="./content/home/videos/Edits_Halle.mp4"
+                type="video/mp4"
+              >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 text-center text-lg-start px-3 px-lg-5 py-5 order-1 order-lg-2">
+          <h1 class="display-1" style="white-space: nowrap;">
+            See Halle in Action
+          </h1>
+          <p class="lead arial" style="font-size: 1.5em;">
+            Tap to play a recent session clip and get a feel for the energy kids love.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <div id="contact-and-footer"></div>
 
+  <script>
+    (function () {
+      var slides = document.querySelectorAll('.hero-slide');
+      if (!slides.length) return;
+      var current = 0;
+      setInterval(function () {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 6000);
+    })();
+  </script>
+  <script>
+    (function () {
+      var thumbnails = document.querySelectorAll('.video-thumbnail');
+      thumbnails.forEach(function (thumbnail) {
+        thumbnail.addEventListener('click', function () {
+          var video = thumbnail.nextElementSibling;
+          if (!video) return;
+          thumbnail.style.display = 'none';
+          video.style.display = 'block';
+          video.play();
+        });
+      });
+    })();
+  </script>
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

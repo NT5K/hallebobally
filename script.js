@@ -15,12 +15,21 @@ function renderNavbar(targetElementId) {
 
       <!-- YouTube icon for small screens (visible next to title) -->
       <a
-        class="nav-link d-inline-flex align-items-center d-lg-none ms-2 me-3"
+        class="nav-link d-inline-flex align-items-center d-lg-none ms-2"
         href="https://www.youtube.com/@hallebobally337"
         target="_blank"
         aria-label="YouTube channel"
       >
         <i class="bi bi-youtube" style="color: #ff69b4; font-size: 2rem; display:block;"></i>
+      </a>
+      <!-- Instagram icon for small screens -->
+      <a
+        class="nav-link d-inline-flex align-items-center d-lg-none me-3"
+        href="https://www.instagram.com/hallebobally/"
+        target="_blank"
+        aria-label="Instagram"
+      >
+        <i class="bi bi-instagram" style="color: #ff69b4; font-size: 1.8rem; display:block;"></i>
       </a>
 
       <!-- Toggler for mobile view -->
@@ -59,6 +68,14 @@ function renderNavbar(targetElementId) {
             aria-label="YouTube channel"
           >
             <i class="bi bi-youtube" style="color: #ff69b4; font-size: 2.4rem; display:block"></i>
+          </a>
+          <a
+            class="nav-link d-none d-lg-inline-flex align-items-center align-self-center"
+            href="https://www.instagram.com/hallebobally_cle/reels/"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="bi bi-instagram" style="color: #ff69b4; font-size: 2rem; display:block"></i>
           </a>
         </div>
         <div class="navbar-nav">
@@ -188,6 +205,9 @@ function renderContactForm(targetElementId) {
         <!-- <a class="" href="#"><i class="bi bi-facebook"></i></a> -->
         <a class="" href="https://www.youtube.com/@hallebobally337" target="_blank">
           <i class="bi bi-youtube" style="font-size: 2.5rem; color: #ff69b4;"></i>
+        </a>
+        <a class="ms-2" href="https://www.instagram.com/hallebobally_cle/reels/" target="_blank">
+          <i class="bi bi-instagram" style="font-size: 2.2rem; color: #ff69b4;"></i>
         </a>
         <!-- <a class="" href="#"><i class="bi bi-linkedin"></i></a> -->
       </span>
