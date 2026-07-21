@@ -47,7 +47,7 @@ function renderNavbar(targetElementId) {
           <a class="nav-link d-inline-flex align-items-center" href="about.html">About</a>
 
           <!-- Dropdown Menu -->
-          <div class="nav-item dropdown">
+          <div class="nav-item dropdown d-inline-flex align-items-center">
             <a class="nav-link dropdown-toggle d-inline-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Services
@@ -143,26 +143,23 @@ function renderContactForm(targetElementId) {
             </div>
           </div>
 
-          <!-- hidden input for selected reason -->
-          <input type="hidden" id="selectedReason" name="entry.52929734" value="Halle Bo Bally">
-
           <!-- reason -->
           <div class="mb-3 arial">
             <label class="form-label arial">Reason for Contact</label>
             <div>
-              <input type="radio" id="reason_halle" name="reason" value="Halle Bo Bally" checked>
+              <input type="radio" id="reason_halle" name="entry.52929734" value="Halle Bo Bally" checked>
               <label for="reason_halle">Halle Bo Bally</label>
             </div>
             <div>
-              <input type="radio" id="reason_princess" name="reason" value="Princess Parties">
+              <input type="radio" id="reason_princess" name="entry.52929734" value="Princess Party">
               <label for="reason_princess">Princess Parties</label>
             </div>
             <div>
-              <input type="radio" id="reason_vocalist" name="reason" value="Vocalist for Hire">
+              <input type="radio" id="reason_vocalist" name="entry.52929734" value="Vocalist for Hire">
               <label for="reason_vocalist">Vocalist for Hire</label>
             </div>
             <div>
-              <input type="radio" id="reason_other" name="reason" value="Other">
+              <input type="radio" id="reason_other" name="entry.52929734" value="Other">
               <label for="reason_other">Other</label>
             </div>
 
@@ -230,20 +227,11 @@ function initializeFormEvents() {
   var formId = "1FAIpQLSd2sEDtvU3rFtk_FV2mhkfmx2f3wt5JBKSxwTO7c9ES6Au8QA";
   var form = document.getElementById('myCustomForm');
   var validationMessages = document.getElementsByClassName('invalid-feedback');
-  var selectedReasonInput = document.getElementById('selectedReason');
-  var radioButtons = document.querySelectorAll('input[type="radio"][name="reason"]');
 
   if (!form) {
     console.error('Form not found after insertion.');
     return;
   }
-
-  // Set up radio button change events
-  radioButtons.forEach(function (radio) {
-    radio.addEventListener('change', function () {
-      selectedReasonInput.value = this.value;
-    });
-  });
 
   // Set up form submission
   form.addEventListener('submit', function (event) {
